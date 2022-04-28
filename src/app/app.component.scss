@@ -1,0 +1,52 @@
+.imgMe {
+    position: absolute;
+    width: 750px;
+    height: 650px;
+    left: 0;
+    top: 125px;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.titelCont {
+    position: absolute;
+    width: 900px;
+    height: 900px;
+    left: 540px;
+    top: 0px;
+    background: #181823;
+
+    .titel {
+        position: absolute;
+        width: 720px;
+        height: 263px;
+        left: 121px;
+        top: 273px;
+        font-family: 'Sen';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 65px;
+        line-height: 78px;
+        display: flex;
+        align-items: center;
+        color: #FFFFFF;
+        z-index: 2;
+    }
+
+    p {
+        position: absolute;
+        width: 720px;
+        height: 54px;
+        left: 127px;
+        top: 566px;
+        font-family: 'Sen';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+        display: flex;
+        align-items: center;
+        color: #FFFFFF;
+        z-index: 2;
+    }
+}
