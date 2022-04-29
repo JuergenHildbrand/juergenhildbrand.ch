@@ -4,6 +4,8 @@ header {
     height: 6.11vw;
     z-index: 3;
 
+   
+
     .headerCont {
         position: relative;
         width: 100%;
@@ -55,5 +57,14 @@ header {
                 color: black;
             }
         }
+        .darkLogo{
+            color: black;
+        }
+        
     }
 }
+.headerDark {
+    background-color: white;
+    box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
+}
+

@@ -1,17 +1,15 @@
-<header>
+<header [class.headerDark]="darkMode">
 
 
     <div class="headerCont">
-        <p routerLink="/" class="logoHeader">J.H</p>
+        <div routerLink="/" class="logoHeader" [class.darkLogo]="darkMode">J.H</div>
 
-        <div class="linksHeader">
-            <div [class.darkLinks]="darkMode">
+        <div class="linksHeader" [class.darkLinks]="darkMode"> 
                 <a routerLink="/">Home</a>
                 <a routerLink="#">About</a>
                 <a routerLink="#">My Skills</a>
                 <a routerLink="#">My Work</a>
                 <a routerLink="/imprint">Imprint</a>
-            </div>
         </div>
 
     </div>
