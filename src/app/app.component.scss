@@ -1,52 +1,75 @@
-.imgMe {
+.topCont {
+    background-color: black;
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+}
+
+.test {
     position: absolute;
-    width: 750px;
-    height: 650px;
+    top: 0;
+    right: 0;
+    bottom: 0;
     left: 0;
-    top: 125px;
-    object-fit: cover;
-    z-index: 1;
-}
-
-.titelCont {
-    position: absolute;
-    width: 900px;
     height: 900px;
-    left: 540px;
-    top: 0px;
-    background: #181823;
 
-    .titel {
-        position: absolute;
-        width: 720px;
-        height: 263px;
-        left: 121px;
-        top: 273px;
-        font-family: 'Sen';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 65px;
-        line-height: 78px;
-        display: flex;
-        align-items: center;
-        color: #FFFFFF;
-        z-index: 2;
+
+
+    .headerImg {
+        position: relative;
+        left: 0;
+        width: 52.1%;
+        height: 650px;
+        z-index: 1;
+        padding-top: 100%;
+        padding-top: 9%;
+
+        .meImg {
+            width: 100%;
+        }
     }
 
-    p {
+    .secoundBg {
         position: absolute;
-        width: 720px;
-        height: 54px;
-        left: 127px;
-        top: 566px;
-        font-family: 'Sen';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 150%;
-        display: flex;
-        align-items: center;
-        color: #FFFFFF;
-        z-index: 2;
+        top: 0;
+        right: 0;
+        width: 62.5vw;
+        height: 900px;
+
+        .contBg {
+            background-color: #181823;
+            position: relative;
+            width: 100%;
+            padding-top: 100%;
+        
+            .titelCont {
+                position: absolute;
+                top: 273px;
+                left: 6vw;
+                right: 59px;
+                height: 263px;
+                font-family: 'Sen';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 65px;
+                line-height: 78px;
+                display: flex;
+                align-items: center;
+                color: #FFFFFF;
+                z-index: 2;
+            
+                .titel {
+                    position: relative;
+                    width: 100%;
+                    padding-top: 0%;
+                }
+            
+            }
+        
+        }
+
     }
+
+
 }
+
