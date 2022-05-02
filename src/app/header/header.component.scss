@@ -4,67 +4,75 @@ header {
     height: 6.11vw;
     z-index: 3;
 
-   
-
-    .headerCont {
-        position: relative;
-        width: 100%;
-        padding-top: 0.611%;
-
-        .logoHeader {
-            position: absolute;
-            top: 0.69vw;
-            left: 5.35vw;
-            font-family: seravek-web, sans-serif;
-            font-style: normal;
-            font-weight: 700;
-            font-size: 3.125;
-            line-height: 150%;
-            font-size: 3.125vw;
-            color: white;
-            cursor: pointer;
-        }
-
-        .linksHeader {
-            position: absolute;
-            top: 0;
-            right: 5vw;
-            bottom: 0;
-            height: 100%;
-            display: flex;
-
-            a {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 7.57vw;
-                height: 6.11vw;
-                font-family: 'Sen';
-                font-style: normal;
-                font-weight: 700;
-                font-size: 1.11vw;
-                text-decoration: none;
-                color: white;
-                cursor: pointer;
-
-                &:hover {
-                    background-color: #5221E6;
-                }
-            }
-        }
-        .darkLinks {
-            a {
-                color: black;
-            }
-        }
-        .darkLogo{
-            color: black;
-        }
-        
+    .logoHeader {
+        position: absolute;
+        top: 0.69vw;
+        left: 5.35vw;
+        font-family: seravek-web, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+        font-size: 3.125vw;
+        color: white;
+        cursor: pointer;
     }
+
+    .linksHeader {
+        position: absolute;
+        right: 5vw;
+        height: 100%;
+        display: flex;
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 1.67vw;
+            padding-right: 1.67vw;
+            height: 6.11vw;
+            font-family: 'Sen';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            text-decoration: none;
+            color: white;
+            opacity: 0.7;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 1;
+                background-color: #5221E6;
+            }
+        }
+    }
+
+    .darkLinks {
+        a {
+            color: #5221E6;
+
+            &:hover {
+                color: white;
+            }
+        }
+    }
+
+    .darkLogo {
+        color: black;
+    }
+
 }
+
 .headerDark {
     background-color: white;
-    box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
+    box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.2);
 }
 
+@media(max-width: 1000px) {
+
+    .linksHeader {
+        a {
+            font-size: 14px !important;
+        }
+    }
+    
+}

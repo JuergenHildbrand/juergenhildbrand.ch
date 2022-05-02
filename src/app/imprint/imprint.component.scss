@@ -1,3 +1,29 @@
-.imprint {
-    padding-top: 6.11vw;
+.imprintCont {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+}
+
+h1 {
+    font-size: 2.22vw;
+}
+
+h2 {
+    font-size: 1.66vw;
+}
+
+
+@media(max-width: 1000px) {
+
+    h1 {
+        font-size: 27px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px !important;
+    }
 }

@@ -1,17 +1,13 @@
 <header [class.headerDark]="darkMode">
 
+    <div routerLink="/" class="logoHeader" [class.darkLogo]="darkMode" [class.fontSize]="darkMode">J.H</div>
 
-    <div class="headerCont">
-        <div routerLink="/" class="logoHeader" [class.darkLogo]="darkMode">J.H</div>
-
-        <div class="linksHeader" [class.darkLinks]="darkMode"> 
-                <a routerLink="/">Home</a>
-                <a routerLink="#">About</a>
-                <a routerLink="#">My Skills</a>
-                <a routerLink="#">My Work</a>
-                <a routerLink="/imprint">Imprint</a>
-        </div>
-
+    <div class="linksHeader" [class.darkLinks]="darkMode">
+        <a routerLink="/">Home</a>
+        <a routerLink="#">About</a>
+        <a routerLink="#">Skills</a>
+        <a routerLink="#">Work</a>
+        <a routerLink="/imprint">Imprint</a>
     </div>
 
 </header>
