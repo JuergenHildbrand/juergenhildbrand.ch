@@ -1,122 +1,201 @@
-.topCont {
+.topSection {
     background-color: black;
+    position: relative;
     width: 100%;
-    height: 100vh;
-
-    .topBg {
-        position: relative;
-        width: 100%;
-        padding-top: 62.5%;
+    padding-top: 62.5%;
+    font-family: 'Sen';
 
 
-        .headerImg {
+    .headerImg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        z-index: 1;
+
+        .meImg {
+            width: 52.1%;
+        }
+    }
+
+    .secoundBg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 62.5vw;
+        display: flex;
+        align-items: center;
+        background-color: #181823;
+
+        p {
             position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            display: flex;
-            align-items: center;
-            z-index: 1;
+            left: 8.4vw;
+            bottom: 42%;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 4.51vw;
+            line-height: 6vw;
+            color: white;
+            z-index: 2;
+        }
+    }
+}
 
-            .meImg {
-                width: 52.1%;
-            }
+.sklillsSection {
+    width: 100%;
+    height: 54vw;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-color: #131111;
+
+    h2 {
+        position: absolute;
+        top: 1.11vw;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 2.5vw;
+        line-height: 6.25vw;
+        color: white;
+    }
+
+    .skillBoxes {
+        position: absolute;
+        margin-top: 11.1vw;
+
+    }
+
+    .boxes {
+        position: relative;
+        width: 12.7vw;
+        height: 8.33vw;
+        margin-left: 2.47vw;
+        margin-right: 2.47vw;
+        margin-bottom: 4.86vw;
+        border-radius: 0.42vw;
+        display: flex;
+        justify-content: center;
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.25vw;
+        line-height: 1.94vw;
+        text-align: center;
+        background-color: white;
+
+        p {
+            margin-top: 3.77vw;
         }
 
-        .secoundBg {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            height: 100%;
-            width: 62.5vw;
-            display: flex;
-            align-items: center;
-            background-color: #181823;
+        .p4 {
+            margin-top: 3.21vw;
+        }
 
-            p {
-                position: absolute;
-                left: 8.4vw;
-                bottom: 42%;
-                font-family: 'Sen';
-                font-style: normal;
-                font-weight: bold;
-                font-size: 4.51vw;
-                line-height: 78px;
-                color: white;
-                z-index: 2;
+        .p5 {
+            margin-top: 3.35vw;
+        }
+
+        .p6 {
+            margin-top: 2.8vw;
+        }
+
+        .p7 {
+            margin-top: 3.19vw;
+        }
+
+        .p8 {
+            margin-top: 2.91vw;
+        }
+
+        .p9 {
+            margin-top: 3.68vw;
+        }
+
+        .position {
+            position: absolute;
+            top: -2.22vw;
+            height: 4.19vw;
+            width: 4.19vw;
+            box-shadow: 0vw 0.28vw 0.28vw rgba(197, 197, 197, 0.25);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            border-radius: 100%;
+
+            .js,
+            .htmlCss  {
+                width: 1.67vw;
+                height: 2.01vw;
             }
 
-        
+            .angular {
+                width: 1.46vw;
+            }
+
+            .scrum,
+            .git,
+            .api,
+            .test,
+            .database {
+                width: 1.67vw;
+            }
+
+            .design {
+                width: 1.578vw;
+            }
+
+           
+
         }
     }
 }
 
 
 
+.aboutMeSection {
+    width: 100%;
+    height: 41.6vw;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    font-family: 'Sen';
 
+    .description {
+        h1 {
+            position: absolute;
+            top: 8.33vw;
+            left: 5vw;
+            font-size: 3.82vw;
+        }
 
+        p {
+            position: absolute;
+            top: 14.58vw;
+            left: 5vw;
+            width: 40vw;
+            color: #181823;
+            padding-right: 5vw;
+            font-size: 1.11vw;
+        }
+    }
 
+    .aboutMeImg {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        z-index: 1;
 
-//         // padding-top: 9%;
+        .imgAboutMe {
+            width: 50vw;
 
-//         .center {
-//             position: absolute;
-//             display: flex;
-//             align-items: center;
-
-
-//             .meImg {
-
-
-//                 right: 0;
-
-//                 left: 0;
-
-//                 object-fit: contain;
-//                 // width: 52.1%;
-//                 height: 650px;
-//             }
-//         }
-//     }
-
-// .secoundBg {
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-//     width: 62.5vw;
-//     height: 900px;
-
-//     .contBg {
-//         background-color: #181823;
-//         position: relative;
-//         width: 100%;
-//         padding-top: 100%;
-
-//         .titelCont {
-//             position: absolute;
-//             top: 273px;
-//             left: 6vw;
-//             right: 59px;
-//             height: 263px;
-//             font-family: 'Sen';
-//             font-style: normal;
-//             font-weight: 700;
-//             font-size: 65px;
-//             line-height: 78px;
-//             display: flex;
-//             align-items: center;
-//             color: #FFFFFF;
-//             z-index: 2;
-
-//             .titel {
-//                 position: relative;
-//                 width: 100%;
-//                 padding-top: 0%;
-//             }
-
-//         }
-
-//     }
-
-// }
+        }
+    }
+}

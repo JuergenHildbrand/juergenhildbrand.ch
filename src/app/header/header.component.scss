@@ -1,7 +1,7 @@
 header {
     position: absolute;
     width: 100%;
-    height: 6.11vw;
+    height: 88px;
     z-index: 3;
 
     .logoHeader {
@@ -33,7 +33,7 @@ header {
             font-family: 'Sen';
             font-style: normal;
             font-weight: 400;
-            font-size: 16px;
+            font-size: 1.11vw;
             text-decoration: none;
             color: white;
             opacity: 0.7;
@@ -67,12 +67,18 @@ header {
     box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.2);
 }
 
-@media(max-width: 1000px) {
 
-    .linksHeader {
-        a {
-            font-size: 14px !important;
-        }
-    }
+
+// @media(max-width: 1000px) {
+
+//     .logoHeader {
+//         font-size: 39px !important;
+//     }
+
+//     .linksHeader {
+//         a {
+//             font-size: 14px !important;
+//         }
+//     }
     
-}
+// }
