@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TopContainerComponent } from './top-container/top-container.component';
 import { HeaderComponent } from './header/header.component';
 import { ImprintComponent } from './imprint/imprint.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { ImprintComponent } from './imprint/imprint.component';
     TopContainerComponent,
     HeaderComponent,
     ImprintComponent,
+    FooterComponent,
 
   ],
   imports: [

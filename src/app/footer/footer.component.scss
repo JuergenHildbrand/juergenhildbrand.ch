@@ -1,0 +1,45 @@
+footer {
+    width: 100%;
+    height: 13.89vw;
+    background-color: white;
+    display: flex;
+    align-items: center;
+
+    p {
+        margin-left: 5.76vw;
+        min-width: 15.83vw;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.25vw;
+        line-height: 150%;
+        color: #8491A0;
+        cursor: pointer;
+    }
+
+    .iconsFooter {
+        display: flex;
+        align-items: center;
+        margin-left: 53.68vw;
+
+        .linkedIn {
+            width: 2.34vw;
+            height: 2.34vw;
+            cursor: pointer;
+        }
+
+        .git {
+            margin-left: 6.35vw;
+            width: 2.6vw;
+            height: 2.54vw;
+            cursor: pointer;
+        }
+        .xing {
+            margin-left: 6.57vw;
+            width: 2.11vw;
+            height: 2.48vw;
+            cursor: pointer;
+        }
+    }
+
+}
