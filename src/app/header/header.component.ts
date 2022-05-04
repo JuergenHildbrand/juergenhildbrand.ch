@@ -11,6 +11,18 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.mobileViewUpdate();
+  }
+
+  screenWidth = false;
+
+  mobileViewUpdate() {
+    let viewportWidth = window.innerWidth;
+    if (viewportWidth <= 900) {
+      this.screenWidth = true;
+      console.log(this.screenWidth);
+    }
+
   }
 
 }

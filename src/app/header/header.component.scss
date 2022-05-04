@@ -1,3 +1,7 @@
+.d-none {
+    display: none;
+}
+
 header {
     position: absolute;
     width: 100%;
@@ -46,6 +50,8 @@ header {
         }
     }
 
+
+
     .darkLinks {
         a {
             color: #5221E6;
@@ -69,16 +75,42 @@ header {
 
 
 
-// @media(max-width: 1000px) {
+@media(max-width: 900px) {
 
-//     .logoHeader {
-//         font-size: 39px !important;
-//     }
+    header {
+        position: unset;
+        height: 20vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: black;
 
-//     .linksHeader {
-//         a {
-//             font-size: 14px !important;
-//         }
-//     }
-    
-// }
+
+        .logoHeader {
+            margin-left: 20px;
+            font-size: 12.5vw;
+        }
+
+        .menuImg {
+            margin-left: 88.3vw !important;
+            width: 5.5vw;
+
+        }
+
+        .linksHeader {
+            display: none !important;
+        }
+    }
+
+}
+
+@media(min-width: 900px) {
+    header {
+
+        .menuImg {
+            display: none;
+
+        }
+    }
+
+}

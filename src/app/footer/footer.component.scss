@@ -43,3 +43,42 @@ footer {
     }
 
 }
+
+@media(max-width: 900px) {
+
+    footer {
+        position: relative;
+        height: 30.8vw;
+        flex-direction: column-reverse;
+    
+        p {
+            position: absolute;
+            top: 0;
+            margin-top: 20.83vw;
+            margin-left: 0;
+            font-size: 5vw;
+        }
+    
+        .iconsFooter {
+            position: absolute;
+            top: 6.18vw;
+            margin-left: 0;
+    
+            .linkedIn {
+                width: 8.125vw;
+                height: 8.125vw;
+            }
+    
+            .git {
+                margin-left: 22vw;
+                width: 9.26vw;
+                height: 9.26vw;
+            }
+            .xing {
+                margin-left: 22.775vw;
+                width: 7.31vw;
+                height: 8.6vw;
+            }
+        }
+    }
+}

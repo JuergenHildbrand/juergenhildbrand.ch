@@ -47,7 +47,7 @@
             position: absolute;
             top: 39.3vw;
             left: 8.4vw;
-            max-width: 50vw;
+            width: 50vw;
             font-size: 1.25vw;
             color: white;
             z-index: 3;
@@ -156,12 +156,12 @@
                 width: 1.67vw;
             }
 
-            .test {
-                width: 2.3vw;
-            }
-
             .design {
                 width: 1.578vw;
+            }
+
+            .test {
+                width: 2.3vw;
             }
         }
     }
@@ -193,31 +193,29 @@
 
         img {
             margin: 1.56vw;
-            margin: 1.56vw;
             width: 30.7vw;
             height: 26vw;
         }
     }
-
-
-
-
 }
 
 .aboutMeSection {
+    position: relative;
     width: 100%;
     height: 41.6vw;
     display: flex;
     justify-content: space-between;
-    position: relative;
     font-family: 'Sen';
 
     .description {
-        h1 {
+        h2 {
             position: absolute;
             top: 5.78vw;
             left: 5vw;
+            font-style: normal;
+            font-weight: 700;
             font-size: 3.82vw;
+            line-height: 4.58vw;
         }
 
         p {
@@ -254,7 +252,7 @@
     font-style: normal;
     background-color: black;
 
-    h1 {
+    h2 {
         position: absolute;
         top: 4.32vw;
         left: 27.5vw;
@@ -268,6 +266,8 @@
         position: absolute;
         top: 13.54vw;
         left: 27.5vw;
+        font-family: 'Roboto';
+        font-style: normal;
         font-weight: 500;
         font-size: 1.25vw;
         line-height: 1.39vw;
@@ -287,7 +287,6 @@
         left: 27.3vw;
 
         .contactTxt {
-            margin-top: 1.39vw;
             margin-bottom: 1.11vw;
             font-weight: 500;
             font-size: 1.25vw;
@@ -299,6 +298,7 @@
             width: 41.37vw;
             height: 2.7vw;
             padding-left: 1.13vw;
+            margin-bottom: 1.39vw;
             background: #1A1A1A;
             border: 0px solid;
             font-weight: 500;
@@ -332,7 +332,8 @@
         height: 4.17vw;
         background: black;
         border: 2px solid #2DFCD8;
-        font-family: 'Inter';
+        font-family: 'Roboto';
+        font-style: normal; 
         font-weight: 400;
         font-size: 1.25vw;
         line-height: 0.97vw;
@@ -340,4 +341,287 @@
         cursor: pointer;
     }
 
+}
+
+
+
+@media(max-width: 900px) {
+
+    .topSection {
+        height: fit-content;
+        flex-direction: column;
+
+        .headerImg {
+            position: unset;
+
+            .meImg {
+                width: 100%;
+            }
+        }
+
+        .secoundBg {
+            position: relative;
+            width: 100%;
+            height: 101.11vw;
+            display: flex;
+            align-items: center;
+            background-color: #181823;
+            display: flex;
+            flex-direction: column;
+
+            span {
+                position: absolute;
+                top: 8.52vw;
+                left: 4.4vw;
+                height: 43.33vw;
+                width: 94vw;
+                font-size: 8.79vw;
+                line-height: 10.44vw;
+                color: white;
+                z-index: 2;
+            }
+
+            p {
+                position: absolute;
+                top: 54.67vw;
+                left: 4.4vw;
+                bottom: 8.24vw;
+                width: 94vw;
+                font-size: 5vw;
+                color: white;
+                z-index: 3;
+            }
+        }
+    }
+
+    .sklillsSection {
+        height: 118vw;
+
+        h2 {
+            top: 16.3vw;
+            font-size: 9.63vw;
+            line-height: 11.1vw;
+        }
+
+        .skillBoxes {
+            margin-top: 39vw;
+        }
+
+        .boxes {
+            position: relative;
+            width: 28.79vw;
+            height: 18.87vw;
+            margin-left: 1.38vw;
+            margin-right: 1.38vw;
+            margin-bottom: 11.08vw;
+            border-radius: 1.6vw;
+            font-size: 4.28vw;
+
+            p {
+                margin-top: 8.42vw;
+                line-height: 7.49vw;
+            }
+
+            .p4 {
+                margin-top: 7.4vw;
+                line-height: 7.49vw;
+            }
+
+            .p5 {
+                margin-top: 7.67vw;
+                line-height: 7.49vw;
+            }
+
+            .p6 {
+                margin-top: 6.01vw;
+                line-height: 4.81vw;
+            }
+
+            .p7 {
+                margin-top: 6.62vw;
+                line-height: 7.49vw;
+            }
+
+            .p8 {
+                margin-top: 6.51vw;
+                line-height: 4.81vw;
+            }
+
+            .p9 {
+                margin-top: 5.98vw;
+                line-height: 7.49vw;
+            }
+
+            .position {
+                position: absolute;
+                top: -5vw;
+                height: 9.49vw;
+                width: 9.49vw;
+                box-shadow: 0vw 1.11vw 1.11vw rgba(197, 197, 197, 0.25);
+
+                .js,
+                .htmlCss {
+                    width: 3.67vw;
+                    height: 4.45vw;
+                }
+
+                .angular {
+                    width: 5vw;
+
+                }
+
+                .scrum,
+                .git,
+                .api,
+                .database {
+                    width: 4.43vw;
+                }
+
+                .design {
+                    width: 4vw;
+                }
+
+                .test {
+                    width: 6vw;
+                }
+            }
+        }
+    }
+
+    .workSection {
+        width: 100%;
+        height: 314vw;
+
+        background-color: black;
+
+        h2 {
+            top: 13.04vw;
+            font-size: 9.63vw;
+            line-height: 11.11vw;
+            color: white;
+        }
+
+        .myProjects {
+            position: absolute;
+            top: 32vw;
+            left: 13.64vw;
+
+            .d-flex {
+                flex-direction: column;
+            }
+
+            img {
+                margin: 0;
+                width: 73.53vw;
+                height: 60.96vw;
+                margin-bottom: 6.95vw;
+            }
+        }
+    }
+
+    .aboutMeSection {
+        height: 200vw;
+        flex-direction: column;
+
+        .description {
+            h2 {
+                position: unset;
+                margin-top: 7.29vw;
+                margin-left: 4.44vw;
+                font-size: 8.89vw;
+                line-height: 2.64;
+            }
+
+            p {
+                position: unset;
+                margin-top: 4.44vw;
+                width: 91.12vw;
+                margin-left: 4.44vw;
+                color: #181823;
+                padding-right: 5vw;
+                font-size: 5vw;
+            }
+        }
+
+        .aboutMeImg {
+            top: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            z-index: 1;
+
+            .imgAboutMe {
+                width: 100vw;
+
+            }
+        }
+    }
+
+    .contactSection {
+        height: 220vw;
+
+        h2 {
+            position: absolute;
+            top: 23.8vw;
+            left: 4.28vw;
+            font-size: 8.56vw;
+            line-height: 8.33vw;
+        }
+
+        p {
+            position: absolute;
+            top: 33.16vw;
+            left: 4.44vw;
+            font-weight: 500;
+            font-size: 4.28vw;
+            line-height: 8.02vw;
+        }
+
+        form {
+            position: absolute;
+            top: 59.62vw;
+            left: 4.28vw;
+
+            .contactTxt {
+                margin-bottom: 4.28vw;
+                font-weight: 500;
+                font-size: 4.28vw;
+                line-height: 5.35vw;
+
+            }
+
+            input {
+                width: 86.5vw;
+                height: 10vw;
+                padding-left: 4.28vw;
+                margin-bottom: 4.28vw;
+                font-size: 4.28vw;
+                line-height: 5.35vw;
+            }
+
+            textarea {
+                width: 86.5vw;
+                height: 47.86vw;
+                padding-top: 2.44vw;
+                padding-left: 4.28vw;
+                font-weight: 500;
+                font-size: 4.28vw;
+                line-height: 5.55vw;
+            }
+        }
+
+        button {
+            position: absolute;
+            top: 174.6vw;
+            left: 59.6vw;
+            width: 35.56vw;
+            height: 16.67vw;
+            font-weight: 500;
+            font-size: 5vw;
+            line-height: 5.55vw;
+
+        }
+
+    }
 }
