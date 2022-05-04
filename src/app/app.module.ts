@@ -7,6 +7,10 @@ import { TopContainerComponent } from './top-container/top-container.component';
 import { HeaderComponent } from './header/header.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { FooterComponent } from './footer/footer.component';
+import { ContactSectionComponent } from './contact-section/contact-section.component';
+import { AboutMeSectionComponent } from './about-me-section/about-me-section.component';
+import { WorkSectionComponent } from './work-section/work-section.component';
+import { SkillsSectionComponent } from './skills-section/skills-section.component';
 
 
 @NgModule({
@@ -16,6 +20,10 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent,
     ImprintComponent,
     FooterComponent,
+    ContactSectionComponent,
+    AboutMeSectionComponent,
+    WorkSectionComponent,
+    SkillsSectionComponent,
 
   ],
   imports: [
