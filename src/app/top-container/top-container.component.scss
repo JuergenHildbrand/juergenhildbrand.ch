@@ -83,27 +83,30 @@
             display: flex;
             flex-direction: column;
 
-            span {
-                position: absolute;
-                top: 8.52vw;
-                left: 4.4vw;
-                height: 43.33vw;
-                width: 94vw;
-                font-size: 8.79vw;
-                line-height: 10.44vw;
-                color: white;
-                z-index: 2;
-            }
+            .headerTxt {
 
-            p {
-                position: absolute;
-                top: 54.67vw;
-                left: 4.4vw;
-                bottom: 8.24vw;
-                width: 94vw;
-                font-size: 5vw;
-                color: white;
-                z-index: 3;
+                span {
+                    position: absolute;
+                    top: 8.52vw;
+                    left: 4.4vw;
+                    height: 43.33vw;
+                    width: 94vw;
+                    font-size: 8.79vw;
+                    line-height: 10.44vw;
+                    color: white;
+                    z-index: 2;
+                }
+
+                p {
+                    position: absolute;
+                    top: 54.67vw;
+                    left: 4.4vw;
+                    bottom: 8.24vw;
+                    width: 94vw;
+                    font-size: 5vw;
+                    color: white;
+                    z-index: 3;
+                }
             }
         }
     }
