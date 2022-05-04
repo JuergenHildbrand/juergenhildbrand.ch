@@ -82,29 +82,22 @@
             border-radius: 100%;
 
             .js,
-            .htmlCss {
-                width: 1.67vw;
-                height: 2.01vw;
-            }
-
-            .angular {
-                width: 1.8vw;
-
-            }
-
+            .htmlCss,
             .scrum,
-            .git,
-            .api,
-            .database {
-                width: 1.67vw;
+            .database,
+            .design {
+                width: 2.4vw;
+                height: 2.4vw;
             }
 
-            .design {
-                width: 1.578vw;
+            .angular,
+            .git,
+            .api {
+                width: 2.9vw;
             }
 
             .test {
-                width: 2.3vw;
+                width: 3.1vw;
             }
         }
     }
