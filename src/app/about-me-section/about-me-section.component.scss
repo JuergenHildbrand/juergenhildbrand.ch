@@ -47,12 +47,12 @@
 
     .aboutMeSection {
         height: 200vw;
-        flex-direction: column;
+        flex-direction: column-reverse;
 
         .description {
             h2 {
                 position: unset;
-                margin-top: 7.29vw;
+                margin-top: -109vw;
                 margin-left: 4.44vw;
                 font-size: 8.89vw;
                 line-height: 2.64;
