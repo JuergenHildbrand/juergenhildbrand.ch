@@ -254,7 +254,7 @@
 
     h2 {
         position: absolute;
-        top: 4.32vw;
+        top: 7vw;
         left: 27.5vw;
         font-weight: 700;
         font-size: 3.82vw;
@@ -581,7 +581,7 @@
 
         h2 {
             position: absolute;
-            top: 16.67vw;
+            top: 20vw;
             left: 4.28vw;
             font-size: 8.89vw;
             line-height: 8.33vw;
@@ -596,8 +596,6 @@
             p {
                 font-size: 4.28vw;
                 line-height: 8.02vw;
-                color: #FFFFFF;
-                opacity: 0.66;
             }
     
             a {
@@ -605,35 +603,13 @@
                 top: 8vw;
                 left: -0.5vw;
                 font-size: 4.28vw;
-                text-decoration: none;
-                color: white;
                 padding: 0.7vw;
-                cursor: pointer;
     
                 &:hover {
-                    color: white;
-                    background-color: #5221E6;
                     padding: 0.7vw;
                 }
             }
         }
-
-        // .contactDescription {
-        //     position: relative;
-        //     width: 100%;
-        //     height: 62.1vw;
-        //     font-family: 'Inter';
-        //     font-style: normal;
-        //     background-color: black;
-
-        //     p {
-        //         top: 33.16vw;
-        //         left: 4.44vw;
-        //         font-weight: 500;
-        //         font-size: 4.28vw;
-        //         line-height: 8.02vw;
-        //     }
-        // }
 
         form {
             position: absolute;
