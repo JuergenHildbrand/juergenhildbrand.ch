@@ -14,9 +14,14 @@
         display: flex;
         align-items: center;
         z-index: 1;
+        font-family: 'Seravek';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 150%;
 
         .meImg {
-            width: 52.1%;
+            width: 52.1vw;
         }
     }
 
@@ -46,10 +51,13 @@
                 line-height: 6vw;
                 color: white;
                 z-index: 2;
+                font-family: 'Sen';
+                font-style: normal;
+                font-weight: 700;
             }
 
             p {
-                width: 50vw;
+                margin-top: 0.5vw;
                 font-size: 1.25vw;
                 color: white;
                 z-index: 3;
@@ -62,21 +70,24 @@
 @media(max-width: 900px) {
 
     .topSection {
-        height: fit-content;
-        flex-direction: column;
+        height: calc(100vh - 88px);
 
         .headerImg {
             position: unset;
 
             .meImg {
                 width: 100%;
+                min-height: calc(100vh - 88px - 280px);
+                height: calc(100vh - 88px - 280px);;
+                object-fit: cover;
+                object-position: 0px 20%;
             }
         }
 
         .secoundBg {
             position: relative;
             width: 100%;
-            height: 101.11vw;
+            height: 280px;
             display: flex;
             align-items: center;
             background-color: #181823;
@@ -84,29 +95,72 @@
             flex-direction: column;
 
             .headerTxt {
+                margin-left: 0;
 
                 span {
                     position: absolute;
-                    top: 8.52vw;
-                    left: 4.4vw;
-                    height: 43.33vw;
-                    width: 94vw;
-                    font-size: 8.79vw;
-                    line-height: 10.44vw;
-                    color: white;
-                    z-index: 2;
+                    top: 31px;
+                    left: 16px;
+                    font-size: 32px;
+                    line-height: 38px;
                 }
 
                 p {
                     position: absolute;
-                    top: 54.67vw;
-                    left: 4.4vw;
-                    bottom: 8.24vw;
-                    width: 94vw;
-                    font-size: 5vw;
+                    top: 157px;
+                    left: 16px;
+                    font-size: 18px;
                     color: white;
                     z-index: 3;
                 }
+
+                .pSecound {
+                    position: absolute;
+                    top: 187px;
+                    
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 380px) {
+
+    .topSection {
+        .secoundBg {
+            .headerTxt {
+
+                span {
+                    font-size: 8vw;
+                }
+
+                p {
+                    font-size: 4vw;
+                }
+
+                .pSecound {
+                    font-size: 4vw;
+                }
+            }
+        }   
+    }
+}
+
+
+
+@media(min-width: 1600px) {
+
+    .topSection {
+
+        .headerImg {
+            width: 100%;
+
+            .meImg {
+                margin-top: 88px !important;
+                width: 52.1%;
+                max-height: 80%;
+                object-fit: cover;
+                object-position: 0px 20%;
             }
         }
     }

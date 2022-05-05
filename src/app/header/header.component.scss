@@ -75,7 +75,7 @@ header {
 
     header {
         position: unset;
-        height: 20vw;
+        height: 88px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -83,13 +83,15 @@ header {
 
 
         .logoHeader {
-            margin-left: 20px;
-            font-size: 12.5vw;
+            position: absolute;
+            left: 0;
+            margin-left: 4.44vw;
+            font-size: 45px;
         }
 
         .menuImg {
             margin-left: 88.3vw !important;
-            width: 5.5vw;
+            width: 20px;
 
         }
 
@@ -100,7 +102,7 @@ header {
 
 }
 
-@media(min-width: 900px) {
+@media(min-width: 901px) {
     header {
 
         .menuImg {
