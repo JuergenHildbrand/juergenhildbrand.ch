@@ -71,11 +71,11 @@ header {
 
 
 
-@media(max-width: 900px) {
+@media(max-width: 1400px) {
 
     header {
         position: unset;
-        height: 88px;
+        height: 400px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -89,10 +89,70 @@ header {
             font-size: 45px;
         }
 
-        .menuImg {
-            margin-left: 88.3vw !important;
-            width: 20px;
+        .menu {
+            position: relative;
+            margin-left: 75%;
+            height: 100%;
+            width: 25%;
+            font-family: 'Sen';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            z-index: 4;
 
+
+            .topnav {
+                height: 100%;
+                overflow: hidden;
+                background-color: black;
+            }
+
+            .topnav #myLinks {
+                display: none;
+            }
+
+            #myLinks a {
+
+                color: white;
+                background-color: #333;
+                padding-left: 10vw;
+                padding-top: 8px;
+                padding-bottom: 8px;
+                margin: 4px;
+                opacity: 0.7;
+
+                &:first-child {
+                    margin-top: 88px;
+                }
+            }
+
+
+            .topnav a {
+                color: white;
+                text-decoration: none;
+                display: block;
+            }
+
+            .topnav a.icon {
+                background: transparent;
+                display: block;
+                position: absolute;
+                right: 30px;
+                top: 30px;
+            }
+
+            // .topnav a:hover {
+            //     background-color: #ddd;
+
+            // }
+
+            .active {
+                background-color: transparent;
+            }
+        }
+
+        .menuImg {
+            width: 20px;
         }
 
         .linksHeader {
@@ -102,7 +162,7 @@ header {
 
 }
 
-@media(min-width: 901px) {
+@media(min-width: 1401px) {
     header {
 
         .menuImg {
@@ -110,5 +170,4 @@ header {
 
         }
     }
-
 }

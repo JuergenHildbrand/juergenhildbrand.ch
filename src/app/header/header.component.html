@@ -2,10 +2,6 @@
 
     <div routerLink="/" class="logoHeader" [class.darkLogo]="darkMode" [class.fontSize]="darkMode">J.H</div>
 
-    <div class="menu">
-        <img class="menuImg" src="assets/ico/menu-smartphone.png">
-    </div>
-
     <div class="linksHeader" [class.darkLinks]="darkMode">
         <a routerLink="/">Home</a>
         <a routerLink="#">Skills</a>
@@ -14,9 +10,24 @@
         <a routerLink="/imprint">Imprint</a>
     </div>
 
-    
-    
+    <div class="menu">
+        <div class="topnav">
+            <a href="#home" class="active"></a>
+            <div id="myLinks">
+                <a routerLink="/">Home</a>
+                <a routerLink="#">Skills</a>
+                <a routerLink="#">Work</a>
+                <a routerLink="#">About</a>
+                <a routerLink="/imprint">Imprint</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" (click)="openMenu()">
+                <img class="menuImg" src="assets/ico/menu-smartphone.png">
+            </a>
+        </div>
+    </div>
+
+
+
+
 
 </header>
-
-<!-- [class.d-none]="!screenWidth" -->
