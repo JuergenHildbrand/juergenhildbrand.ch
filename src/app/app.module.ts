@@ -11,6 +11,7 @@ import { ContactSectionComponent } from './contact-section/contact-section.compo
 import { AboutMeSectionComponent } from './about-me-section/about-me-section.component';
 import { WorkSectionComponent } from './work-section/work-section.component';
 import { SkillsSectionComponent } from './skills-section/skills-section.component';
+import { TopSectionComponent } from './top-section/top-section.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { SkillsSectionComponent } from './skills-section/skills-section.componen
     AboutMeSectionComponent,
     WorkSectionComponent,
     SkillsSectionComponent,
+    TopSectionComponent,
 
   ],
   imports: [

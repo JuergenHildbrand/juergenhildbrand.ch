@@ -1,9 +1,11 @@
-body {
+body,
+html {
     margin: 0;
     width: 100%;
     max-width: 1920px;
     padding: -40px, 72px;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {

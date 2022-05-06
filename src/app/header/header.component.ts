@@ -26,6 +26,8 @@ export class HeaderComponent implements OnInit {
 
 
 
+
+
   // screenWidth = false;
 
   // mobileViewUpdate() {
