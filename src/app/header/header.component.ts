@@ -15,11 +15,15 @@ export class HeaderComponent implements OnInit {
   }
 
   openMenu() {
-    var x = document.getElementById("myLinks");
-    if (x.style.display === "block") {
-      x.style.display = "none";
+    let x = document.getElementById('myLinks');
+    if (x.style.display === 'block') {
+      x.classList.add('exitMenu');
+      setTimeout(() => {
+        x.style.display = 'none';
+        x.classList.remove('exitMenu');
+      }, 1000);
     } else {
-      x.style.display = "block";
+      x.style.display = 'block';
     }
   }
 

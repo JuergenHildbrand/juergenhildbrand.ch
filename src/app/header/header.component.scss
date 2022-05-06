@@ -93,7 +93,7 @@ header {
             position: relative;
             margin-left: 75%;
             height: 100%;
-            width: 25%;
+            width: 33.3%;
             z-index: 4;
             font-family: 'Sen';
             font-style: normal;
@@ -111,20 +111,48 @@ header {
                 display: none;
             }
 
-            #myLinks a {
-                color: white;
-                background-color: #333;
-                padding-left: 10vw;
-                padding-top: 8px;
-                padding-bottom: 8px;
-                margin: 1px;
-                opacity: 0.7;
+            #myLinks {
+                position: absolute;
+                width: 90%;
+                text-align: right;
+                animation: smoothOut 500ms ease-in-out;
+            }
 
-                &:first-child {
-                    margin-top: 88px;
+            @keyframes smoothOut {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
                 }
             }
 
+            .exitMenu {
+                animation: smoothIn 500ms ease-in-out;
+            }
+
+            @keyframes smoothIn {
+                100% {
+                    opacity: 1;
+                }
+                0% {
+                    opacity: 0;
+                }
+            }
+
+            #myLinks a {
+                color: rgba(255, 255, 255, 0.7);
+                background-color: black;
+                margin-top: 2px;
+                padding-top: 16px;
+                padding-bottom: 16px;
+                padding-right: 16px;
+                translate: 225ms ease-in-out;
+
+                &:first-child {
+                    margin-top: 90px;
+                }
+            }
 
             .topnav a {
                 color: white;
@@ -163,7 +191,6 @@ header {
 
 @media(min-width: 1401px) {
     header {
-
         .menu {
             display: none;
 
