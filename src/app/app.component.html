@@ -1,5 +1,5 @@
-<app-header [darkMode]="router.url !== '/'"></app-header>
-<div [class.container]="router.url !== '/'">
+<app-header [darkMode]="router.url.startsWith('imprint')"></app-header>
+<div [class.container]="router.url.startsWith('imprint')">
     <router-outlet></router-outlet>
 </div>
 <app-footer></app-footer>
