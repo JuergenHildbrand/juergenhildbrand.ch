@@ -27,3 +27,89 @@ span {
     margin-block-start: 0;
     margin-block-end: 0;
 }
+
+
+
+// Animations //
+
+// Header && TopSection //
+
+.openMenuA {
+    animation: smoothOut 225ms ease-in-out;
+}
+
+@keyframes smoothOut {
+    0% {
+        opacity: 0;
+        padding-left: 90%;
+        width: 0%;
+    }
+    100% {
+        opacity: 1;
+        padding-left: 0;
+        width: 100%;
+    }
+}
+
+.exitMenu {
+    animation: smoothIn 225ms ease-in-out;
+}
+
+@keyframes smoothIn {
+    0% {
+        opacity: 1;
+        padding-left: 0;
+        width: 100%;
+    }
+    100% {
+        opacity: 0;
+        padding-left: 90%;
+        width: 0%;
+    }
+}
+
+.colorLinksT {
+    text-decoration: transparent;
+}
+
+.colorLinksV {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+
+@keyframes fadeInAmimationLeft {
+
+    0% {
+        opacity: 0;
+        transform: translateX(-1000px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }  
+}
+
+@keyframes fadeInAmimationRight {
+
+    0% {
+        opacity: 0;
+        transform: translateX(1000px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }  
+}
+
+
+@keyframes fadeInAmimationTop {
+
+    0% {
+        opacity: 0;
+        transform: translateY(-1000px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }  
+}

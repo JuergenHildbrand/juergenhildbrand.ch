@@ -5,3 +5,34 @@
     padding-bottom: 36px;
 }
 
+
+#overlayBg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255,255,255,0.5);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    font-family: 'sen';
+    font-size: 100px;
+}
+
+.canceling {
+    animation: cancel 2s ease;
+}
+
+@keyframes cancel {
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

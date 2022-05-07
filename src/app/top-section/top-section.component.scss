@@ -19,6 +19,7 @@
         font-weight: 700;
         font-size: 45px;
         line-height: 150%;
+        animation: fadeInAmimationLeft 1.5s ease;
 
         .meImg {
             width: 52.1vw;
@@ -43,6 +44,7 @@
             flex-direction: column;
             justify-content: center;
             margin-left: 8vw;
+            animation: fadeInAmimationRight 1.5s ease;
 
             span {
                 font-style: normal;
@@ -74,6 +76,7 @@
 
         .headerImg {
             position: unset;
+            animation: fadeInAmimationTop 1s ease;
 
             .meImg {
                 width: 100%;
@@ -96,6 +99,7 @@
 
             .headerTxt {
                 margin-left: 0;
+                animation: fadeInAmimationLeft 1.5s ease;
 
                 span {
                     position: absolute;
