@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TopContainerComponent } from './top-container/top-container.component';
@@ -12,6 +12,7 @@ import { AboutMeSectionComponent } from './about-me-section/about-me-section.com
 import { WorkSectionComponent } from './work-section/work-section.component';
 import { SkillsSectionComponent } from './skills-section/skills-section.component';
 import { TopSectionComponent } from './top-section/top-section.component';
+import { ScrollDetectionComponent } from './scroll-detection.component';
 
 
 @NgModule({
@@ -26,11 +27,14 @@ import { TopSectionComponent } from './top-section/top-section.component';
     WorkSectionComponent,
     SkillsSectionComponent,
     TopSectionComponent,
+    ScrollDetectionComponent,
+
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

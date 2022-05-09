@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ContactSectionComponent } from './contact-section/contact-section.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { TopContainerComponent } from './top-container/top-container.component';
 

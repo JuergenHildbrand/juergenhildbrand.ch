@@ -28,11 +28,11 @@ overlayBg() {
   z.classList.add('canceling');
   setTimeout(() => {
     d.classList.remove('d-none');
-  }, 2000);
+  }, 20);
 
   setTimeout(() => {
     y.classList.add('d-none');  
-  }, 1900);
+  }, 19);
   
 }
 }

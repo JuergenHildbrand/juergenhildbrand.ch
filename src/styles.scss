@@ -30,9 +30,9 @@ span {
 
 
 
-// Animations //
+////////// Animations /////////
 
-// Header && TopSection //
+// Header 
 
 .openMenuA {
     animation: smoothOut 225ms ease-in-out;
@@ -77,6 +77,8 @@ span {
 }
 
 
+// TopSection
+
 @keyframes fadeInAmimationLeft {
 
     0% {
@@ -112,4 +114,25 @@ span {
         opacity: 1;
         transform: translateY(0);
     }  
+}
+
+
+
+// Skills
+
+
+.fadeAnimationBottom {
+    animation: skillsMiddle 225ms ease;
+}
+
+@keyframes skillsMiddle {
+
+    0% {
+        opacity: 0;
+        transform: translateY(+1000px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    } 
 }
