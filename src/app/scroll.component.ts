@@ -1,20 +1,29 @@
-import { Directive, HostListener, Injectable } from '@angular/core';
+import { Directive, HostListener } from '@angular/core';
+import { ScrollService} from "./scroll.service";
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Directive({
   selector: '[scrolledTo]',
   exportAs: 'scrolledTo'
 })
 
-@Injectable()
 
-export class ScrollDetectionComponent {
-  
+export class ScrollComponent {
+
+  reachedSkills$: Observable<boolean>;
+  reachedWork$: Observable<boolean>;
+  reachedAbout$: Observable<boolean>;
+  reachedContact$: Observable<boolean>;
+
+  constructor(private scrollService: ScrollService) {}
+
 
   reachedSkills = false;
   reachedWork = false;
   reachedAbout = false;
   reachedContact = false;
-
+  
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
 
@@ -45,5 +54,18 @@ export class ScrollDetectionComponent {
     this.reachedAbout = screenBottom > aboutTopPosition && screenTop < aboutBottomPosition;
     this.reachedContact = screenBottom > contactTopPosition;
 
+    console.log('skills', this.reachedSkills);
+    // console.log('work', this.reachedWork);
+    // console.log('about', this.reachedAbout);
+    // console.log('contact', this.reachedContact);
+  }
+
+  getVariables() {
+    return this.reachedSkills,
+      this.reachedWork,
+      this.reachedAbout,
+      this.reachedContact
   }
 }
+
+

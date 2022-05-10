@@ -12,7 +12,8 @@ import { AboutMeSectionComponent } from './about-me-section/about-me-section.com
 import { WorkSectionComponent } from './work-section/work-section.component';
 import { SkillsSectionComponent } from './skills-section/skills-section.component';
 import { TopSectionComponent } from './top-section/top-section.component';
-import { ScrollDetectionComponent } from './scroll-detection.component';
+import { ScrollComponent } from './scroll.component';
+
 
 
 @NgModule({
@@ -27,7 +28,7 @@ import { ScrollDetectionComponent } from './scroll-detection.component';
     WorkSectionComponent,
     SkillsSectionComponent,
     TopSectionComponent,
-    ScrollDetectionComponent,
+    ScrollComponent
 
 
   ],
