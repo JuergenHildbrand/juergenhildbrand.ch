@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
       const workHeight = work.clientHeight;
       const workTopPosition = work.offsetTop;
       const workBottomPosition = workTopPosition + workHeight;
-
+  
       const about = document.getElementById('about');
       const aboutHeight = about.clientHeight;
       const aboutTopPosition = about.offsetTop;
