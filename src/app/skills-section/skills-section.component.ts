@@ -20,7 +20,7 @@ export class SkillsSectionComponent  implements OnInit {
 
 
   ngOnInit(): void {
-    console.log(this.scrollService.reachedSkills)
+
   }
 }
 

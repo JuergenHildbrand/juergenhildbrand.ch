@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ScrollService } from '../scroll.service';
 
 @Component({
   selector: 'app-top-container',
@@ -9,9 +10,14 @@ export class TopContainerComponent implements OnInit {
 
 
 
-  constructor() { }
+  constructor(public scrollService : ScrollService) {}
 
   ngOnInit(): void {
+
+      console.log('skills', this.scrollService.reachedSkills);
+      console.log('work', this.scrollService.reachedWork);
+      console.log('about', this.scrollService.reachedAbout);
+      console.log('contact', this.scrollService.reachedContact);
   }
 
   

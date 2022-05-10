@@ -7,10 +7,15 @@ import { ScrollService } from './scroll.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-
+  providers: [ScrollService]
 })
 
 export class AppComponent implements OnInit {
+
+  reachedSkills = false;
+  reachedWork = false;
+  reachedAbout = false;
+  reachedContact = false;
 
 
   constructor(public router: Router, private scrollService : ScrollService) { }
@@ -44,11 +49,6 @@ export class AppComponent implements OnInit {
       this.scrollService.reachedWork = screenBottom > workTopPosition && screenTop < workBottomPosition;
       this.scrollService.reachedAbout = screenBottom > aboutTopPosition && screenTop < aboutBottomPosition;
       this.scrollService.reachedContact = screenBottom > contactTopPosition;
-  
-      // console.log('skills', this.scrollService.reachedSkills);
-      // console.log('work', this.reachedWork);
-      // console.log('about', this.reachedAbout);
-      // console.log('contact', this.reachedContact);
     }
   
 

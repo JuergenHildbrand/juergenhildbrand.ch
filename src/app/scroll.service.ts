@@ -1,21 +1,17 @@
-import { Injectable } from '@angular/core';
+import {  Injectable, NgModule } from '@angular/core';
+
 
 @Injectable({
   providedIn: 'root'
 })
 
-
-
 export class ScrollService {
 
-  
 
-  reachedSkills = false;
-  reachedWork = false;
-  reachedAbout = false;
-  reachedContact = false;
-
-  
+  reachedSkills: boolean;
+  reachedWork: boolean;
+  reachedAbout: boolean;
+  reachedContact: boolean;
 
   getVariables() {
     return  this.reachedSkills,
