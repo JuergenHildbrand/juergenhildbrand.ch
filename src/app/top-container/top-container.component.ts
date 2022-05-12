@@ -14,10 +14,7 @@ export class TopContainerComponent implements OnInit {
 
   ngOnInit(): void {
 
-      console.log('skills', this.scrollService.reachedSkills);
-      console.log('work', this.scrollService.reachedWork);
-      console.log('about', this.scrollService.reachedAbout);
-      console.log('contact', this.scrollService.reachedContact);
+     
   }
 
   

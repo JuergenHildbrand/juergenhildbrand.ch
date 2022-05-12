@@ -1,4 +1,4 @@
-import {  Injectable, NgModule } from '@angular/core';
+import {  Injectable } from '@angular/core';
 
 
 @Injectable({
@@ -7,17 +7,9 @@ import {  Injectable, NgModule } from '@angular/core';
 
 export class ScrollService {
 
-
-  reachedSkills: boolean;
   reachedWork: boolean;
   reachedAbout: boolean;
   reachedContact: boolean;
 
-  getVariables() {
-    return  this.reachedSkills,
-            this.reachedWork,
-            this.reachedAbout,
-            this.reachedContact
-  }
 }
 

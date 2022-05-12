@@ -68,25 +68,15 @@ span {
     }
 }
 
-.colorLinksT {
-    text-decoration: transparent;
-}
-
-.colorLinksV {
-    color: rgba(255, 255, 255, 0.7) !important;
-}
-
 
 // TopSection
 
 @keyframes fadeInAmimationLeft {
 
     0% {
-        opacity: 0;
         transform: translateX(-1000px);
     }
     100% {
-        opacity: 1;
         transform: translateX(0);
     }  
 }
@@ -94,11 +84,9 @@ span {
 @keyframes fadeInAmimationRight {
 
     0% {
-        opacity: 0;
         transform: translateX(1000px);
     }
     100% {
-        opacity: 1;
         transform: translateX(0);
     }  
 }
@@ -107,11 +95,9 @@ span {
 @keyframes fadeInAmimationTop {
 
     0% {
-        opacity: 0;
         transform: translateY(-1000px);
     }
     100% {
-        opacity: 1;
         transform: translateY(0);
     }  
 }
@@ -121,18 +107,36 @@ span {
 // Skills
 
 
-.fadeAnimationBottom {
-    animation: skillsMiddle 225ms ease;
-}
 
-@keyframes skillsMiddle {
+@keyframes fadeOutAmimationRight {
 
     0% {
-        opacity: 0;
-        transform: translateY(+1000px);
+        transform: translateX(0);
     }
     100% {
+        transform: translateX(1000px);
+    }  
+}
+
+@keyframes fadeOutAmimationLeft {
+
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-1000px);
+    }  
+}
+
+@keyframes showObject {
+    to {
         opacity: 1;
-        transform: translateY(0);
-    } 
+    }
+}
+
+@keyframes hiddenObject {
+    to {
+        opacity: 0;
+    }
+    
 }

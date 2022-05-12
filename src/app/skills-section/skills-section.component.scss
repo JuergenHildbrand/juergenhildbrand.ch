@@ -15,9 +15,10 @@
         font-size: 3.82vw;
         line-height: 6.25vw;
         color: white;
+
     }
 
-    .skillBoxes {
+    .skillBoxesCont {
         position: absolute;
         margin-top: 11.1vw;
 
@@ -40,6 +41,7 @@
         line-height: 1.94vw;
         text-align: center;
         background-color: white;
+       
 
         p {
             margin-top: 3.77vw;
@@ -101,7 +103,7 @@
             }
         }
     }
-    
+
     .middle {
         transition: .5s ease;
         opacity: 0;
@@ -111,7 +113,7 @@
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%)
     }
-}   
+}
 
 
 @media(max-width: 900px) {
@@ -211,9 +213,51 @@
     }
 }
 
+
+
 // Animations
 
-
-.testSkill {
-    display: none;
+.titleIn {
+    animation: fadeInAmimationLeft 0.225s ease-in-out;
 }
+.titleOut {
+    animation: hiddenObject 0s 0.224s forwards, fadeOutAmimationRight 0.225s ease-in-out;
+}
+.active1InR {
+    animation: fadeInAmimationRight 0.2s ease;
+}
+.active2InR {
+    animation: fadeInAmimationRight 0.4s ease;
+}
+.active3InR {
+    animation: fadeInAmimationRight 0.6s ease;
+}
+.active1InL {
+    animation: fadeInAmimationLeft 0.2s ease;
+}
+.active2InL {
+    animation: fadeInAmimationLeft 0.4s ease;
+}
+.active3InL {
+    animation: fadeInAmimationLeft 0.6s ease;
+}
+.active1OutL {
+    animation: hiddenObject 0s 0.19s forwards, fadeOutAmimationLeft 0.2s ease;
+}
+.active2OutL {
+    animation: hiddenObject 0s 0.19s forwards, fadeOutAmimationLeft 0.4s ease;
+}
+.active3OutL {
+    animation: hiddenObject 0s 0.19s forwards, fadeOutAmimationLeft 0.6s ease;
+}
+.active1OutR {
+    animation: hiddenObject 0s 0.19s forwards, fadeOutAmimationRight 0.2s ease;
+}
+.active2OutR {
+    animation: hiddenObject 0s 0.19s forwards, fadeOutAmimationRight 0.4s ease;
+}
+.active3OutR {
+    animation: hiddenObject 0s 0.19s forwards, fadeOutAmimationRight 0.6s ease;
+}
+
+
