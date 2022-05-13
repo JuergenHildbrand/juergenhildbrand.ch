@@ -32,41 +32,6 @@ span {
 
 ////////// Animations /////////
 
-// Header 
-
-.openMenuA {
-    animation: smoothOut 225ms ease-in-out;
-}
-@keyframes smoothOut {
-    0% {
-        opacity: 0;
-        padding-left: 90%;
-        width: 0%;
-    }
-    100% {
-        opacity: 1;
-        padding-left: 0;
-        width: 100%;
-    }
-}
-
-.exitMenu {
-    animation: smoothIn 225ms ease-in-out;
-}
-@keyframes smoothIn {
-    0% {
-        opacity: 1;
-        padding-left: 0;
-        width: 100%;
-    }
-    100% {
-        opacity: 0;
-        padding-left: 90%;
-        width: 0%;
-    }
-}
-
-
 
 ////// Animations left right ///////
 
@@ -77,47 +42,47 @@ span {
     animation: hiddenObject 0s 0.49s forwards, fadeOutAmimationRight 0.5s ease-in-out;
 }
 .active1InR {
-    animation: fadeInAmimationRight 0.4s ease;
-}
-.active2InR {
     animation: fadeInAmimationRight 0.6s ease;
 }
-.active3InR {
+.active2InR {
     animation: fadeInAmimationRight 0.8s ease;
 }
-.active1InL {
-    animation: fadeInAmimationLeft 0.4s ease;
+.active3InR {
+    animation: fadeInAmimationRight 1s ease;
 }
-.active2InL {
+.active1InL {
     animation: fadeInAmimationLeft 0.6s ease;
 }
-.active3InL {
+.active2InL {
     animation: fadeInAmimationLeft 0.8s ease;
 }
+.active3InL {
+    animation: fadeInAmimationLeft 1s ease;
+}
 .active1OutL {
-    animation: hiddenObject 0s 0.19s forwards, fadeOutAmimationLeft 0.4s ease;
+    animation: hiddenObject 0s 0.59s forwards, fadeOutAmimationLeft 0.6s ease;
 }
 .active2OutL {
-    animation: hiddenObject 0s 0.19s forwards, fadeOutAmimationLeft 0.6s ease;
+    animation: hiddenObject 0s 0.79s forwards, fadeOutAmimationLeft 0.8s ease;
 }
 .active3OutL {
-    animation: hiddenObject 0s 0.19s forwards, fadeOutAmimationLeft 0.8s ease;
+    animation: hiddenObject 0s 0.99s forwards, fadeOutAmimationLeft 1s ease;
 }
 .active1OutR {
-    animation: hiddenObject 0s 0.19s forwards, fadeOutAmimationRight 0.4s ease;
+    animation: hiddenObject 0s 0.59s forwards, fadeOutAmimationRight 0.6s ease;
 }
 .active2OutR {
-    animation: hiddenObject 0s 0.19s forwards, fadeOutAmimationRight 0.6s ease;
+    animation: hiddenObject 0s 0.79s forwards, fadeOutAmimationRight 0.8s ease;
 }
 .active3OutR {
-    animation: hiddenObject 0s 0.19s forwards, fadeOutAmimationRight 0.8s ease;
+    animation: hiddenObject 0s 0.99s forwards, fadeOutAmimationRight 1s ease;
 }
 
 
 @keyframes fadeInAmimationLeft {
 
     0% {
-        transform: translateX(-1000px);
+        transform: translateX(-1200px);
     }
     100% {
         transform: translateX(0);
@@ -127,7 +92,7 @@ span {
 @keyframes fadeInAmimationRight {
 
     0% {
-        transform: translateX(1000px);
+        transform: translateX(1200px);
     }
     100% {
         transform: translateX(0);
@@ -137,7 +102,7 @@ span {
 @keyframes fadeInAmimationTop {
 
     0% {
-        transform: translateY(-1000px);
+        transform: translateY(-1200px);
     }
     100% {
         transform: translateY(0);
@@ -151,7 +116,7 @@ span {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(1000px);
+        transform: translateX(1200px);
     }  
 }
 
@@ -161,7 +126,7 @@ span {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-1000px);
+        transform: translateX(-1200px);
     }  
 }
 

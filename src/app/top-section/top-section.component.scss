@@ -45,6 +45,7 @@
             justify-content: center;
             margin-left: 8vw;
             animation: fadeInAmimationRight 1.5s ease;
+            z-index: 2;
 
             span {
                 font-style: normal;
@@ -52,7 +53,6 @@
                 font-size: 4.51vw;
                 line-height: 6vw;
                 color: white;
-                z-index: 2;
                 font-family: 'Sen';
                 font-style: normal;
                 font-weight: 700;
@@ -62,14 +62,13 @@
                 margin-top: 0.5vw;
                 font-size: 1.25vw;
                 color: white;
-                z-index: 2;
             }
         }
     }
 }
 
 
-@media(max-width: 1400px) {
+@media(max-width: 901px) {
 
     .topSection {
         height: calc(100vh - 88px);
