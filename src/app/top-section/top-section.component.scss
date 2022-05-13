@@ -19,8 +19,7 @@
         font-weight: 700;
         font-size: 45px;
         line-height: 150%;
-        animation: fadeInAmimationLeft 1.5s ease;
-
+        opacity: 0.9;
         .meImg {
             width: 52.1vw;
         }
@@ -38,14 +37,13 @@
         background-color: #181823;
 
         .headerTxt {
-            height: 100vh;
+            height: fit-content;
             width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             margin-left: 8vw;
-            animation: fadeInAmimationRight 1.5s ease;
-            z-index: 2;
+            z-index: 5;
 
             span {
                 font-style: normal;
@@ -68,7 +66,7 @@
 }
 
 
-@media(max-width: 901px) {
+@media(max-width: 900px) {
 
     .topSection {
         height: calc(100vh - 88px);

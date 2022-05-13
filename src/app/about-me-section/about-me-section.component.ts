@@ -23,15 +23,10 @@ export class AboutMeSectionComponent {
     const aboutTopPosition = about.offsetTop;
     const aboutBottomPosition = aboutTopPosition + aboutHeight;
 
-    this.reachedAbout = screenBottom > aboutTopPosition + vwCalc && screenTop < aboutBottomPosition;
+    this.reachedAbout = screenBottom > aboutTopPosition + vwCalc && screenTop < aboutBottomPosition - vwCalc;
 
-    console.log(this.reachedAbout)
-
-    console.log(screenBottom)
-    console.log(aboutTopPosition)
 
   }
 
-  ngOnInit(): void {
-  }
+
 }

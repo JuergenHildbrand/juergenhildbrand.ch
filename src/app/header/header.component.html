@@ -1,8 +1,8 @@
 <header [class.headerDark]="darkMode">
 
-    <div routerLink="/" class="logoHeader" [class.darkLogo]="darkMode" [class.fontSize]="darkMode">J.H</div>
+    <div routerLink="/" class="logoHeader" [class.darkLogo]="darkMode" [class.fontSize]="darkMode" [class.active3InL]="logoHeader" [class.active3OutL]="!logoHeader" id="logoHeader">J.H</div>
 
-    <div class="linksHeader" [class.darkLinks]="darkMode">
+    <div class="linksHeader" [class.darkLinks]="darkMode" [class.active3InR]="linksHeader" [class.active3OutR]="!linksHeader" id="linksHeader">
         <a routerLink="/">Home</a>
         <a href="#skills">Skills</a>
         <a href="#work">Work</a>

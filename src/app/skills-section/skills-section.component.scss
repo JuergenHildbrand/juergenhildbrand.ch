@@ -41,7 +41,7 @@
         line-height: 1.94vw;
         text-align: center;
         background-color: white;
-       
+
 
         p {
             margin-top: 3.77vw;
@@ -104,7 +104,7 @@
         }
     }
 
-   
+
 }
 
 
@@ -114,91 +114,92 @@
         height: 118vw;
 
         h2 {
-            top: 16.3vw;
+            top: 16vw;
             font-size: 8.89vw;
             line-height: 11.1vw;
         }
 
-        .skillBoxes {
+        .skillBoxesCont {
             margin-top: 39vw;
-        }
 
-        .boxes {
-            position: relative;
-            width: 28.79vw;
-            height: 18.87vw;
-            margin-left: 1.38vw;
-            margin-right: 1.38vw;
-            margin-bottom: 11.08vw;
-            border-radius: 1.6vw;
-            font-size: 4.28vw;
 
-            p {
-                margin-top: 8.42vw;
-                line-height: 7.49vw;
-            }
+            .boxes {
+                position: relative;
+                width: 28.79vw;
+                height: 18.87vw;
+                margin-left: 1.38vw;
+                margin-right: 1.38vw;
+                margin-bottom: 11.08vw;
+                border-radius: 1.6vw;
+                font-size: 4.28vw;
 
-            .p4 {
-                margin-top: 7.4vw;
-                line-height: 7.49vw;
-            }
-
-            .p5 {
-                margin-top: 7.67vw;
-                line-height: 7.49vw;
-            }
-
-            .p6 {
-                margin-top: 6.01vw;
-                line-height: 4.81vw;
-            }
-
-            .p7 {
-                margin-top: 6.62vw;
-                line-height: 7.49vw;
-            }
-
-            .p8 {
-                margin-top: 6.51vw;
-                line-height: 4.81vw;
-            }
-
-            .p9 {
-                margin-top: 5.98vw;
-                line-height: 7.49vw;
-            }
-
-            .position {
-                position: absolute;
-                top: -5vw;
-                height: 9.49vw;
-                width: 9.49vw;
-                box-shadow: 0vw 1.11vw 1.11vw rgba(197, 197, 197, 0.25);
-
-                .js,
-                .htmlCss {
-                    width: 3.67vw;
-                    height: 4.45vw;
+                p {
+                    margin-top: 8.42vw;
+                    line-height: 7.49vw;
                 }
 
-                .angular {
-                    width: 5vw;
-
+                .p4 {
+                    margin-top: 7.4vw;
+                    line-height: 7.49vw;
                 }
 
-                .scrum,
-                .git,
-                .api,
-                .database {
-                    width: 4.43vw;
+                .p5 {
+                    margin-top: 7.67vw;
+                    line-height: 7.49vw;
                 }
 
-                .design {
-                    width: 4vw;
+                .p6 {
+                    margin-top: 6.01vw;
+                    line-height: 4.81vw;
                 }
 
-                .test {
-                    width: 6vw;
+                .p7 {
+                    margin-top: 6.62vw;
+                    line-height: 7.49vw;
+                }
+
+                .p8 {
+                    margin-top: 6.51vw;
+                    line-height: 4.81vw;
+                }
+
+                .p9 {
+                    margin-top: 5.98vw;
+                    line-height: 7.49vw;
+                }
+
+                .position {
+                    position: absolute;
+                    top: -5vw;
+                    height: 9.49vw;
+                    width: 9.49vw;
+                    box-shadow: 0vw 1.11vw 1.11vw rgba(197, 197, 197, 0.25);
+
+                    .js,
+                    .htmlCss {
+                        width: 3.67vw;
+                        height: 4.45vw;
+                    }
+
+                    .angular {
+                        width: 5vw;
+
+                    }
+
+                    .scrum,
+                    .git,
+                    .api,
+                    .database {
+                        width: 4.43vw;
+                    }
+
+                    .design {
+                        width: 4vw;
+                    }
+
+                    .test {
+                        width: 6vw;
+                    }
                 }
             }
         }

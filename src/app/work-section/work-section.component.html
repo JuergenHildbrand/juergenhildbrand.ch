@@ -1,34 +1,34 @@
 <div class="workSection" id="work">
-    <h2 [class.titleIn]="titleWork" [class.titleOut]="!titleWork" id="titleWork">My Work</h2>
+    <h2 [class.titleInT]="titleWork" [class.titleOutT]="!titleWork" id="titleWork">My Work</h2>
 
     <div class="myProjects">
 
-        <div class="d-flex" id="workBox1">
-            <div class="work" [class.active1InR]="workBox1" [class.active1OutL]="!workBox1">
+        <div class="d-flex">
+            <div class="work" id="workBox1" [class.active1InL]="workBox1" [class.active1OutL]="!workBox1">
                 <div class="imgCont">
                     <img class="workImg" src="assets/img/myPage.png">
                     <div class="middle">
                         <div class="title">My personal homepage</div>
                         <div class="text">Angular - my first Angular project</div>
-                        <button class="btn" id="tryOut">Try it!</button>
+                        <button class="btn" (click)="myPageGit()">Check git</button>
                     </div>
                 </div>
             </div>
-            <div class="work" [class.active2InR]="workBox1" [class.active2OutL]="!workBox1">
+            <div class="work" id="workBox2" [class.active2InR]="workBox2" [class.active2OutR]="!workBox2">
                 <div class="imgCont">
                     <img class="workImg" src="assets/img/elPolloLoco.png">
                     <div class="middle">
                         <div class="title">El Pollo Loco</div>
                         <div class="text">JavaScript - based jump and run game</div>
-                        <button class="btn" id="tryOut">Try it!</button>
+                        <button class="btn" (click)="tryOut()">Try it</button>
                     </div>
 
                 </div>
             </div>
         </div>
 
-        <div class="d-flex" id="workBox2">
-            <div class="work" [class.active1InL]="workBox2" [class.active1OutR]="!workBox2">
+        <div class="d-flex">
+            <div class="work" id="workBox3" [class.active1InL]="workBox3" [class.active1OutL]="!workBox3">
                 <div class="imgCont">
                     <img class="workImg" src="assets/img/elPolloLoco.png">
                     <div class="middle">
@@ -38,7 +38,7 @@
                     </div>
                 </div>
             </div>
-            <div class="work" [class.active2InL]="workBox2" [class.active2OutR]="!workBox2">
+            <div class="work" id="workBox4" [class.active2InR]="workBox4" [class.active2OutR]="!workBox4">
                 <div class="imgCont">
                     <img class="workImg" src="assets/img/elPolloLoco.png">
                     <div class="middle">

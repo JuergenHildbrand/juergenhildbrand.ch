@@ -9,18 +9,18 @@
     .description {
         h2 {
             position: absolute;
-            top: 0.2vw;
+            top: 1.5vw;
             left: 5vw;
             font-style: normal;
             font-weight: 700;
             font-size: 3.82vw;
             line-height: 4.58vw;
-            min-width: 300px;
+            min-width: 400px;
         }
 
         p {
             position: absolute;
-            top: 4vw;
+            top: 7.3vw;
             left: 5vw;
             width: 40vw;
             color: #181823;
@@ -47,26 +47,29 @@
 @media(max-width: 900px) {
 
     .aboutMeSection {
-        height: 200vw;
+        height: fit-content;
         flex-direction: column-reverse;
 
         .description {
+            min-height: fit-content;
+
             h2 {
                 position: unset;
-                margin-top: -109vw;
+
                 margin-left: 4.44vw;
                 font-size: 8.89vw;
-                line-height: 2.64;
+                line-height: 2.64
             }
 
             p {
                 position: unset;
-                margin-top: 4.44vw;
+                min-height: fit-content;
+                margin-top: 1vw;
+                margin-bottom: 5vw;
                 width: 91.12vw;
                 margin-left: 4.44vw;
-                padding-right: 0;
                 color: #181823;
-                font-size: 5vw;
+                font-size: 18px;
             }
         }
 
@@ -97,8 +100,8 @@
     animation: fadeInAmimationRight 1s ease-in-out;
 }
 .activeOutLAbout {
-    animation: hiddenObject 0s 0.19s forwards, fadeOutAmimationLeft 0.4s ease;
+    animation: hiddenObject 0.99s 0s forwards, fadeOutAmimationLeft 1s ease;
 }
 .activeOutRAbout {
-    animation: hiddenObject 0s 0.19s forwards, fadeOutAmimationRight 0.4s ease;
+    animation: hiddenObject 0.99s 0s forwards, fadeOutAmimationRight 1s ease;
 }

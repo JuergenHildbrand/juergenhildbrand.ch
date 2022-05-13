@@ -15,6 +15,7 @@
         font-size: 3.82vw;
         line-height: 6.25vw;
         color: white;
+        opacity: 0;
     }
 
     .myProjects {
@@ -104,9 +105,11 @@
 
     .workSection {
         width: 100%;
-        height: 314vw;
-
+        height: fit-content;
         background-color: black;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
 
         h2 {
             top: 13.04vw;
@@ -116,19 +119,78 @@
         }
 
         .myProjects {
-            position: absolute;
-            top: 32vw;
-            left: 13.64vw;
+            position: unset;
+            margin-top: 32vw;
 
             .d-flex {
                 flex-direction: column;
             }
 
-            img {
-                margin: 0;
-                width: 73.53vw;
-                height: 60.96vw;
-                margin-bottom: 6.95vw;
+            .imgCont {
+                position: relative;
+                margin: 3.5vw;
+                width: 73.5vw;
+                height: 60.1vw;
+
+                .workImg {
+                    height: 100%;
+                    max-width: 100%;
+                    opacity: 0.8;
+                    transition: 0.5s ease;
+                    backface-visibility: hidden;
+                    object-fit: cover;
+                }
+
+                .middle {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    background: rgba(245, 245, 245, 0.8);
+                    transition: 0.5s ease;
+                    opacity: 0;
+
+                    .title {
+                        margin-top: 6.8vw;
+                        color: #FA2759;
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 1.25vw;
+                        line-height: 1.38px;
+                    }
+
+                    .text {
+                        margin-top: 2.66vw;
+                        color: black;
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 1.25vw;
+                        line-height: 1.38px;
+                    }
+
+                    .btn {
+                        margin-top: 4.75vw;
+                        width: 128px;
+                        height: 60px;
+                        left: 411px;
+                        top: 2530px;
+                        background: #FFFFFF;
+                        border: 1px solid #FA2759;
+                        font-weight: 500;
+                        font-size: 1.25vw;
+                        line-height: 1.38px;
+                        color: #FB426E;
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
             }
         }
     }

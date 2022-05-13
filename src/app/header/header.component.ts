@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,9 +6,38 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
   @Input() darkMode = true;
-  ngOnInit(): void {
+  
+
+  logoHeader = true;
+  linksHeader = true;
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+
+    
+
+    const bodyRect = document.body.getBoundingClientRect();
+
+    const screenTop = window.pageYOffset;
+    const vw = window.innerWidth;
+
+    const a = document.getElementById('logoHeader');
+    const logoHeader = a.getBoundingClientRect();
+    const logoHeaderBottomPosition = logoHeader.bottom - bodyRect.top;
+
+    const b = document.getElementById('linksHeader');
+    const linksHeader = b.getBoundingClientRect();
+    const linksHeaderBottomPosition = linksHeader.bottom - bodyRect.top;
+
+    this.logoHeader = screenTop < logoHeaderBottomPosition ;
+    this.linksHeader = screenTop < linksHeaderBottomPosition;
+    console.log(this.logoHeader)
+    console.log(screenTop)
+    console.log(logoHeaderBottomPosition)
+    
+  
   }
 
   openMenu() {
