@@ -1,23 +1,60 @@
 <div class="workSection" id="work">
-    <h2>My Work</h2>
+    <h2 [class.titleIn]="titleWork" [class.titleOut]="!titleWork" id="titleWork">My Work</h2>
 
     <div class="myProjects">
 
-        <div class="d-flex">
-            <div class="elPolloLoco">
-                <img src="assets/img/elPolloLoco.png">
+        <div class="d-flex" id="workBox1">
+            <div class="work" [class.active1InR]="workBox1" [class.active1OutL]="!workBox1">
+                <div class="imgCont">
+                    <div class="overlay">
+                        <img class="workImg" src="assets/img/myPage.png">
+                    </div>
+                    <div class="middle">
+                        <div class="title">My personal homepage</div>
+                        <div class="text">Angular - my first Angular project</div>
+                        <button class="btn" id="tryOut">Try it!</button>
+                    </div>
+
+                </div>
             </div>
-            <div class="work2">
-                <img src="assets/img/elPolloLoco.png">
+            <div class="overlay" [class.active2InR]="workBox1" [class.active2OutL]="!workBox1">
+                <div class="imgCont">
+                    <div class="overlay">
+                        <img class="workImg" src="assets/img/elPolloLoco.png">
+                    </div>
+                    <div class="middle">
+                        <div class="title">El Pollo Loco</div>
+                        <div class="text">JavaScript - based jump and run game</div>
+                        <button class="btn" id="tryOut">Try it!</button>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="d-flex">
-            <div class="work3">
-                <img src="assets/img/elPolloLoco.png">
+        <div class="d-flex" id="workBox2">
+            <div class="work" [class.active1InL]="workBox2" [class.active1OutR]="!workBox2">
+                <div class="imgCont">
+                    <div class="overlay">
+                        <img class="workImg" src="assets/img/elPolloLoco.png">
+                    </div>
+                    <div class="middle">
+                        <div class="title">El Pollo Loco</div>
+                        <div class="text">JavaScript - based jump and run game</div>
+                        <button class="btn" id="tryOut">Try it!</button>
+                    </div>
+                </div>
             </div>
-            <div class="work4">
-                <img src="assets/img/elPolloLoco.png">
+            <div class="work" [class.active2InL]="workBox2" [class.active2OutR]="!workBox2">
+                <div class="imgCont">
+                    <div class="overlay">
+                        <img class="workImg" src="assets/img/elPolloLoco.png">
+                    </div>
+                    <div class="middle">
+                        <div class="title">El Pollo Loco</div>
+                        <div class="text">JavaScript - based jump and run game</div>
+                        <button class="btn" id="tryOut">Try it!</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

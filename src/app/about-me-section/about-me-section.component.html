@@ -1,5 +1,5 @@
 <div class="aboutMeSection" id="about">
-    <div class="description">
+    <div class="description" id="aboutBox1"[class.activeInLAbout]="reachedAbout" [class.activeOutRAbout]="!reachedAbout">
         <h2>About me</h2>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut culpa tenetur odio tempora amet,
             reprehenderit
@@ -7,7 +7,7 @@
             distinctio! Et, quidem praesentium?
         </p>
     </div>
-    <div class="aboutMeImg">
+    <div class="aboutMeImg" id="aboutBox2" [class.activeInRAbout]="reachedAbout" [class.activeOutLAbout]="!reachedAbout">
         <img class="imgAboutMe" src="assets/img/meProfile.jpg">
     </div>
 </div>

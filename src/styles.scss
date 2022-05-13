@@ -37,7 +37,6 @@ span {
 .openMenuA {
     animation: smoothOut 225ms ease-in-out;
 }
-
 @keyframes smoothOut {
     0% {
         opacity: 0;
@@ -54,7 +53,6 @@ span {
 .exitMenu {
     animation: smoothIn 225ms ease-in-out;
 }
-
 @keyframes smoothIn {
     0% {
         opacity: 1;
@@ -69,7 +67,52 @@ span {
 }
 
 
-// TopSection
+
+////// Animations left right ///////
+
+.titleIn {
+    animation: fadeInAmimationLeft 0.5s ease-in-out;
+}
+.titleOut {
+    animation: hiddenObject 0s 0.49s forwards, fadeOutAmimationRight 0.5s ease-in-out;
+}
+.active1InR {
+    animation: fadeInAmimationRight 0.4s ease;
+}
+.active2InR {
+    animation: fadeInAmimationRight 0.6s ease;
+}
+.active3InR {
+    animation: fadeInAmimationRight 0.8s ease;
+}
+.active1InL {
+    animation: fadeInAmimationLeft 0.4s ease;
+}
+.active2InL {
+    animation: fadeInAmimationLeft 0.6s ease;
+}
+.active3InL {
+    animation: fadeInAmimationLeft 0.8s ease;
+}
+.active1OutL {
+    animation: hiddenObject 0s 0.19s forwards, fadeOutAmimationLeft 0.4s ease;
+}
+.active2OutL {
+    animation: hiddenObject 0s 0.19s forwards, fadeOutAmimationLeft 0.6s ease;
+}
+.active3OutL {
+    animation: hiddenObject 0s 0.19s forwards, fadeOutAmimationLeft 0.8s ease;
+}
+.active1OutR {
+    animation: hiddenObject 0s 0.19s forwards, fadeOutAmimationRight 0.4s ease;
+}
+.active2OutR {
+    animation: hiddenObject 0s 0.19s forwards, fadeOutAmimationRight 0.6s ease;
+}
+.active3OutR {
+    animation: hiddenObject 0s 0.19s forwards, fadeOutAmimationRight 0.8s ease;
+}
+
 
 @keyframes fadeInAmimationLeft {
 
@@ -91,7 +134,6 @@ span {
     }  
 }
 
-
 @keyframes fadeInAmimationTop {
 
     0% {
@@ -101,11 +143,6 @@ span {
         transform: translateY(0);
     }  
 }
-
-
-
-// Skills
-
 
 
 @keyframes fadeOutAmimationRight {
@@ -140,3 +177,4 @@ span {
     }
     
 }
+

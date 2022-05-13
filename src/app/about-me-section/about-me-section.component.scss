@@ -15,6 +15,7 @@
             font-weight: 700;
             font-size: 3.82vw;
             line-height: 4.58vw;
+            min-height: 300px;
         }
 
         p {
@@ -83,5 +84,21 @@
             }
         }
     }
+}
 
+
+
+///// Animations /////
+
+.activeInLAbout {
+    animation: fadeInAmimationLeft 1s ease-in-out;
+}
+.activeInRAbout {
+    animation: fadeInAmimationRight 1s ease-in-out;
+}
+.activeOutLAbout {
+    animation: hiddenObject 0s 0.19s forwards, fadeOutAmimationLeft 0.4s ease;
+}
+.activeOutRAbout {
+    animation: hiddenObject 0s 0.19s forwards, fadeOutAmimationRight 0.4s ease;
 }

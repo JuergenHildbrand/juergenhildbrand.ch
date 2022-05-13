@@ -13,8 +13,8 @@ import { ScrollService } from './scroll.service';
 export class AppComponent implements OnInit {
 
   
-  reachedWork = false;
-  reachedAbout = false;
+
+ 
   reachedContact = false;
 
 
@@ -25,23 +25,13 @@ export class AppComponent implements OnInit {
   
       const screenTop = window.pageYOffset;
       const screenBottom = window.innerHeight + screenTop;
-  
-      const work = document.getElementById('work');
-      const workHeight = work.clientHeight;
-      const workTopPosition = work.offsetTop;
-      const workBottomPosition = workTopPosition + workHeight;
-  
-      const about = document.getElementById('about');
-      const aboutHeight = about.clientHeight;
-      const aboutTopPosition = about.offsetTop;
-      const aboutBottomPosition = aboutTopPosition + aboutHeight;
+      
   
       const contact = document.getElementById('contact');
       const contactTopPosition = contact.offsetTop;
   
       // set `true` when scrolling has reached current element
-      this.scrollService.reachedWork = screenBottom > workTopPosition && screenTop < workBottomPosition;
-      this.scrollService.reachedAbout = screenBottom > aboutTopPosition && screenTop < aboutBottomPosition;
+      
       this.scrollService.reachedContact = screenBottom > contactTopPosition;
     }
   

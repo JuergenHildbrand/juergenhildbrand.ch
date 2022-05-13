@@ -22,11 +22,95 @@
         top: 14vw;
         left: 16.14vw;
 
-        img {
+        .imgCont {
+            position: relative;
             margin: 1.56vw;
             width: 30.7vw;
             height: 26vw;
+
+            .overlay {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: rgba(255, 255, 255, 0.8);
+                z-index: 1000;
+
+                .workImg {
+                    height: 100%;
+                    max-width: 100%;
+                    opacity: 1;
+                    transition: 0.5s ease;
+                    backface-visibility: hidden;
+                    object-fit: cover;
+                }
+            }
+
+            .middle {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background: rgba(245, 245, 245, 0.9);
+                transition: 0.5s ease;
+                opacity: 0;
+
+                .title {
+                    margin-top: 6.8vw;
+                    color: #FA2759;
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 1.25vw;
+                    line-height: 1.38px;
+                }
+
+                .text {
+                    margin-top: 2.66vw;
+                    color: black;
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 1.25vw;
+                    line-height: 1.38px;
+                }
+
+                .btn {
+                    margin-top: 4.75vw;
+                    width: 128px;
+                    height: 60px;
+                    left: 411px;
+                    top: 2530px;
+                    background: #FFFFFF;
+                    border: 1px solid #FA2759;
+                    font-weight: 500;
+                    font-size: 1.25vw;
+                    line-height: 1.38px;
+                    color: #FB426E;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+            }
+
         }
+
+
+
+        .work:hover .workImg {
+            opacity: 0.3;
+        }
+
+        .work:hover .middle {
+            opacity: 1;
+        }
+
     }
 }
 
@@ -62,10 +146,4 @@
             }
         }
     }
-
-   
-
-
-
-
 }
