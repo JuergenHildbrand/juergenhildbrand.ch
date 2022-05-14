@@ -41,12 +41,6 @@ span {
 .titleOut {
     animation: hiddenObject 0s 0.99s forwards, fadeOutAmimationRight 1s ease-in-out;
 }
-.titleInT {
-    animation: showObject 1s 0s forwards ease-in-out;
-}
-.titleOutT {
-    animation: hiddenObject 1s 0s forwards;
-}
 .active1InR {
     animation: fadeInAmimationRight 1s ease-in-out;
 }
@@ -154,14 +148,6 @@ span {
     }  
 }
 
-@keyframes showObject {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
 
 @keyframes hiddenObject {
     from {
@@ -173,3 +159,59 @@ span {
     
 }
 
+
+
+
+@media(max-width: 900px) {
+
+    @keyframes fadeInAmimationLeft {
+
+        0% {
+            transform: translateX(-900px);
+        }
+        100% {
+            transform: translateX(0);
+        }  
+    }
+    
+    @keyframes fadeInAmimationRight {
+    
+        0% {
+            transform: translateX(900px);
+        }
+        100% {
+            transform: translateX(0);
+        }  
+    }
+    
+    @keyframes fadeInAmimationTop {
+    
+        0% {
+            transform: translateY(-900px);
+        }
+        100% {
+            transform: translateY(0);
+        }  
+    }
+    
+    
+    @keyframes fadeOutAmimationRight {
+    
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(900px);
+        }  
+    }
+    
+    @keyframes fadeOutAmimationLeft {
+    
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-900px);
+        }  
+    }
+}

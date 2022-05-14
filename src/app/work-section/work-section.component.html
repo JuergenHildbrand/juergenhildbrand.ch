@@ -1,11 +1,16 @@
 <div class="workSection" id="work">
-    <h2 [class.titleInT]="titleWork" [class.titleOutT]="!titleWork" id="titleWork">My Work</h2>
+    <h2 [class.goDownIn]="titleWork" [class.goDownOut]="!titleWork" id="titleWork">My Work</h2>
+    <div class="buttons" [class.goDownIn]="buttonsWork" [class.goDownOut]="!buttonsWork" id="buttonsWork">
+        <button class="btns backgroundColorBtn" (click)="all()" [disabled]="click1" id="btn1">All</button>
+        <button class="btns" (click)="angular()" [disabled]="click2" id="btn2">Angular</button>
+        <button class="btns" (click)="javascript()" [disabled]="click3" id="btn3">Java Script</button>
+    </div>
 
     <div class="myProjects">
 
-        <div class="d-flex">
-            <div class="work" id="workBox1" [class.active1InL]="workBox1" [class.active1OutL]="!workBox1">
-                <div class="imgCont">
+        <div class="d-wrap">
+            <div class="work" id="workBox1" [class.goDownIn]="workBox1" [class.goDownOut]="!workBox1">
+                <div class="imgCont" id="wb1">
                     <img class="workImg" src="assets/img/myPage.png">
                     <div class="middle">
                         <div class="title">My personal homepage</div>
@@ -14,37 +19,43 @@
                     </div>
                 </div>
             </div>
-            <div class="work" id="workBox2" [class.active2InR]="workBox2" [class.active2OutR]="!workBox2">
-                <div class="imgCont">
+            <div class="work" id="workBox2" [class.goDownIn]="workBox2" [class.goDownOut]="!workBox2">
+                <div class="imgCont" id="wb2">
                     <img class="workImg" src="assets/img/elPolloLoco.png">
                     <div class="middle">
                         <div class="title">El Pollo Loco</div>
                         <div class="text">JavaScript - based jump and run game</div>
-                        <button class="btn" (click)="tryOut()">Try it</button>
+                        <div class="dFlex">
+                            <button class="btn" (click)="tryOutElPlloLoco()">Try it</button>
+                            <button class="btn" (click)="elPlloLocoGit()">Check git</button>
+                        </div>
                     </div>
 
                 </div>
             </div>
-        </div>
-
-        <div class="d-flex">
-            <div class="work" id="workBox3" [class.active1InL]="workBox3" [class.active1OutL]="!workBox3">
-                <div class="imgCont">
-                    <img class="workImg" src="assets/img/elPolloLoco.png">
+            <div class="work" id="workBox3" [class.goDownIn]="workBox3" [class.goDownOut]="!workBox3">
+                <div class="imgCont" id="wb3">
+                    <img class="workImg" src="assets/img/join.jpg">
                     <div class="middle">
-                        <div class="title">El Pollo Loco</div>
-                        <div class="text">JavaScript - based jump and run game</div>
-                        <button class="btn" id="tryOut">Try it!</button>
+                        <div class="title">Join</div>
+                        <div class="text">JavaScript - Group work kanban board</div>
+                        <div class="dFlex">
+                            <button class="btn" (click)="tryOutJoin()">Try it!</button>
+                            <button class="btn" (click)="joinGit()">Check git</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="work" id="workBox4" [class.active2InR]="workBox4" [class.active2OutR]="!workBox4">
-                <div class="imgCont">
-                    <img class="workImg" src="assets/img/elPolloLoco.png">
+            <div class="work" id="workBox4" [class.goDownIn]="workBox4" [class.goDownOut]="!workBox4">
+                <div class="imgCont" id="wb4">
+                    <img class="workImg" src="assets/img/pokadex.png">
                     <div class="middle">
-                        <div class="title">El Pollo Loco</div>
-                        <div class="text">JavaScript - based jump and run game</div>
-                        <button class="btn" id="tryOut">Try it!</button>
+                        <div class="title">Pokadex</div>
+                        <div class="text">JavaScript - A project with rest API's</div>
+                        <div class="dFlex">
+                            <button class="btn" (click)="tryOutPokedex()">Try it!</button>
+                            <button class="btn" (click)="pokedexGit()">Check git</button>
+                        </div>
                     </div>
                 </div>
             </div>

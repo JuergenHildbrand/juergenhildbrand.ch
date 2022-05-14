@@ -1,6 +1,6 @@
 <header [class.headerDark]="darkMode">
 
-    <div routerLink="/" class="logoHeader" [class.darkLogo]="darkMode" [class.fontSize]="darkMode" [class.active3InL]="logoHeader" [class.active3OutL]="!logoHeader" id="logoHeader">J.H</div>
+    <div routerLink="/" class="logoHeader" [class.darkLogo]="darkMode" [class.fontSize]="darkMode">J.H</div>
 
     <div class="linksHeader" [class.darkLinks]="darkMode" [class.active3InR]="linksHeader" [class.active3OutR]="!linksHeader" id="linksHeader">
         <a routerLink="/">Home</a>
@@ -15,11 +15,11 @@
         <div class="topnav">
             <a href="#home" class="active"></a>
             <div id="myLinks">
-                <a routerLink="/">Home</a>
-                <a href="#skills">Skills</a>
-                <a href="#work">Work</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
+                <a routerLink="/" (click)="openMenu()">Home</a>
+                <a href="#skills" (click)="openMenu()">Skills</a>
+                <a href="#work" (click)="openMenu()">Work</a>
+                <a href="#about" (click)="openMenu()">About</a>
+                <a href="#contact"  (click)="openMenu()">Contact</a>
                 
             </div>
             <a href="javascript:void(0);" class="icon" (click)="openMenu()">

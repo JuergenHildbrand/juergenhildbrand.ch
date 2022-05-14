@@ -23,19 +23,13 @@ export class HeaderComponent {
     const screenTop = window.pageYOffset;
     const vw = window.innerWidth;
 
-    const a = document.getElementById('logoHeader');
-    const logoHeader = a.getBoundingClientRect();
-    const logoHeaderBottomPosition = logoHeader.bottom - bodyRect.top;
-
     const b = document.getElementById('linksHeader');
     const linksHeader = b.getBoundingClientRect();
     const linksHeaderBottomPosition = linksHeader.bottom - bodyRect.top;
 
-    this.logoHeader = screenTop < logoHeaderBottomPosition ;
+
     this.linksHeader = screenTop < linksHeaderBottomPosition;
-    console.log(this.logoHeader)
-    console.log(screenTop)
-    console.log(logoHeaderBottomPosition)
+   
     
   
   }

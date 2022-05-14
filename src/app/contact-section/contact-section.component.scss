@@ -13,7 +13,7 @@
         font-weight: 700;
         font-size: 3.82vw;
         line-height: 6.25vw;
-        color: white;
+        color: #5221E6;
     }
 
     .contactDescription {
@@ -36,14 +36,16 @@
         a {
             margin-left: 0.5vw;
             text-decoration: none;
-            color: white;
+            color: #5221E6;
             padding: 0.5vw;
             cursor: pointer;
+            transition: 225ms ease-in-out;
 
             &:hover {
                 color: white;
-                background-color: #5221E6;
+                background-color: #1E0079;
                 padding: 0.5vw;
+                opacity: 0.66;
             }
         }
     }
@@ -107,9 +109,11 @@
         color: white;
         background-color: transparent;
         cursor: pointer;
+        transition: 225ms ease-in-out;
 
         &:hover {
-            background-color: #5221E6;
+            background: #1E0079;
+            border: 1px solid white;
         }
     }
 }

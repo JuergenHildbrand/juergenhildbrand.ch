@@ -1,3 +1,7 @@
+.dFlex {
+    display: flex !important;
+}
+
 .workSection {
     width: 100%;
     height: 83.125vw;
@@ -8,32 +12,69 @@
 
     h2 {
         position: absolute;
-        top: 4.58vw;
+        top: 6.67vw;
         font-family: 'Inter';
         font-style: normal;
         font-weight: 500;
-        font-size: 3.82vw;
+        font-size: 3.82vw;;
         line-height: 6.25vw;
         color: white;
-        opacity: 0;
+    }
+
+    .buttons {
+        position: absolute;
+        top: 14vw;
+
+        .backgroundColorBtn {
+            background-color: #5221E6 !important;
+            border: 1px solid #5221E6;
+        }
+
+        .btns {
+            width: 8.89vw;
+            height: 4.86vw;
+            margin-left: 0.21vw;
+            margin-right: 0.21vw;
+            border: 2px solid #5221E6;
+            box-sizing: border-box;
+            background-color: transparent;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.25vw;
+            line-height: 1.39vw;
+            color: white;
+            cursor: pointer;
+            transition: 225ms ease-in-out;
+
+            &:hover {
+                background: #1E0079;
+                border: 1px solid #1E0079;
+            }
+        }
     }
 
     .myProjects {
         position: absolute;
-        top: 14vw;
+        top: 22.2vw;
         left: 16.14vw;
+
+        .d-wrap {
+            display: flex;
+            flex-wrap: wrap;
+        }
 
         .imgCont {
             position: relative;
             margin: 1.56vw;
             width: 30.7vw;
-            height: 26vw;
+            height: 25.5vw;
 
             .workImg {
+                width: 100%;
                 height: 100%;
-                max-width: 100%;
-                opacity: 0.8;
-                transition: 0.5s ease;
+                opacity: 0.75;
+                transition: 0.5s ease-in-out;
                 backface-visibility: hidden;
                 object-fit: cover;
             }
@@ -47,12 +88,12 @@
                 flex-direction: column;
                 align-items: center;
                 background: rgba(245, 245, 245, 0.8);
-                transition: 0.5s ease;
+                transition: 0.5s ease-in-out;
                 opacity: 0;
 
                 .title {
                     margin-top: 6.8vw;
-                    color: #FA2759;
+                    color: #5221E6;
                     font-family: 'Inter';
                     font-style: normal;
                     font-weight: 700;
@@ -72,23 +113,26 @@
 
                 .btn {
                     margin-top: 4.75vw;
-                    width: 128px;
-                    height: 60px;
-                    left: 411px;
-                    top: 2530px;
+                    margin-left: 0.21vw;
+                    margin-right: 0.21vw;
+                    width: 8.89vw;
+                    height: 4.17vw;
                     background: #FFFFFF;
-                    border: 1px solid #FA2759;
+                    border: 1px solid #5221E6;
                     font-weight: 500;
                     font-size: 1.25vw;
                     line-height: 1.38px;
-                    color: #FB426E;
+                    color: #5221E6;
+                    cursor: pointer;
+                    transition: 225ms ease-in-out;
 
                     &:hover {
-                        cursor: pointer;
+                        color: #FFFFFF;
+                        background-color: #1E0079;
+                        border: 1px solid #1E0079;
                     }
                 }
             }
-
         }
 
         .work:hover .workImg {
@@ -112,18 +156,43 @@
         flex-direction: column;
 
         h2 {
-            top: 13.04vw;
+            position: unset;
+            margin-top: 12.84vw;
             font-size: 8.89vw;
             line-height: 11.11vw;
             color: white;
         }
 
+        .buttons {
+            position: unset;
+            margin-top: 9vw;
+
+            .btns {
+                width: 24.3vw;
+                height: 13.1vw;
+                margin-left: 0.55vw;
+                margin-right: 0.55vw;
+                font-size: 4vw;
+                line-height: 0vw;
+            }
+        }
+
         .myProjects {
             position: unset;
-            margin-top: 32vw;
+            margin-top: 7.5vw;
+
+            .d-wrap {
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: column;
+            }
 
             .d-flex {
                 flex-direction: column;
+            }
+
+            #workBox4 {
+                margin-bottom: 3.9vw;
             }
 
             .imgCont {
@@ -133,12 +202,7 @@
                 height: 60.1vw;
 
                 .workImg {
-                    height: 100%;
-                    max-width: 100%;
-                    opacity: 0.8;
-                    transition: 0.5s ease;
-                    backface-visibility: hidden;
-                    object-fit: cover;
+                    animation: opacityC 6s infinite;
                 }
 
                 .middle {
@@ -150,48 +214,101 @@
                     flex-direction: column;
                     align-items: center;
                     background: rgba(245, 245, 245, 0.8);
-                    transition: 0.5s ease;
-                    opacity: 0;
+                    animation: opacityB 6s infinite;
 
                     .title {
-                        margin-top: 6.8vw;
+                        margin-top: 16vw;
                         color: #FA2759;
                         font-family: 'Inter';
                         font-style: normal;
                         font-weight: 700;
-                        font-size: 1.25vw;
-                        line-height: 1.38px;
+                        font-size: 4.2vw;
+                        line-height: 1.36vw;
                     }
 
                     .text {
-                        margin-top: 2.66vw;
+                        margin-top: 7.15vw;
+                        max-width: 40vw;
                         color: black;
                         font-family: 'Inter';
                         font-style: normal;
                         font-weight: 400;
-                        font-size: 1.25vw;
-                        line-height: 1.38px;
+                        font-size: 4.2vw;
+                        line-height: 5.36vw;
+                        text-align: center;
                     }
 
                     .btn {
-                        margin-top: 4.75vw;
-                        width: 128px;
-                        height: 60px;
-                        left: 411px;
-                        top: 2530px;
-                        background: #FFFFFF;
-                        border: 1px solid #FA2759;
+                        margin-top: 7.15vw;
+                        width: 24.6vw;
+                        height: 11.5vw;
                         font-weight: 500;
-                        font-size: 1.25vw;
-                        line-height: 1.38px;
-                        color: #FB426E;
-
-                        &:hover {
-                            cursor: pointer;
-                        }
+                        font-size: 4.8vw;
                     }
                 }
             }
         }
+    }
+}
+
+///// Animation //////
+
+.goDownIn {
+    animation: showObjectIn 1s ease-in-out;
+}
+.goDownOut {
+    animation: hiddenObject 0s 0.99s forwards, showObjectOut 1s ease-in-out;;
+}
+
+@keyframes showObjectIn {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+        border-radius: 100%;
+    }
+    100% {
+        transform: scale(1);
+    }  
+}
+
+@keyframes showObjectOut {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }  
+}
+
+
+
+
+@keyframes opacityB {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes opacityC {
+    0% {
+        opacity: 0.75;
+    }
+
+    50% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 0.75;
     }
 }

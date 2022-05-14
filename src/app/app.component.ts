@@ -50,11 +50,11 @@ overlayBg() {
   z.classList.add('canceling');
   setTimeout(() => {
     d.classList.remove('d-none');
-  }, 20);
+  }, 3);
 
   setTimeout(() => {
     y.classList.add('d-none');  
-  }, 19);
+  }, 3);
   
 }
 }
