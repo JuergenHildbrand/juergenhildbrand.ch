@@ -6,15 +6,11 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./work-section.component.scss']
 })
 
-
-
-
 export class WorkSectionComponent {
 
-  click1 : boolean = true;
-  click2 : boolean = false;
-  click3 : boolean = false;
-
+  click1: boolean = true;
+  click2: boolean = false;
+  click3: boolean = false;
 
   titleWork = false;
   buttonsWork = false;
@@ -22,18 +18,15 @@ export class WorkSectionComponent {
   workBox2 = false;
   workBox3 = false;
   workBox4 = false;
-  
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
 
+    const bodyRect = document.body.getBoundingClientRect();
     const screenTop = window.pageYOffset;
     const screenBottom = window.innerHeight + screenTop;
     const vw = window.innerWidth;
     const vwCalc = vw / 5;
-
-    const bodyRect = document.body.getBoundingClientRect();
-
 
     const a = document.getElementById('titleWork');
     const title = a.getBoundingClientRect();
@@ -65,24 +58,15 @@ export class WorkSectionComponent {
     const workBox4TopPosition = workBox4.top - bodyRect.top;
     const workBox4BottomPosition = workBox4.bottom - bodyRect.top;
 
-
     this.titleWork = screenBottom > titleBottomPosition && screenTop < titleTopPosition;
     this.buttonsWork = screenBottom > buttonsWorkBottomPosition && screenTop < buttonsWorkTopPosition;
     this.workBox1 = screenBottom > workBox1BottomPosition - vwCalc && screenTop < workBox1TopPosition + vwCalc;
     this.workBox2 = screenBottom > workBox2BottomPosition - vwCalc && screenTop < workBox2TopPosition + vwCalc;
     this.workBox3 = screenBottom > workBox3BottomPosition - vwCalc && screenTop < workBox3TopPosition + vwCalc;
     this.workBox4 = screenBottom > workBox4BottomPosition - vwCalc && screenTop < workBox4TopPosition + vwCalc;
-    console.log(this.titleWork)
-    console.log(screenTop)
-    console.log(titleTopPosition)
   }
 
-
-
   all() {
-    this.click1 = true;
-    this.click2 = false;
-    this.click3 = false;
     let wb1 = document.getElementById('wb1');
     let wb2 = document.getElementById('wb2');
     let wb3 = document.getElementById('wb3');
@@ -91,21 +75,28 @@ export class WorkSectionComponent {
     wb2.classList.add('goDownOut');
     wb3.classList.add('goDownOut');
     wb4.classList.add('goDownOut');
+    this.clickFunction1();
+    this.timeOut1(wb1, wb2, wb3, wb4);
+  }
+
+  clickFunction1() {
+    this.click1 = true;
+    this.click2 = false;
+    this.click3 = false;
     let btn1 = document.getElementById('btn1');
     let btn2 = document.getElementById('btn2');
     let btn3 = document.getElementById('btn3');
     btn1.classList.add('backgroundColorBtn');
     btn2.classList.remove('backgroundColorBtn');
     btn3.classList.remove('backgroundColorBtn');
+  }
+
+  timeOut1(wb1, wb2, wb3, wb4) {
     setTimeout(() => {
-      wb1.classList.remove('d-none');
-      wb2.classList.remove('d-none');
-      wb3.classList.remove('d-none');
-      wb4.classList.remove('d-none');
-      wb1.classList.remove('goDownOut');
-      wb2.classList.remove('goDownOut');
-      wb3.classList.remove('goDownOut');
-      wb4.classList.remove('goDownOut');
+      wb1.classList.remove('d-none', 'goDownOut');
+      wb2.classList.remove('d-none', 'goDownOut');
+      wb3.classList.remove('d-none', 'goDownOut');
+      wb4.classList.remove('d-none', 'goDownOut');
       wb1.classList.add('goDownIn');
       wb2.classList.add('goDownIn');
       wb3.classList.add('goDownIn');
@@ -114,9 +105,6 @@ export class WorkSectionComponent {
   }
 
   angular() {
-    this.click1 = false;
-    this.click2 = true;
-    this.click3 = false;
     let wb1 = document.getElementById('wb1');
     let wb2 = document.getElementById('wb2');
     let wb3 = document.getElementById('wb3');
@@ -125,15 +113,26 @@ export class WorkSectionComponent {
     wb2.classList.add('goDownOut');
     wb3.classList.add('goDownOut');
     wb4.classList.add('goDownOut');
+    this.clickFunction2();
+    this.timeOut2(wb1, wb2, wb3, wb4);
+  }
+
+  clickFunction2() {
+    this.click1 = false;
+    this.click2 = true;
+    this.click3 = false;
     let btn1 = document.getElementById('btn1');
     let btn2 = document.getElementById('btn2');
     let btn3 = document.getElementById('btn3');
     btn1.classList.remove('backgroundColorBtn');
     btn2.classList.add('backgroundColorBtn');
     btn3.classList.remove('backgroundColorBtn');
+  }
+
+  timeOut2(wb1, wb2, wb3, wb4) {
     setTimeout(() => {
-      wb1.classList.remove('d-none');
-      wb1.classList.remove('goDownOut');
+      wb1.classList.remove();
+      wb1.classList.remove('d-none', 'goDownOut');
       wb2.classList.add('goDownOut');
       wb3.classList.add('goDownOut');
       wb4.classList.add('goDownOut');
@@ -142,9 +141,6 @@ export class WorkSectionComponent {
   }
 
   javascript() {
-    this.click1 = false;
-    this.click2 = false;
-    this.click3 = true;
     let wb1 = document.getElementById('wb1');
     let wb2 = document.getElementById('wb2');
     let wb3 = document.getElementById('wb3');
@@ -153,12 +149,23 @@ export class WorkSectionComponent {
     wb2.classList.add('goDownOut');
     wb3.classList.add('goDownOut');
     wb4.classList.add('goDownOut');
+    this.clickFunction3();
+    this.timeOut3(wb1, wb2, wb3, wb4);
+  }
+
+  clickFunction3() {
+    this.click1 = false;
+    this.click2 = false;
+    this.click3 = true;
     let btn1 = document.getElementById('btn1');
     let btn2 = document.getElementById('btn2');
     let btn3 = document.getElementById('btn3');
     btn1.classList.remove('backgroundColorBtn');
     btn2.classList.remove('backgroundColorBtn');
     btn3.classList.add('backgroundColorBtn');
+  }
+
+  timeOut3(wb1, wb2, wb3, wb4) {
     setTimeout(() => {
       wb1.classList.add('d-none');
       wb2.classList.remove('goDownOut');
@@ -169,14 +176,6 @@ export class WorkSectionComponent {
       wb4.classList.add('goDownIn');
     }, 1000);
   }
-
-
-
-
-
-
-
-
 
   myPageGit() {
     window.open('https://github.com/JuergenHildbrand/juergenhildbrand.ch.git');
@@ -205,5 +204,4 @@ export class WorkSectionComponent {
   pokedexGit() {
     window.open('https://github.com/JuergenHildbrand/Pokedex.git');
   }
-
 }
