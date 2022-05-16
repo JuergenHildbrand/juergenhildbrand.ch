@@ -70,6 +70,13 @@ footer {
     height: 6.81vw;
 }
 
+.fixPosition {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
 @media(max-width: 900px) {
 
     footer {

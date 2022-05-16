@@ -1,37 +1,43 @@
 .imprintCont {
-    position: relative;
-    width: 90%;
-    padding-top: 10.4vw;
-    padding-left: 5.35vw;
-    padding-right: 5.35vw;
-    padding-bottom: 36px;
-    min-height: 71vh;
-}
-
-h1 {
-    font-size: 2.22vw;
-}
-
-h2 {
-    font-size: 1.66vw;
-}
-
-a {
-    text-decoration: none;
+    width: 90vw;
+    min-height: fit-content;
+    padding-top: 8vw;
+    padding-left: 4.44vw;
+    padding-right: 4.44vw;
+    
+    h1 {
+        font-size: 2.22vw;
+    }
+    
+    h2 {
+        font-size: 1.66vw;
+    }
+    
+    a {
+        text-decoration: none;
+    }
 }
 
 
 @media(max-width: 900px) {
 
-    h1 {
-        font-size: 27px;
-    }
-    
-    h2 {
-        font-size: 20px;
-    }
+    .imprintCont {
+        height: calc(100vh - 378px);
 
-    p {
-        font-size: 14px !important;
+        padding-left: 4.44vw;
+        padding-right: 4.44vw;
+        padding-bottom: 111px;
+     
+        h1 {
+            font-size: 27px;
+        }
+        
+        h2 {
+            font-size: 20px;
+        }
+    
+        p {
+            font-size: 14px !important;
+        }
     }
 }
