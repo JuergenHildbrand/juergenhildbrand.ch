@@ -4,6 +4,9 @@ footer {
     background-color: white;
     display: flex;
     align-items: center;
+    border-top: rgba(0,0,0,0.2);
+
+
 
     p {
         margin-left: 5.76vw;
@@ -15,6 +18,16 @@ footer {
         line-height: 150%;
         color: #8491A0;
         cursor: pointer;
+
+        a {
+            text-decoration: none;
+            color: black;
+
+            &:hover {
+                text-decoration: underline;
+                color: #5221E6;
+            }
+        }   
     }
 
     .iconsFooter {
@@ -41,27 +54,31 @@ footer {
             cursor: pointer;
         }
     }
+}
 
+.headerDark {
+    height: 6.81vw;
 }
 
 @media(max-width: 900px) {
 
     footer {
         position: relative;
-        height: 30.8vw;
+        height: 30vw !important;
         flex-direction: column-reverse;
     
         p {
             position: absolute;
             top: 0;
-            margin-top: 20.83vw;
+            margin-top: 17vw;
             margin-left: 0;
             font-size: 5vw;
+
         }
     
         .iconsFooter {
             position: absolute;
-            top: 6.18vw;
+            top: 5.35vw;
             margin-left: 0;
     
             .linkedIn {

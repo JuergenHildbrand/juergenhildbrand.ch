@@ -1,12 +1,12 @@
-<footer>
+<footer [class.headerDark]="darkMode">
     <p>
         <a id="link5" routerLink="/imprint">Imprint - Legal Notice</a>
     </p>
 
     <div class="iconsFooter">
-        <img class="linkedIn" src="assets/ico/linkedin-box-fill.png">
-        <img class="git" src="assets/ico/Git-Icon-1788C 2.png">
-        <img class="xing" src="assets/ico/xing-fill.png">
+        <img class="linkedIn" src="assets/ico/linkedin-box-fill.png" (click)="linkedIn()">
+        <img class="git" src="assets/ico/Git-Icon-1788C 2.png" (click)="git()">
+        <img class="xing" src="assets/ico/xing-fill.png" (click)="xing()">
     </div>
 
 

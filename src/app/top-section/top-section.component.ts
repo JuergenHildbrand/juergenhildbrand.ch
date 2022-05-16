@@ -6,7 +6,6 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./top-section.component.scss']
 })
 export class TopSectionComponent  {
-  
 
   topSection = true;
   secoundBg = true;

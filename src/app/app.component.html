@@ -1,9 +1,7 @@
 <div id="uConstr" class="d-none">
-    <app-header [darkMode]="router.url.startsWith('imprint')"></app-header>
-    <div [class.container]="router.url.startsWith('imprint')">
-        <router-outlet></router-outlet>
-    </div>
-    <app-footer></app-footer>
+    <app-header [darkMode]="router.url !== '/'"></app-header>
+    <router-outlet></router-outlet>
+    <app-footer [darkMode]="router.url !== '/'"></app-footer>
 </div>
 
 
@@ -14,3 +12,5 @@
         </div>
     </div>
 </div>
+
+<!-- [darkMode]="router.url.startsWith('imprint')" -->

@@ -3,6 +3,8 @@ header {
     width: 100%;
     height: 6.11vw;
     z-index: 3;
+    background-color: black;
+    z-index: 10 !important;
 
     .logoHeader {
         position: absolute;
@@ -81,7 +83,7 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background-color: black;
+
 
 
         .logoHeader {
@@ -181,6 +183,7 @@ header {
         padding-left: 90%;
         width: 0%;
     }
+
     100% {
         opacity: 1;
         padding-left: 0;
@@ -198,6 +201,7 @@ header {
         padding-left: 0;
         width: 100%;
     }
+
     100% {
         opacity: 0;
         padding-left: 90%;

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ScrollService } from '../scroll.service';
 
 @Component({
   selector: 'app-top-container',
@@ -10,7 +9,6 @@ export class TopContainerComponent implements OnInit {
 
 
 
-  constructor(public scrollService : ScrollService) {}
 
   ngOnInit(): void {
 
