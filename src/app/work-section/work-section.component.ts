@@ -78,7 +78,6 @@ export class WorkSectionComponent {
     this.clickFunction1();
     this.timeOut1(wb1, wb2, wb3, wb4);
   }
-
   clickFunction1() {
     this.click1 = true;
     this.click2 = false;
@@ -90,7 +89,6 @@ export class WorkSectionComponent {
     btn2.classList.remove('backgroundColorBtn');
     btn3.classList.remove('backgroundColorBtn');
   }
-
   timeOut1(wb1, wb2, wb3, wb4) {
     setTimeout(() => {
       wb1.classList.remove('d-none', 'goDownOut');
@@ -116,7 +114,6 @@ export class WorkSectionComponent {
     this.clickFunction2();
     this.timeOut2(wb1, wb2, wb3, wb4);
   }
-
   clickFunction2() {
     this.click1 = false;
     this.click2 = true;
@@ -128,7 +125,6 @@ export class WorkSectionComponent {
     btn2.classList.add('backgroundColorBtn');
     btn3.classList.remove('backgroundColorBtn');
   }
-
   timeOut2(wb1, wb2, wb3, wb4) {
     setTimeout(() => {
       wb1.classList.remove();
@@ -152,7 +148,6 @@ export class WorkSectionComponent {
     this.clickFunction3();
     this.timeOut3(wb1, wb2, wb3, wb4);
   }
-
   clickFunction3() {
     this.click1 = false;
     this.click2 = false;
@@ -164,7 +159,6 @@ export class WorkSectionComponent {
     btn2.classList.remove('backgroundColorBtn');
     btn3.classList.add('backgroundColorBtn');
   }
-
   timeOut3(wb1, wb2, wb3, wb4) {
     setTimeout(() => {
       wb1.classList.add('d-none');

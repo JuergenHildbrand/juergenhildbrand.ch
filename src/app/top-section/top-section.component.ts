@@ -5,6 +5,7 @@ import { Component, HostListener } from '@angular/core';
   templateUrl: './top-section.component.html',
   styleUrls: ['./top-section.component.scss']
 })
+
 export class TopSectionComponent  {
 
   topSection = true;
@@ -13,8 +14,6 @@ export class TopSectionComponent  {
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
-
-    
 
     const bodyRect = document.body.getBoundingClientRect();
 
@@ -37,8 +36,5 @@ export class TopSectionComponent  {
     this.topSection = screenTop < topSectionBottomPosition - vwCalc;
     this.secoundBg = screenTop < secoundBgBottomPosition - vwCalc;
     this.headerTxt = screenTop < headerTxtBottomPosition - vwCalc;
-    
-  
   }
-
 }

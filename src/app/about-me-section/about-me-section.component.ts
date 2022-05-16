@@ -5,10 +5,10 @@ import { Component, HostListener } from '@angular/core';
   templateUrl: './about-me-section.component.html',
   styleUrls: ['./about-me-section.component.scss']
 })
+
 export class AboutMeSectionComponent {
 
   reachedAbout = false;
-
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
@@ -24,9 +24,5 @@ export class AboutMeSectionComponent {
     const aboutBottomPosition = aboutTopPosition + aboutHeight;
 
     this.reachedAbout = screenBottom > aboutTopPosition + vwCalc && screenTop < aboutBottomPosition - vwCalc;
-
-
   }
-
-
 }

@@ -5,10 +5,10 @@
     height: 100vh;
     font-family: 'Sen';
 
-
     .headerImg {
         position: absolute;
         top: 0;
+        margin-top: 6.11vw;
         left: 0;
         bottom: 0;
         display: flex;
@@ -19,7 +19,7 @@
         font-weight: 700;
         font-size: 45px;
         line-height: 150%;
-        opacity: 0.9;
+
         .meImg {
             width: 52.1vw;
         }
@@ -60,6 +60,7 @@
                 margin-top: 0.5vw;
                 font-size: 1.25vw;
                 color: white;
+                font-weight: 500;
             }
         }
     }
@@ -73,6 +74,7 @@
 
         .headerImg {
             position: unset;
+            margin-top: 0vw;
 
             .meImg {
                 width: 100%;
@@ -99,7 +101,7 @@
                 span {
                     position: absolute;
                     top: 31px;
-                    left: 16px;
+                    left: 4.44vw;
                     font-size: 32px;
                     line-height: 38px;
                 }
@@ -107,7 +109,7 @@
                 p {
                     position: absolute;
                     top: 157px;
-                    left: 16px;
+                    left: 4.44vw;
                     font-size: 18px;
                     color: white;
                 }
@@ -142,8 +144,6 @@
         }   
     }
 }
-
-
 
 @media(min-width: 1600px) {
 

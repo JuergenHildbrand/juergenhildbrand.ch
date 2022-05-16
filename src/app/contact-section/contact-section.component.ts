@@ -5,6 +5,7 @@ import { Component, HostListener } from '@angular/core';
   templateUrl: './contact-section.component.html',
   styleUrls: ['./contact-section.component.scss']
 })
+
 export class ContactSectionComponent {
 
   titleContact = false;
@@ -21,8 +22,6 @@ export class ContactSectionComponent {
 
     const screenTop = window.pageYOffset;
     const screenBottom = window.innerHeight + screenTop;
-    const vw = window.innerWidth;
-    const vwCalc = vw / 12;
 
     const a = document.getElementById('titleContact');
     const title = a.getBoundingClientRect();
@@ -54,7 +53,5 @@ export class ContactSectionComponent {
     this.email = screenBottom > emailBottomPosition;
     this.message = screenBottom > messageBottomPosition;
     this.sendBtn = screenBottom > sendBtnBottomPosition;
-  
   }
-
 }

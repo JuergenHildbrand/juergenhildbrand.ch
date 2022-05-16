@@ -1,5 +1,7 @@
 <div class="workSection" id="work">
+
     <h2 [class.goDownIn]="titleWork" [class.goDownOut]="!titleWork" id="titleWork">My Work</h2>
+
     <div class="buttons" [class.goDownIn]="buttonsWork" [class.goDownOut]="!buttonsWork" id="buttonsWork">
         <button class="btns backgroundColorBtn" (click)="all()" [disabled]="click1" id="btn1">All</button>
         <button class="btns" (click)="angular()" [disabled]="click2" id="btn2">Angular</button>
@@ -8,6 +10,7 @@
 
     <div class="myProjects">
 
+        <!-- My page -->
         <div class="d-wrap">
             <div class="work" id="workBox1" [class.goDownIn]="workBox1" [class.goDownOut]="!workBox1">
                 <div class="imgCont" id="wb1">
@@ -19,6 +22,8 @@
                     </div>
                 </div>
             </div>
+
+            <!-- El pllo loco -->
             <div class="work" id="workBox2" [class.goDownIn]="workBox2" [class.goDownOut]="!workBox2">
                 <div class="imgCont" id="wb2">
                     <img class="workImg" src="assets/img/elPolloLoco.png">
@@ -30,9 +35,10 @@
                             <button class="btn" (click)="elPlloLocoGit()">Check git</button>
                         </div>
                     </div>
-
                 </div>
             </div>
+
+            <!-- Join -->
             <div class="work" id="workBox3" [class.goDownIn]="workBox3" [class.goDownOut]="!workBox3">
                 <div class="imgCont" id="wb3">
                     <img class="workImg" src="assets/img/join.jpg">
@@ -46,11 +52,13 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Pokedex -->
             <div class="work" id="workBox4" [class.goDownIn]="workBox4" [class.goDownOut]="!workBox4">
                 <div class="imgCont" id="wb4">
-                    <img class="workImg" src="assets/img/pokadex.png">
+                    <img class="workImg" src="assets/img/pokedex.png">
                     <div class="middle">
-                        <div class="title">Pokadex</div>
+                        <div class="title">Pokedex</div>
                         <div class="text">JavaScript - A project with rest API's</div>
                         <div class="dFlex">
                             <button class="btn" (click)="tryOutPokedex()">Try it!</button>
@@ -59,6 +67,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </div>

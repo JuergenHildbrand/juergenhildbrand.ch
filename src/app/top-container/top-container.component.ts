@@ -5,15 +5,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './top-container.component.html',
   styleUrls: ['./top-container.component.scss']
 })
+
 export class TopContainerComponent implements OnInit {
 
+  ngOnInit(): void {}
 
-
-
-  ngOnInit(): void {
-
-     
-  }
-
-  
 }

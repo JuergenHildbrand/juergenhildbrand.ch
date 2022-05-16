@@ -15,13 +15,11 @@
         font-size: 3.82vw;
         line-height: 6.25vw;
         color: white;
-
     }
 
     .skillBoxesCont {
         position: absolute;
         margin-top: 11.1vw;
-
     }
 
     .boxes {
@@ -41,7 +39,6 @@
         line-height: 1.94vw;
         text-align: center;
         background-color: white;
-
 
         p {
             margin-top: 3.77vw;
@@ -103,32 +100,31 @@
             }
         }
     }
-
-
 }
 
 
 @media(max-width: 900px) {
 
     .sklillsSection {
-        height: 118vw;
+        min-height: 130vw;
 
         h2 {
-            top: 16vw;
+            top: 12.84vw;
             font-size: 8.89vw;
             line-height: 11.1vw;
         }
 
         .skillBoxesCont {
             margin-top: 39vw;
-
+            width: 95.56vw;
+            padding-bottom: 12vw;
 
             .boxes {
                 position: relative;
                 width: 28.79vw;
                 height: 18.87vw;
-                margin-left: 1.38vw;
-                margin-right: 1.38vw;
+                margin-left: 2.22vw;
+                margin-right: 2.22vw;
                 margin-bottom: 11.08vw;
                 border-radius: 1.6vw;
                 font-size: 4.28vw;

@@ -16,7 +16,7 @@
         font-family: 'Inter';
         font-style: normal;
         font-weight: 500;
-        font-size: 3.82vw;;
+        font-size: 3.82vw;
         line-height: 6.25vw;
         color: white;
     }
@@ -150,7 +150,6 @@
     .workSection {
         width: 100%;
         height: fit-content;
-        background-color: black;
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -180,6 +179,7 @@
         .myProjects {
             position: unset;
             margin-top: 7.5vw;
+            padding-bottom: 12vw;
 
             .d-wrap {
                 display: flex;
@@ -189,10 +189,6 @@
 
             .d-flex {
                 flex-direction: column;
-            }
-
-            #workBox4 {
-                margin-bottom: 3.9vw;
             }
 
             .imgCont {
@@ -228,7 +224,7 @@
 
                     .text {
                         margin-top: 7.15vw;
-                        max-width: 40vw;
+                        max-width: 44vw;
                         color: black;
                         font-family: 'Inter';
                         font-style: normal;
@@ -251,13 +247,37 @@
     }
 }
 
-///// Animation //////
+@media(max-width: 530px) {
+
+    .workSection {
+        .buttons {
+            .btns {
+                font-size: 3.4vw;
+            }
+        }
+
+        .myProjects {
+            .imgCont {
+                .middle {
+                    .btn {
+                        font-size: 4.4vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+///// Animations //////
 
 .goDownIn {
     animation: showObjectIn 1s ease-in-out;
 }
+
 .goDownOut {
-    animation: hiddenObject 0s 0.99s forwards, showObjectOut 1s ease-in-out;;
+    animation: hiddenObject 0s 0.99s forwards, showObjectOut 1s ease-in-out;
+    ;
 }
 
 @keyframes showObjectIn {
@@ -266,9 +286,10 @@
         transform: scale(0);
         border-radius: 100%;
     }
+
     100% {
         transform: scale(1);
-    }  
+    }
 }
 
 @keyframes showObjectOut {
@@ -276,14 +297,12 @@
         opacity: 1;
         transform: scale(1);
     }
+
     100% {
         opacity: 0;
         transform: scale(0);
-    }  
+    }
 }
-
-
-
 
 @keyframes opacityB {
     0% {

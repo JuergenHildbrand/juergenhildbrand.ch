@@ -29,11 +29,7 @@ span {
 }
 
 
-
-////////// Animations /////////
-
-
-////// Animations left right ///////
+///// Animations /////
 
 .titleIn {
     animation: fadeInAmimationLeft 1s ease-in-out;
@@ -96,7 +92,6 @@ span {
     animation: hiddenObject 0s 1.99s forwards, fadeOutAmimationRight 2s ease-in-out;
 }
 
-
 @keyframes fadeInAmimationLeft {
 
     0% {
@@ -127,7 +122,6 @@ span {
     }  
 }
 
-
 @keyframes fadeOutAmimationRight {
 
     0% {
@@ -148,8 +142,8 @@ span {
     }  
 }
 
-
 @keyframes hiddenObject {
+
     from {
         opacity: 1;
     }
@@ -158,9 +152,6 @@ span {
     }
     
 }
-
-
-
 
 @media(max-width: 900px) {
 
@@ -193,7 +184,6 @@ span {
             transform: translateY(0);
         }  
     }
-    
     
     @keyframes fadeOutAmimationRight {
     

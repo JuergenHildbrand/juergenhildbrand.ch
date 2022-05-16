@@ -1,8 +1,11 @@
 <div class="contactSection" id="contact">
+
     <h2 [class.titleIn]="titleContact" [class.titleOut]="!titleContact" id="titleContact">Contact me.</h2>
+
     <div class="contactDescription" [class.active2InR]="description" [class.active2OutL]="!description" id="description">
         <p>Get in touch via the form below, or by emailing</p> <a href="mailto:abc@example.com">info@juergenhildbrand.ch</a>
     </div>
+
     <form>
         <div class="contactTxt" [class.active2InR]="nameContact" [class.active2OutL]="!nameContact">Name</div>
         <input type="text" placeholder="Enter your name" [class.active2InR]="nameContact" [class.active2OutL]="!nameContact" id="nameContact">
@@ -11,7 +14,7 @@
         <div class="contactTxt" [class.active2InR]="message" [class.active2OutL]="!message">Message</div>
         <textarea placeholder="Enter your message" [class.active2InR]="message" [class.active2OutL]="!message" id="message"></textarea>
     </form>
-    <div>
+
     <button [class.active2InL]="sendBtn" [class.active2OutR]="!sendBtn" id="sendBtn">Send</button>
-</div>
+    
 </div>

@@ -1,44 +1,43 @@
 footer {
     width: 100%;
-    height: 13.89vw;
+    height: 12vw;
     background-color: white;
     display: flex;
     align-items: center;
-    border-top: rgba(0,0,0,0.2);
+    justify-content: space-between;
+    box-shadow: 0px -1px 3px 0px rgba(0, 0, 0, 0.2);
 
-
-
-    p {
-        margin-left: 5.76vw;
-        min-width: 15.83vw;
+    a {
+        margin-left: 4.44vw;
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 400;
         font-size: 1.25vw;
         line-height: 150%;
-        color: #8491A0;
+        text-decoration: none;
+        color: #8491A0;;
         cursor: pointer;
+        transition: 225ms ease-in-out;
 
-        a {
-            text-decoration: none;
-            color: black;
-
-            &:hover {
-                text-decoration: underline;
-                color: #5221E6;
-            }
-        }   
+        &:hover {
+            color: #5221E6;
+        }
     }
 
     .iconsFooter {
         display: flex;
         align-items: center;
-        margin-left: 53.68vw;
+        margin-right: 4.44vw;
 
         .linkedIn {
             width: 2.34vw;
             height: 2.34vw;
             cursor: pointer;
+            animation: scaleIn 225ms ease-in-out forwards;
+
+            &:hover {
+                animation: scaleOut 225ms ease-in-out forwards;
+            }
         }
 
         .git {
@@ -46,12 +45,23 @@ footer {
             width: 2.6vw;
             height: 2.54vw;
             cursor: pointer;
+            animation: scaleIn 225ms ease-in-out forwards;
+
+            &:hover {
+                animation: scaleOut 225ms ease-in-out forwards;
+            }
         }
+
         .xing {
             margin-left: 6.57vw;
             width: 2.11vw;
             height: 2.48vw;
             cursor: pointer;
+            animation: scaleIn 225ms ease-in-out forwards;
+
+            &:hover {
+                animation: scaleOut 225ms ease-in-out forwards;
+            }
         }
     }
 }
@@ -64,38 +74,57 @@ footer {
 
     footer {
         position: relative;
-        height: 30vw !important;
+        height: 111px !important;
         flex-direction: column-reverse;
-    
-        p {
-            position: absolute;
-            top: 0;
-            margin-top: 17vw;
-            margin-left: 0;
-            font-size: 5vw;
 
+        a {
+            position: absolute;
+            top: 75px;
+            margin-left: 0;
+            font-size: 18px;
         }
-    
+
         .iconsFooter {
             position: absolute;
-            top: 5.35vw;
-            margin-left: 0;
-    
+            top: 22px;
+            margin-right: 0;
+
             .linkedIn {
-                width: 8.125vw;
-                height: 8.125vw;
+                width: 30px;
+                height: 30px;
             }
-    
+
             .git {
                 margin-left: 22vw;
-                width: 9.26vw;
-                height: 9.26vw;
+                width: 33px;
+                height: 33px;
             }
+
             .xing {
                 margin-left: 22.775vw;
-                width: 7.31vw;
-                height: 8.6vw;
+                width: 26.3px;
+                height: 31px;
             }
         }
+    }
+}
+
+//// Animations ////
+
+@keyframes scaleOut {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes scaleIn {
+    0% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
     }
 }

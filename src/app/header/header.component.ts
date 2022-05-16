@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, HostListener } from '@angular/core';
+import { Component, Input, } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,32 +6,8 @@ import { Component, Input, OnInit, HostListener } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
   @Input() darkMode = true;
-
-  ngOnInit(): void {
-    console.log(this.darkMode)    
-  }
-  
-  
-
-  // logoHeader = true;
-  // linksHeader = true;
-
-  // @HostListener('window:scroll', ['$event'])
-  // onWindowScroll() {
-
-  //   const bodyRect = document.body.getBoundingClientRect();
-
-  //   const screenTop = window.pageYOffset;
-  //   const vw = window.innerWidth;
-
-  //   const b = document.getElementById('linksHeader');
-  //   const linksHeader = b.getBoundingClientRect();
-  //   const linksHeaderBottomPosition = linksHeader.bottom - bodyRect.top;
-
-  //   this.linksHeader = screenTop < linksHeaderBottomPosition;
-  // }
 
   openMenu() {
     let x = document.getElementById('myLinks');

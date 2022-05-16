@@ -13,9 +13,6 @@ import { WorkSectionComponent } from './work-section/work-section.component';
 import { SkillsSectionComponent } from './skills-section/skills-section.component';
 import { TopSectionComponent } from './top-section/top-section.component';
 
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,9 +25,6 @@ import { TopSectionComponent } from './top-section/top-section.component';
     WorkSectionComponent,
     SkillsSectionComponent,
     TopSectionComponent,
-
-
-
   ],
   imports: [
     BrowserModule,
@@ -40,4 +34,5 @@ import { TopSectionComponent } from './top-section/top-section.component';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
