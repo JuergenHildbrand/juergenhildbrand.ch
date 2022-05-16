@@ -52,7 +52,7 @@
     }
 
     form {
-        position: absolute;
+        position: relative;
         top: 18.75vw;
         left: 27.3vw;
 
@@ -92,29 +92,29 @@
             overflow-y: auto;
             color: #989898;
         }
-    }
 
-    button {
-        position: absolute;
-        top: 52.22vw;
-        left: 58.82vw;
-        width: 10.9vw;
-        height: 4.17vw;
-        background: black;
-        border: 2px solid #5221E6;
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 1.25vw;
-        line-height: 0.97vw;
-        color: white;
-        background-color: transparent;
-        cursor: pointer;
-        transition: 225ms ease-in-out;
-
-        &:hover {
-            background: #1E0079;
-            border: 1px solid #1E0079;
+        button {
+            position: absolute;
+            top: 31.22vw;
+            left: 31.8vw;
+            width: 10.9vw;
+            height: 4.17vw;
+            background: black;
+            border: 2px solid #5221E6;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.25vw;
+            line-height: 0.97vw;
+            color: white;
+            background-color: transparent;
+            cursor: pointer;
+            transition: 225ms ease-in-out;
+    
+            &:hover {
+                background: #1E0079;
+                border: 1px solid #1E0079;
+            }
         }
     }
 }
@@ -187,17 +187,16 @@
                 font-size: 4.44vw;
                 line-height: 5.55vw;
             }
-        }
 
-        button {
-            position: absolute;
-            top: 174.6vw;
-            left: 59.6vw;
-            width: 35.56vw;
-            height: 16.67vw;
-            font-weight: 500;
-            font-size: 5vw;
-            line-height: 5.55vw;
+            button {
+                top: 116.22vw;
+                left: 55.8vw;
+                width: 35.56vw;
+                height: 16.67vw;
+                font-weight: 500;
+                font-size: 5vw;
+                line-height: 5.55vw;
+            }
         }
     }
 }

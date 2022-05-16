@@ -54,4 +54,8 @@ export class ContactSectionComponent {
     this.message = screenBottom > messageBottomPosition;
     this.sendBtn = screenBottom > sendBtnBottomPosition;
   }
+
+  sendMail() {
+
+  }
 }
