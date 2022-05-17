@@ -9,11 +9,11 @@ import {NgForm} from '@angular/forms';
 
 export class ContactSectionComponent {
 
-  isDisablet = true;
+  isDisabled = true;
 
   onSubmit(contactForm: NgForm) {
     if (contactForm.valid) {
-      this.isDisablet = false;
+      this.isDisabled = false;
     }
   }
 
