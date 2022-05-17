@@ -12,6 +12,8 @@ import { AboutMeSectionComponent } from './about-me-section/about-me-section.com
 import { WorkSectionComponent } from './work-section/work-section.component';
 import { SkillsSectionComponent } from './skills-section/skills-section.component';
 import { TopSectionComponent } from './top-section/top-section.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { TopSectionComponent } from './top-section/top-section.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

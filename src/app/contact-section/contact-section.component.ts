@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
-import {NgForm} from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { NavigationService } from '../navigation.service';
 
 @Component({
   selector: 'app-contact-section',
@@ -9,13 +10,56 @@ import {NgForm} from '@angular/forms';
 
 export class ContactSectionComponent {
 
-  isDisabled = true;
+  constructor(private http: HttpClient, public navigation: NavigationService) {}
 
-  onSubmit(contactForm: NgForm) {
-    if (contactForm.valid) {
-      this.isDisabled = false;
+    /**
+   * This is bind to ngForm's InputFields in Template File
+   */
+     contact = {
+      name: '', //Bind  to InputField name="name"
+      email: '', //Bind to InputField name="email"
+      message: '', //Bind to InputField name="message"
+    };
+  
+    /**
+     * A post request construct configuration
+     */
+    post = {
+      // Where to send the post request Ex. http://my-domain/sendMail.php
+      //or https://my-domain/sendMail.php if you have SSL-Certificate Active
+      endPoint: '',
+      // What to send, notice JSON.stringify
+      body: (payload: any) => JSON.stringify(payload),
+      // How to send, notice Content-Type and responseType
+      options: {
+        headers: {
+          'Content-Type': 'text/plain',
+          responseType: 'text',
+        },
+      },
+    };
+
+    /**
+   * Do not forget to import FormsModule in app.module.ts
+   */
+  onSubmit(ngForm) {
+    if (ngForm.submitted && ngForm.form.valid) {
+      this.http
+        .post(this.post.endPoint, this.post.body(this.contact))
+        .subscribe({
+          next: (response) => {
+            console.log(response);
+            // Here Message was send
+          },
+          error: (error) => {
+            console.error(error);
+            // Here Message was not send!!!!!
+          },
+          complete: () => console.info('send post complete'),
+        });
     }
   }
+
 
   titleContact = false;
   description = false;
