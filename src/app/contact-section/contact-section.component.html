@@ -13,7 +13,8 @@
         <input 
             type="text" 
             placeholder="Enter your name" 
-            id="name" required 
+            id="name" 
+            required 
             [(ngModel)]="contact.name" 
             name="name"
             #name="ngModel" 
@@ -24,6 +25,7 @@
         <input 
             type="email" 
             id="email"
+            required 
             [(ngModel)]="contact.email"
             name="email"
             #email="ngModel" 
@@ -42,7 +44,7 @@
             [class.active2InR]="message" 
             [class.active2OutL]="!message">
         </textarea>
-        <button [class.active2InL]="sendBtn" [class.active2OutR]="!sendBtn" id="sendBtn" type="submit"  [disabled]="!contactForm.form.valid">Send</button>
+        <button [class.active2InL]="sendBtn" [class.active2OutR]="!sendBtn" id="sendBtn" type="submit" [disabled]="!contactForm.form.valid" (click)="sendMail()">Send</button>
     </form>
 
 </div>

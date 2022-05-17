@@ -27,7 +27,7 @@ export class ContactSectionComponent {
     post = {
       // Where to send the post request Ex. http://my-domain/sendMail.php
       //or https://my-domain/sendMail.php if you have SSL-Certificate Active
-      endPoint: 'https://www.juergenhildbrand.ch/send_mail.php',
+      endPoint: 'https://www.juergenhildbrand.ch/sendMail.php',
       // What to send, notice JSON.stringify
       body: (payload: any) => JSON.stringify(payload),
       // How to send, notice Content-Type and responseType
@@ -48,7 +48,8 @@ export class ContactSectionComponent {
         .post(this.post.endPoint, this.post.body(this.contact))
         .subscribe({
           next: (response) => {
-            console.log(response);
+            console.log(this.post.endPoint);
+            console.log(this.contact);
             // Here Message was send
           },
           error: (error) => {
@@ -58,6 +59,10 @@ export class ContactSectionComponent {
           complete: () => console.info('send post complete'),
         });
     }
+  }
+
+  sendMail() {
+    window.location.href = "https://www.juergenhildbrand.ch/testMail/overlay-email.html";
   }
 
 
@@ -106,5 +111,7 @@ export class ContactSectionComponent {
     this.email = screenBottom > emailBottomPosition;
     this.message = screenBottom > messageBottomPosition;
     this.sendBtn = screenBottom > sendBtnBottomPosition;
+
+    console.log(this.email)
   }
 }
