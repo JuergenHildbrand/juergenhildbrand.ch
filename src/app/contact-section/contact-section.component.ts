@@ -27,7 +27,7 @@ export class ContactSectionComponent {
     post = {
       // Where to send the post request Ex. http://my-domain/sendMail.php
       //or https://my-domain/sendMail.php if you have SSL-Certificate Active
-      endPoint: '',
+      endPoint: 'https://www.juergenhildbrand.ch/send_mail.php',
       // What to send, notice JSON.stringify
       body: (payload: any) => JSON.stringify(payload),
       // How to send, notice Content-Type and responseType
