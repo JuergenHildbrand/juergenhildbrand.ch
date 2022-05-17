@@ -8,14 +8,14 @@
             target="_blank">info@juergenhildbrand.ch</a>
     </div>
 
-    <form action="https://www.juergenhildbrand.ch/send_mail.php" method="post">
+    <form action="https://www.juergenhildbrand.ch/send_mail.php" method="POST" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
         <div class="contactTxt" [class.active2InR]="nameContact" [class.active2OutL]="!nameContact">Name</div>
-        <input type="text" placeholder="Enter your name" [class.active2InR]="nameContact" [class.active2OutL]="!nameContact" id="name" name="name">
+        <input type="text" placeholder="Enter your name" [class.active2InR]="nameContact" [class.active2OutL]="!nameContact" id="name" name="name" ngModel required #name="ngModel">
         <div class="contactTxt" [class.active2InL]="email" [class.active2OutR]="!email">Email address</div>
-        <input type="email" id="email" placeholder="Enter your Email address" [class.active2InL]="email" [class.active2OutR]="!email" id="email">
+        <input type="email" id="email" placeholder="Enter your Email address" [class.active2InL]="email" [class.active2OutR]="!email" id="email" ngModel required #email="ngModel">
         <div class="contactTxt" [class.active2InR]="message" [class.active2OutL]="!message">Message</div>
-        <textarea placeholder="Enter your message" [class.active2InR]="message" [class.active2OutL]="!message" id="message" name="message"></textarea>
-        <button [class.active2InL]="sendBtn" [class.active2OutR]="!sendBtn" id="sendBtn" type="submit">Send</button>
+        <textarea placeholder="Enter your message" [class.active2InR]="message" [class.active2OutL]="!message" id="message" name="message" ngModel required #messages="ngModel"></textarea>
+        <button [disabled]="isDisabled" [class.active2InL]="sendBtn" [class.active2OutR]="!sendBtn" id="sendBtn" type="submit">Send</button>
     </form>
 
 </div>

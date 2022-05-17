@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-contact-section',
@@ -7,6 +8,14 @@ import { Component, HostListener } from '@angular/core';
 })
 
 export class ContactSectionComponent {
+
+  isDisablet = true;
+
+  onSubmit(contactForm: NgForm) {
+    if (contactForm.valid) {
+      this.isDisablet = false;
+    }
+  }
 
   titleContact = false;
   description = false;
