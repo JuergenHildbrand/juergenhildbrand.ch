@@ -10,67 +10,13 @@ import { NavigationService } from '../navigation.service';
 
 export class ContactSectionComponent {
 
-  constructor(private http: HttpClient, public navigation: NavigationService) {}
-
-    /**
-   * This is bind to ngForm's InputFields in Template File
-   */
-     contact = {
-      name: '', //Bind  to InputField name="name"
-      email: '', //Bind to InputField name="email"
-      message: '', //Bind to InputField name="message"
-    };
-  
-    /**
-     * A post request construct configuration
-     */
-    post = {
-      // Where to send the post request Ex. http://my-domain/sendMail.php
-      //or https://my-domain/sendMail.php if you have SSL-Certificate Active
-      endPoint: 'https://www.juergenhildbrand.ch/sendMail.php',
-      // What to send, notice JSON.stringify
-      body: (payload: any) => JSON.stringify(payload),
-      // How to send, notice Content-Type and responseType
-      options: {
-        headers: {
-          'Content-Type': 'text/plain',
-          responseType: 'text',
-        },
-      },
-    };
-
-    /**
-   * Do not forget to import FormsModule in app.module.ts
-   */
-  onSubmit(ngForm) {
-    if (ngForm.submitted && ngForm.form.valid) {
-      this.http
-        .post(this.post.endPoint, this.post.body(this.contact))
-        .subscribe({
-          next: (response) => {
-            console.log(this.post.endPoint);
-            console.log(this.contact);
-            // Here Message was send
-          },
-          error: (error) => {
-            console.error(error);
-            // Here Message was not send!!!!!
-          },
-          complete: () => console.info('send post complete'),
-        });
-    }
-  }
-
-  sendMail() {
-    window.location.href = "https://www.juergenhildbrand.ch/testMail/overlay-email.html";
-  }
-
+  constructor(private http: HttpClient, public navigation: NavigationService) { }
 
   titleContact = false;
   description = false;
   nameContact = false;
-  email = false;
-  message = false;
+  emailContact = false;
+  messageContact = false;
   sendBtn = false;
 
   @HostListener('window:scroll', ['$event'])
@@ -108,8 +54,61 @@ export class ContactSectionComponent {
     this.titleContact = screenBottom > titleBottomPosition;
     this.description = screenBottom > descriptionBottomPosition;
     this.nameContact = screenBottom > nameBottomPosition;
-    this.email = screenBottom > emailBottomPosition;
-    this.message = screenBottom > messageBottomPosition;
+    this.emailContact = screenBottom > emailBottomPosition;
+    this.messageContact = screenBottom > messageBottomPosition;
     this.sendBtn = screenBottom > sendBtnBottomPosition;
+  }
+
+  /**
+* This is bind to ngForm's InputFields in Template File
+*/
+  contact = {
+    name: '', //Bind  to InputField name="name"
+    email: '', //Bind to InputField name="email"
+    message: '', //Bind to InputField name="message"
+  };
+
+  /**
+   * A post request construct configuration
+   */
+  post = {
+    // Where to send the post request Ex. http://my-domain/sendMail.php
+    //or https://my-domain/sendMail.php if you have SSL-Certificate Active
+    endPoint: 'https://www.juergenhildbrand.ch/sendMail.php',
+    // What to send, notice JSON.stringify
+    body: (payload: any) => JSON.stringify(payload),
+    // How to send, notice Content-Type and responseType
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
+
+  /**
+ * Do not forget to import FormsModule in app.module.ts
+ */
+  onSubmit(ngForm) {
+    if (ngForm.submitted && ngForm.form.valid) {
+      this.http
+        .post(this.post.endPoint, this.post.body(this.contact))
+        .subscribe({
+          next: (response) => {
+            console.log(ngForm.submitted);
+            console.log(ngForm.form.valid);
+            // Here Message was send
+          },
+          error: (error) => {
+            console.error(error);
+            // Here Message was not send!!!!!
+          },
+          complete: () => console.info('send post complete'),
+        });
+    }
+  }
+
+  sendMail() {
+    window.location.href = "https://www.juergenhildbrand.ch/testMail/overlay-email.html";
   }
 }

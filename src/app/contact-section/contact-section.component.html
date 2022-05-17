@@ -12,37 +12,37 @@
         <div class="contactTxt" [class.active2InR]="nameContact" [class.active2OutL]="!nameContact">Name</div>
         <input 
             type="text" 
-            placeholder="Enter your name" 
+            placeholder="Enter your name"  
             id="name" 
             required 
             [(ngModel)]="contact.name" 
-            name="name"
+            name="name" 
             #name="ngModel" 
             [class.active2InR]="nameContact" 
-            [class.active2OutL]="!nameContact"/>
+            [class.active2OutL]="!nameContact">
 
-        <div class="contactTxt" [class.active2InL]="email" [class.active2OutR]="!email">Email address</div>
+        <div class="contactTxt" [class.active2InL]="emailContact" [class.active2OutR]="!emailContact">Email address</div>
         <input 
-            type="email" 
-            id="email"
-            required 
-            [(ngModel)]="contact.email"
-            name="email"
-            #email="ngModel" 
+            type="email"
             placeholder="Enter your Email address" 
-            [class.active2InL]="email"
-            [class.active2OutR]="!email"/>
+            id="email" 
+            required 
+            [(ngModel)]="contact.email" 
+            name="email" 
+            #email="ngModel" 
+            [class.active2InL]="emailContact" 
+            [class.active2OutR]="!emailContact">
 
-        <div class="contactTxt" [class.active2InR]="message" [class.active2OutL]="!message">Message</div>
+        <div class="contactTxt" [class.active2InR]="messageContact" [class.active2OutL]="!messageContact">Message</div>
         <textarea 
             placeholder="Enter your message" 
             id="message" 
-            required
-            [(ngModel)]="contact.message"
+            required 
+            [(ngModel)]="contact.message" 
             name="message"
-            #message="ngModel"
-            [class.active2InR]="message" 
-            [class.active2OutL]="!message">
+            #message="ngModel" 
+            [class.active2InR]="messageContact" 
+            [class.active2OutL]="!messageContact">
         </textarea>
         <button [class.active2InL]="sendBtn" [class.active2OutR]="!sendBtn" id="sendBtn" type="submit" [disabled]="!contactForm.form.valid" (click)="sendMail()">Send</button>
     </form>
