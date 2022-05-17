@@ -8,6 +8,25 @@ import { Component, HostListener } from '@angular/core';
 
 export class ContactSectionComponent {
 
+  sendMail() {
+    const g = document.getElementById('overlayEmail');
+
+    g.classList.remove('d-none');
+    g.classList.add('d-flex');
+    g.classList.add('scaleOut');
+    
+
+    // setTimeout(() => {
+    //   g.classList.remove('scaleOut');
+    //   g.classList.add('scaleIn');
+
+    // }, 3000);
+    // setTimeout(() => {
+    //   g.classList.remove('scaleIn');
+    //   g.classList.add('d-none');
+    // }, 4000);
+  }
+
   titleContact = false;
   description = false;
   nameContact = false;
@@ -31,7 +50,7 @@ export class ContactSectionComponent {
     const description = b.getBoundingClientRect();
     const descriptionBottomPosition = description.bottom - bodyRect.top;
 
-    const c = document.getElementById('nameContact');
+    const c = document.getElementById('name');
     const nameContact = c.getBoundingClientRect();
     const nameBottomPosition = nameContact.bottom - bodyRect.top;
 
@@ -53,25 +72,5 @@ export class ContactSectionComponent {
     this.email = screenBottom > emailBottomPosition;
     this.message = screenBottom > messageBottomPosition;
     this.sendBtn = screenBottom > sendBtnBottomPosition;
-  }
-
-  sendMail(el: HTMLElement) {
-
-    const g = document.getElementById('overlayEmail');
-
-    g.classList.remove('d-none');
-
-    g.classList.add('scaleOut');
-
-
-    setTimeout(() => {
-      g.classList.remove('scaleOut');
-      g.classList.add('scaleIn');
-      // el.scrollIntoView();
-    }, 3000);
-    setTimeout(() => {
-      g.classList.remove('scaleIn');
-      g.classList.add('d-none');
-    }, 4000);
   }
 }

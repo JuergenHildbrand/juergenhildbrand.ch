@@ -15,6 +15,8 @@ export class AppComponent implements OnInit {
     this.overlayBg();
   }
 
+
+
   // under construction
   overlayBg() {
     let d = document.getElementById('uConstr');
@@ -23,9 +25,9 @@ export class AppComponent implements OnInit {
     z.classList.add('canceling');
     setTimeout(() => {
       d.classList.remove('d-none');
-    }, 3);
+    }, 3000);
     setTimeout(() => {
       y.classList.add('d-none');
-    }, 3);
+    }, 3000);
   }
 }

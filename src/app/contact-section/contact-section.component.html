@@ -1,30 +1,33 @@
-<div class="contactSection" id="contact" #target>
+<div class="contactSection" id="contact">
 
     <h2 [class.titleIn]="titleContact" [class.titleOut]="!titleContact" id="titleContact">Contact me.</h2>
 
-    <div class="contactDescription" [class.active2InR]="description" [class.active2OutL]="!description" id="description">
-        <p>Get in touch via the form below, or by emailing</p> <a href="mailto:abc@example.com" target="_blank">info@juergenhildbrand.ch</a>
+    <div class="contactDescription" [class.active2InR]="description" [class.active2OutL]="!description"
+        id="description">
+        <p>Get in touch via the form below, or by emailing</p> <a href="mailto:abc@example.com"
+            target="_blank">info@juergenhildbrand.ch</a>
     </div>
 
-    <form>
+    <form action="https://www.juergenhildbrand.ch/send_mail.php" method="post">
         <div class="contactTxt" [class.active2InR]="nameContact" [class.active2OutL]="!nameContact">Name</div>
-        <input type="text" placeholder="Enter your name" [class.active2InR]="nameContact" [class.active2OutL]="!nameContact" id="nameContact" name="name">
+        <input type="text" placeholder="Enter your name" [class.active2InR]="nameContact" [class.active2OutL]="!nameContact" id="name" name="name">
         <div class="contactTxt" [class.active2InL]="email" [class.active2OutR]="!email">Email address</div>
-        <input type="email" id="email" placeholder="Enter your Email address" [class.active2InL]="email" [class.active2OutR]="!email" id="email">
+        <input type="email" id="email" placeholder="Enter your Email address" [class.active2InL]="email" [class.active2OutR]="!email" id="email" name="email">
         <div class="contactTxt" [class.active2InR]="message" [class.active2OutL]="!message">Message</div>
         <textarea placeholder="Enter your message" [class.active2InR]="message" [class.active2OutL]="!message" id="message" name="message"></textarea>
-        <button [class.active2InL]="sendBtn" [class.active2OutR]="!sendBtn" id="sendBtn" (click)="sendMail(target)" type="submit">Send</button>
+        <button [class.active2InL]="sendBtn" [class.active2OutR]="!sendBtn" id="sendBtn" (click)="sendMail()" type="submit">Send</button>
     </form>
 
-    <div class="overlayEmail d-none" id="overlayEmail">
-        <div class="middleEmail">
-            Vielen Dank!
-            <br>
-            <br>
-            Ich werde Ihnen so schnell<br>wie möglich antworten...
-        </div>
-    </div>
-    
 </div>
 
-<!-- action="https://www.juergenhildbrand.ch/send_mail.php" -->
+<!-- E-mail send -->
+<div class="d-none" id="overlayEmail">
+    <div class="middleEmail">
+        Vielen Dank!
+        <br>
+        <br>
+        Ich werde Ihnen so schnell<br>wie möglich antworten...
+    </div>
+</div>
+
+<!--  action="https://www.juergenhildbrand.ch/send_mail.php" method="post" -->
