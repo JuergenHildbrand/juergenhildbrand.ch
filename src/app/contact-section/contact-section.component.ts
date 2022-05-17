@@ -111,7 +111,5 @@ export class ContactSectionComponent {
     this.email = screenBottom > emailBottomPosition;
     this.message = screenBottom > messageBottomPosition;
     this.sendBtn = screenBottom > sendBtnBottomPosition;
-
-    console.log(this.email)
   }
 }
