@@ -25,9 +25,9 @@ export class AppComponent implements OnInit {
     z.classList.add('canceling');
     setTimeout(() => {
       d.classList.remove('d-none');
-    }, 3000);
+    }, 3);
     setTimeout(() => {
       y.classList.add('d-none');
-    }, 3000);
+    }, 3);
   }
 }

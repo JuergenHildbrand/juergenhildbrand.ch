@@ -8,25 +8,6 @@ import { Component, HostListener } from '@angular/core';
 
 export class ContactSectionComponent {
 
-  sendMail() {
-    const g = document.getElementById('overlayEmail');
-
-    g.classList.remove('d-none');
-    g.classList.add('d-flex');
-    g.classList.add('scaleOut');
-    
-
-    // setTimeout(() => {
-    //   g.classList.remove('scaleOut');
-    //   g.classList.add('scaleIn');
-
-    // }, 3000);
-    // setTimeout(() => {
-    //   g.classList.remove('scaleIn');
-    //   g.classList.add('d-none');
-    // }, 4000);
-  }
-
   titleContact = false;
   description = false;
   nameContact = false;

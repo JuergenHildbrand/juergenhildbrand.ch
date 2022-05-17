@@ -24,7 +24,7 @@ import { TopSectionComponent } from './top-section/top-section.component';
     AboutMeSectionComponent,
     WorkSectionComponent,
     SkillsSectionComponent,
-    TopSectionComponent,
+    TopSectionComponent
   ],
   imports: [
     BrowserModule,
