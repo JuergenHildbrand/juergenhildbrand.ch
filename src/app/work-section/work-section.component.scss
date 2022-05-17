@@ -271,39 +271,6 @@
 
 ///// Animations //////
 
-.goDownIn {
-    animation: showObjectIn 1s ease-in-out;
-}
-
-.goDownOut {
-    animation: hiddenObject 0s 0.99s forwards, showObjectOut 1s ease-in-out;
-    ;
-}
-
-@keyframes showObjectIn {
-    0% {
-        opacity: 0;
-        transform: scale(0);
-        border-radius: 100%;
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes showObjectOut {
-    0% {
-        opacity: 1;
-        transform: scale(1);
-    }
-
-    100% {
-        opacity: 0;
-        transform: scale(0);
-    }
-}
-
 @keyframes opacityB {
     0% {
         opacity: 0;

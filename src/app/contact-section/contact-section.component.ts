@@ -55,7 +55,23 @@ export class ContactSectionComponent {
     this.sendBtn = screenBottom > sendBtnBottomPosition;
   }
 
-  sendMail() {
+  sendMail(el: HTMLElement) {
 
+    const g = document.getElementById('overlayEmail');
+
+    g.classList.remove('d-none');
+
+    g.classList.add('scaleOut');
+
+
+    setTimeout(() => {
+      g.classList.remove('scaleOut');
+      g.classList.add('scaleIn');
+      // el.scrollIntoView();
+    }, 3000);
+    setTimeout(() => {
+      g.classList.remove('scaleIn');
+      g.classList.add('d-none');
+    }, 4000);
   }
 }

@@ -13,7 +13,7 @@ html {
 }
 
 .d-none {
-    display: none;
+    display: none !important;
 }
 
 .d-flex {
@@ -90,6 +90,38 @@ span {
 }
 .active5OutR {
     animation: hiddenObject 0s 1.99s forwards, fadeOutAmimationRight 2s ease-in-out;
+}
+.scaleOut {
+    animation: showObjectIn 1s ease-in-out;
+}
+.scaleIn {
+    animation: hiddenObject 0s 0.99s forwards, showObjectOut 1s ease-in-out;
+}
+
+@keyframes showObjectIn {
+
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes showObjectOut {
+
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
 }
 
 @keyframes fadeInAmimationLeft {

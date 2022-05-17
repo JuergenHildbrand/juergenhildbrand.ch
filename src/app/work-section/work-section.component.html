@@ -1,8 +1,8 @@
 <div class="workSection" id="work">
 
-    <h2 [class.goDownIn]="titleWork" [class.goDownOut]="!titleWork" id="titleWork">My Work</h2>
+    <h2 [class.scaleOut]="titleWork" [class.scaleIn]="!titleWork" id="titleWork">My Work</h2>
 
-    <div class="buttons" [class.goDownIn]="buttonsWork" [class.goDownOut]="!buttonsWork" id="buttonsWork">
+    <div class="buttons" [class.scaleOut]="buttonsWork" [class.scaleIn]="!buttonsWork" id="buttonsWork">
         <button class="btns backgroundColorBtn" (click)="all()" [disabled]="click1" id="btn1">All</button>
         <button class="btns" (click)="angular()" [disabled]="click2" id="btn2">Angular</button>
         <button class="btns" (click)="javascript()" [disabled]="click3" id="btn3">Java Script</button>
@@ -12,7 +12,7 @@
 
         <!-- My page -->
         <div class="d-wrap">
-            <div class="work" id="workBox1" [class.goDownIn]="workBox1" [class.goDownOut]="!workBox1">
+            <div class="work" id="workBox1" [class.scaleOut]="workBox1" [class.scaleIn]="!workBox1">
                 <div class="imgCont" id="wb1">
                     <img class="workImg" src="assets/img/myPage.png">
                     <div class="middle">
@@ -24,7 +24,7 @@
             </div>
 
             <!-- El pllo loco -->
-            <div class="work" id="workBox2" [class.goDownIn]="workBox2" [class.goDownOut]="!workBox2">
+            <div class="work" id="workBox2" [class.scaleOut]="workBox2" [class.scaleIn]="!workBox2">
                 <div class="imgCont" id="wb2">
                     <img class="workImg" src="assets/img/elPolloLoco.png">
                     <div class="middle">
@@ -39,7 +39,7 @@
             </div>
 
             <!-- Join -->
-            <div class="work" id="workBox3" [class.goDownIn]="workBox3" [class.goDownOut]="!workBox3">
+            <div class="work" id="workBox3" [class.scaleOut]="workBox3" [class.scaleIn]="!workBox3">
                 <div class="imgCont" id="wb3">
                     <img class="workImg" src="assets/img/join.jpg">
                     <div class="middle">
@@ -54,7 +54,7 @@
             </div>
 
             <!-- Pokedex -->
-            <div class="work" id="workBox4" [class.goDownIn]="workBox4" [class.goDownOut]="!workBox4">
+            <div class="work" id="workBox4" [class.scaleOut]="workBox4" [class.scaleIn]="!workBox4">
                 <div class="imgCont" id="wb4">
                     <img class="workImg" src="assets/img/pokedex.png">
                     <div class="middle">
