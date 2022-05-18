@@ -20,7 +20,7 @@ switch($_SERVER['REQUEST_METHOD']){
 
         $recipient = 'info@juergenhildbrand.ch'; //your email address
         $subject = "Contact From $name <$email>";
-        $headers = "From: $email";
+        $headers = "From: info@juergenhildbrand.ch";
 
         mail($recipient, $subject, $message, $name, $headers);
 
