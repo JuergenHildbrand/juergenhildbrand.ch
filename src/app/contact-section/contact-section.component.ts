@@ -28,6 +28,8 @@ export class ContactSectionComponent {
 
     const screenTop = window.pageYOffset;
     const screenBottom = window.innerHeight + screenTop;
+    const vw = window.innerWidth;
+    const vwCalc = vw / 12;
 
     const a = document.getElementById('titleContact');
     const title = a.getBoundingClientRect();
@@ -53,12 +55,12 @@ export class ContactSectionComponent {
     const sendBtn = f.getBoundingClientRect();
     const sendBtnBottomPosition = sendBtn.bottom - bodyRect.top;
 
-    this.titleContact = screenBottom > titleBottomPosition;
-    this.description = screenBottom > descriptionBottomPosition;
-    this.nameContact = screenBottom > nameBottomPosition;
-    this.emailContact = screenBottom > emailBottomPosition;
-    this.messageContact = screenBottom > messageBottomPosition;
-    this.sendBtn = screenBottom > sendBtnBottomPosition;
+    this.titleContact = screenBottom > titleBottomPosition - vwCalc;
+    this.description = screenBottom > descriptionBottomPosition - vwCalc;
+    this.nameContact = screenBottom > nameBottomPosition - vwCalc;
+    this.emailContact = screenBottom > emailBottomPosition - vwCalc;
+    this.messageContact = screenBottom > messageBottomPosition - vwCalc;
+    this.sendBtn = screenBottom > sendBtnBottomPosition - vwCalc;
   }
 
   /**
