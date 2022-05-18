@@ -86,19 +86,3 @@
         }
     }
 }
-
-
-///// Animations /////
-
-.activeInLAbout {
-    animation: fadeInAmimationLeft 1s ease-in-out;
-}
-.activeInRAbout {
-    animation: fadeInAmimationRight 1s ease-in-out;
-}
-.activeOutLAbout {
-    animation: hiddenObject 0.99s 0s forwards, fadeOutAmimationLeft 1s ease;
-}
-.activeOutRAbout {
-    animation: hiddenObject 0.99s 0s forwards, fadeOutAmimationRight 1s ease;
-}

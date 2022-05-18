@@ -8,6 +8,7 @@ import { Component, HostListener } from '@angular/core';
 
 export class AboutMeSectionComponent {
 
+  ///// Animations /////
   reachedAbout = false;
 
   @HostListener('window:scroll', ['$event'])

@@ -12,12 +12,14 @@ export class ContactSectionComponent {
 
   constructor(private http: HttpClient, public navigation: NavigationService) { }
 
+  ///// Animations /////
   titleContact = false;
   description = false;
   nameContact = false;
   emailContact = false;
   messageContact = false;
   sendBtn = false;
+  disabled = true;
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
@@ -60,8 +62,8 @@ export class ContactSectionComponent {
   }
 
   /**
-* This is bind to ngForm's InputFields in Template File
-*/
+  * This is bind to ngForm's InputFields in Template File
+  */
   contact = {
     name: '', //Bind  to InputField name="name"
     email: '', //Bind to InputField name="email"
@@ -69,8 +71,8 @@ export class ContactSectionComponent {
   };
 
   /**
-   * A post request construct configuration
-   */
+  * A post request construct configuration
+  */
   post = {
     // Where to send the post request Ex. http://my-domain/sendMail.php
     //or https://my-domain/sendMail.php if you have SSL-Certificate Active
@@ -86,9 +88,9 @@ export class ContactSectionComponent {
     },
   };
 
-  /**
- * Do not forget to import FormsModule in app.module.ts
- */
+/**
+* Do not forget to import FormsModule in app.module.ts
+*/
   onSubmit(ngForm) {
     if (ngForm.submitted && ngForm.form.valid) {
       this.http
@@ -109,6 +111,7 @@ export class ContactSectionComponent {
   }
 
   sendMail() {
-    window.location.href = "https://www.juergenhildbrand.ch/testMail/overlay-email.html";
+    window.location.href = "https://www.juergenhildbrand.ch/Mail/overlay-email.html";
   }
+
 }

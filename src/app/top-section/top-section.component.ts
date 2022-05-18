@@ -8,6 +8,8 @@ import { Component, HostListener } from '@angular/core';
 
 export class TopSectionComponent  {
 
+
+  ///// Animations /////
   topSection = true;
   secoundBg = true;
   headerTxt = true;

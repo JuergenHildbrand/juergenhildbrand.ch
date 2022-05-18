@@ -1,7 +1,5 @@
 <?php
 
-
-
 switch($_SERVER['REQUEST_METHOD']){
     case("OPTIONS"): //Allow preflighting to take place.
         header("Access-Control-Allow-Origin: *");
@@ -21,10 +19,10 @@ switch($_SERVER['REQUEST_METHOD']){
         $message = $params->message;
 
         $recipient = 'info@juergenhildbrand.ch'; //your email address
-        $subject = "Contact From $email";
+        $subject = "Contact From $name <$email>";
         $headers = "From: $email";
 
-        mail($recipient, $subject, $message, $headers);
+        mail($recipient, $subject, $message, $name, $headers);
 
         break;
     default: //Reject any non POST or OPTIONS requests.

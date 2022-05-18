@@ -8,10 +8,12 @@ import { Component, HostListener } from '@angular/core';
 
 export class WorkSectionComponent {
 
+  ///// Disable Buttons /////
   click1: boolean = true;
   click2: boolean = false;
   click3: boolean = false;
 
+  ///// Animations /////
   titleWork = false;
   buttonsWork = false;
   workBox1 = false;
@@ -66,6 +68,7 @@ export class WorkSectionComponent {
     this.workBox4 = screenBottom > workBox4BottomPosition - vwCalc && screenTop < workBox4TopPosition + vwCalc;
   }
 
+  // Button 1
   all() {
     let wb1 = document.getElementById('wb1');
     let wb2 = document.getElementById('wb2');
@@ -102,6 +105,7 @@ export class WorkSectionComponent {
     }, 1000);
   }
 
+  // Button 2
   angular() {
     let wb1 = document.getElementById('wb1');
     let wb2 = document.getElementById('wb2');
@@ -136,6 +140,7 @@ export class WorkSectionComponent {
     }, 1000);
   }
 
+  // Button 3
   javascript() {
     let wb1 = document.getElementById('wb1');
     let wb2 = document.getElementById('wb2');
@@ -171,6 +176,7 @@ export class WorkSectionComponent {
     }, 1000);
   }
 
+  // Links
   myPageGit() {
     window.open('https://github.com/JuergenHildbrand/juergenhildbrand.ch.git');
   }

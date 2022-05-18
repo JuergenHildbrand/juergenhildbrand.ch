@@ -8,6 +8,7 @@ import { Component, HostListener } from '@angular/core';
 
 export class SkillsSectionComponent {
 
+  ///// Animations /////
   titleSkills = false;
   skillBoxes1 = false;
   skillBoxes2 = false;

@@ -1,15 +1,16 @@
 <div class="contactSection" id="contact">
 
-    <h2 [class.titleIn]="titleContact" [class.titleOut]="!titleContact" id="titleContact">Contact me.</h2>
+    <h2 [class.active1InL]="titleContact" [class.active3OutR]="!titleContact" id="titleContact">Contact me.</h2>
 
-    <div class="contactDescription" [class.active2InR]="description" [class.active2OutL]="!description"
-        id="description">
-        <p>Get in touch via the form below, or by emailing</p> <a href="mailto:abc@example.com"
-            target="_blank">info@juergenhildbrand.ch</a>
+    <div class="contactDescription" [class.active2InR]="description" [class.active2OutL]="!description" id="description">
+        <p>Get in touch via the form below, or by emailing</p> 
+        <a href="mailto:abc@example.com" target="_blank">info@juergenhildbrand.ch</a>
     </div>
 
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+
         <div class="contactTxt" [class.active2InR]="nameContact" [class.active2OutL]="!nameContact">Name</div>
+
         <input 
             type="text" 
             placeholder="Enter your name"  
@@ -22,6 +23,7 @@
             [class.active2OutL]="!nameContact">
 
         <div class="contactTxt" [class.active2InL]="emailContact" [class.active2OutR]="!emailContact">Email address</div>
+
         <input 
             type="email"
             placeholder="Enter your Email address" 
@@ -34,6 +36,7 @@
             [class.active2OutR]="!emailContact">
 
         <div class="contactTxt" [class.active2InR]="messageContact" [class.active2OutL]="!messageContact">Message</div>
+
         <textarea 
             placeholder="Enter your message" 
             id="message" 
@@ -44,7 +47,15 @@
             [class.active2InR]="messageContact" 
             [class.active2OutL]="!messageContact">
         </textarea>
-        <button [class.active2InL]="sendBtn" [class.active2OutR]="!sendBtn" id="sendBtn" type="submit" [disabled]="!contactForm.form.valid" (click)="sendMail()">Send</button>
-    </form>
 
+        <button 
+            [class.active2InL]="sendBtn" 
+            [class.active2OutR]="!sendBtn" 
+            id="sendBtn" 
+            type="submit" 
+            [disabled]="!contactForm.form.valid" 
+            (click)="sendMail()">Send
+        </button>
+
+    </form>
 </div>

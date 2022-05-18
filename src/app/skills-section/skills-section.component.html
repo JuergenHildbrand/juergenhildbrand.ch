@@ -1,70 +1,82 @@
 <div class="sklillsSection" id="skills">
 
-    <h2 [class.titleIn]="titleSkills" [class.titleOut]="!titleSkills" id="titleSkills">My Skills</h2>
+    <h2 [class.active1InL]="titleSkills" [class.active3OutR]="!titleSkills" id="titleSkills">My Skills</h2>
 
     <div class="skillBoxesCont">
 
         <div class="d-flex" id="skillBoxes1">
+
             <div class="boxes" [class.active1InR]="skillBoxes1" [class.active1OutL]="!skillBoxes1">
                 <p>Java Script</p>
                 <div class="position"  id="title">
                     <img class="js" src="assets/ico/javaScript.png">
                 </div>
             </div>
+
             <div class="boxes" [class.active2InR]="skillBoxes1" [class.active2OutL]="!skillBoxes1">
                 <p>Angular</p>
                 <div class="position">
                     <img class="angular" src="assets/ico/angular.png">
                 </div>
             </div>
+
             <div class="boxes" [class.active3InR]="skillBoxes1" [class.active3OutL]="!skillBoxes1">
                 <p>HTML / CSS</p>
                 <div class="position">
                     <img class="htmlCss" src="assets/ico/Group 205.png">
                 </div>
             </div>
+
         </div>
 
         <div class="d-flex" id="skillBoxes2">
+
             <div class="boxes" [class.active3InL]="skillBoxes2" [class.active3OutR]="!skillBoxes2">
                 <p class="p4">SCRUM</p>
                 <div class="position">
                     <img class="scrum" src="assets/ico/Group 226.png">
                 </div>
             </div>
+
             <div class="boxes" [class.active2InL]="skillBoxes2" [class.active2OutR]="!skillBoxes2">
                 <p class="p5">GIT</p>
                 <div class="position">
                     <img class="git" src="assets/ico/github-fill.png">
                 </div>
             </div>
+
             <div class="boxes" [class.active1InL]="skillBoxes2" [class.active1OutR]="!skillBoxes2">
                 <p class="p6">Design<br>Thinking</p>
                 <div class="position">
                     <img class="design" src="assets/ico/Group 20.png">
                 </div>
             </div>
+
         </div>
 
         <div class="d-flex" id="skillBoxes3">
+
             <div class="boxes" [class.active1InR]="skillBoxes3" [class.active1OutL]="!skillBoxes3">
                 <p class="p7">Rest API</p>
                 <div class="position">
                     <img class="api" src="assets/ico/icons8-rest-api-80 2.png">
                 </div>
             </div>
+
             <div class="boxes" [class.active2InR]="skillBoxes3" [class.active2OutL]="!skillBoxes3">
                 <p class="p8">Test<br>automation</p>
                 <div class="position">
                     <img class="test" src="assets/ico/icons8-test-lab-96 2.png">
                 </div>
             </div>
+
             <div class="boxes" [class.active3InR]="skillBoxes3" [class.active3OutL]="!skillBoxes3">
                 <p class="p9">Database</p>
                 <div class="position">
                     <img class="database" src="assets/ico/icons8-database-52 2.png">
                 </div>
             </div>
+
         </div>
         
     </div>

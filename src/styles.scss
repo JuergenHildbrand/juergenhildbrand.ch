@@ -31,72 +31,91 @@ span {
 
 ///// Animations /////
 
-.titleIn {
-    animation: fadeInAmimationLeft 1s ease-in-out;
-}
-.titleOut {
-    animation: hiddenObject 0s 0.99s forwards, fadeOutAmimationRight 1s ease-in-out;
-}
+// From right
 .active1InR {
     animation: fadeInAmimationRight 1s ease-in-out;
 }
+
 .active2InR {
     animation: fadeInAmimationRight 1.2s ease-in-out;
 }
+
 .active3InR {
     animation: fadeInAmimationRight 1.4s ease-in-out;
 }
+
 .active4InR {
     animation: fadeInAmimationRight 1.5s ease-in-out;
 }
+
 .active5InR {
     animation: fadeInAmimationRight 2s ease-in-out;
 }
+
+// From left
 .active1InL {
     animation: fadeInAmimationLeft 1s ease-in-out;
 }
+
 .active2InL {
     animation: fadeInAmimationLeft 1.2s ease-in-out;
 }
+
 .active3InL {
     animation: fadeInAmimationLeft 1.4s ease-in-out;
 }
+
 .active4InL {
     animation: fadeInAmimationLeft 1.5s ease-in-out;
 }
+
+// Go left an stays
 .active1OutL {
     animation: hiddenObject 0s 0.59s forwards, fadeOutAmimationLeft 0.6s ease-in-out;
 }
+
 .active2OutL {
     animation: hiddenObject 0s 0.79s forwards, fadeOutAmimationLeft 0.8s ease-in-out;
 }
+
 .active3OutL {
     animation: hiddenObject 0s 0.99s forwards, fadeOutAmimationLeft 1s ease-in-out;
 }
+
 .active4OutL {
     animation: hiddenObject 0s 1.49s forwards, fadeOutAmimationLeft 1.5s ease-in-out;
 }
+
+// Go right and Stays
 .active1OutR {
     animation: hiddenObject 0s 0.59s forwards, fadeOutAmimationRight 0.6s ease-in-out;
 }
+
 .active2OutR {
     animation: hiddenObject 0s 0.79s forwards, fadeOutAmimationRight 0.8s ease-in-out;
 }
+
 .active3OutR {
     animation: hiddenObject 0s 0.99s forwards, fadeOutAmimationRight 1s ease-in-out;
 }
+
 .active4OutR {
     animation: hiddenObject 0s 1.49s forwards, fadeOutAmimationRight 1.5s ease-in-out;
 }
+
 .active5OutR {
     animation: hiddenObject 0s 1.99s forwards, fadeOutAmimationRight 2s ease-in-out;
 }
+
+// Scale
 .scaleOut {
     animation: showObjectIn 1s ease-in-out;
 }
+
 .scaleIn {
     animation: hiddenObject 0s 0.99s forwards, showObjectOut 1s ease-in-out;
 }
+
 
 @keyframes showObjectIn {
 

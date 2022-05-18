@@ -15,8 +15,6 @@ export class AppComponent implements OnInit {
     this.overlayBg();
   }
 
-
-
   // under construction
   overlayBg() {
     let d = document.getElementById('uConstr');
