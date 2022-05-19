@@ -109,13 +109,20 @@ span {
 
 // Scale
 .scaleOut {
-    animation: showObjectIn 1.5s ease-in-out;
+    animation: showObjectIn 1.2s ease-in-out;
+}
+
+.scaleOutC {
+    animation: showObjectIn 0.5s ease-in-out;
 }
 
 .scaleIn {
-    animation: hiddenObject 0s 1.49s forwards, showObjectOut 1.5s ease-in-out;
+    animation: hiddenObject 0s 1.19s forwards, showObjectOut 1.2s ease-in-out;
 }
 
+.scaleInC {
+    animation: hiddenObject 0s 0.4s forwards, showObjectOut 0.5s ease-in-out;
+}
 
 @keyframes showObjectIn {
 

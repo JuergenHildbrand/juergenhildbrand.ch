@@ -53,9 +53,13 @@
             [class.active2OutR]="!sendBtn" 
             id="sendBtn" 
             type="submit" 
-            [disabled]="!contactForm.form.valid" 
-            (click)="sendMail()">Send
+            [disabled]="!contactForm.form.valid">
+            Send
         </button>
 
     </form>
+</div>
+
+<div class="response" *ngIf="response.hasResponse" [class.response__ok]="response.ok" [class.response__not_ok]="!response.ok" [class.scaleOutC]="response.ok" [class.scaleInC]="response.okk">
+    {{response.message}}
 </div>

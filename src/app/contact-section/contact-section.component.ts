@@ -99,11 +99,21 @@ export class ContactSectionComponent {
         .post(this.post.endPoint, this.post.body(this.contact))
         .subscribe({
           next: (response) => {
-            console.log(ngForm.submitted);
-            console.log(ngForm.form.valid);
+            this.response.hasResponse = true;
+            this.response.okk = false;
+            this.response.ok = true;
+            this.response.message = "Your Email has been sent!"
+            setTimeout(() => {
+              this.response.okk = true;
+            }, 3000);
+            console.log(this.response.ok);
+            console.log(this.response.message);
             // Here Message was send
           },
           error: (error) => {
+            this.response.hasResponse = true;
+            this.response.ok = false;
+            this.response.message = "Your Email has not been sent!"
             console.error(error);
             // Here Message was not send!!!!!
           },
@@ -112,8 +122,12 @@ export class ContactSectionComponent {
     }
   }
 
-  sendMail() {
-    window.location.href = "https://www.juergenhildbrand.ch/Mail/overlay-email.html";
+  response = {
+    okk : false,
+    ok : false,
+    message : "",
+    hasResponse : false
   }
-
 }
+
+

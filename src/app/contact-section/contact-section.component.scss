@@ -115,9 +115,13 @@
             cursor: pointer;
             transition: 225ms ease-in-out;
     
-            &:hover {
+            &:not(:disabled):hover {
                 background: #1E0079;
                 border: 1px solid #1E0079;
+            }
+
+            &:disabled {
+                cursor: not-allowed;
             }
         }
     }
@@ -205,3 +209,28 @@
         }
     }
 }
+
+.response {
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    color: #5221E6;
+    font-family: 'Inter';
+}
+
+// .response__ok {
+//     border: 2px solid green;
+// }
+
+// .response__not_ok {
+//     border: 2px solid red;
+// }
