@@ -26,6 +26,6 @@ export class AppComponent implements OnInit {
     }, 3);
     setTimeout(() => {
       y.classList.add('d-none');
-    }, 30);
+    }, 3);
   }
 }
