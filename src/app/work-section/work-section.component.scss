@@ -85,14 +85,16 @@
                 position: absolute;
                 top: 0;
                 display: flex;
+                justify-content: space-around;
                 flex-direction: column;
                 align-items: center;
+                text-align: center;
                 background: rgba(245, 245, 245, 0.8);
                 transition: 0.5s ease-in-out;
                 opacity: 0;
 
                 .title {
-                    margin-top: 6.8vw;
+                    margin-top: 16px;
                     color: #5221E6;
                     font-family: 'Inter';
                     font-style: normal;
@@ -102,17 +104,16 @@
                 }
 
                 .text {
-                    margin-top: 2.66vw;
+                    text-align: center;
                     color: black;
                     font-family: 'Inter';
                     font-style: normal;
                     font-weight: 400;
                     font-size: 1.25vw;
-                    line-height: 1.38px;
+                    // line-height: 1.38px;
                 }
 
                 .btn {
-                    margin-top: 4.75vw;
                     margin-left: 0.21vw;
                     margin-right: 0.21vw;
                     width: 8.89vw;
@@ -202,19 +203,10 @@
                 }
 
                 .middle {
-                    width: 100%;
-                    height: 100%;
-                    position: absolute;
-                    top: 0;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
                     background: rgba(245, 245, 245, 0.8);
                     animation: opacityB 6s infinite;
 
                     .title {
-                        margin-top: 16vw;
-                        color: #FA2759;
                         font-family: 'Inter';
                         font-style: normal;
                         font-weight: 700;
@@ -223,7 +215,6 @@
                     }
 
                     .text {
-                        margin-top: 7.15vw;
                         max-width: 44vw;
                         color: black;
                         font-family: 'Inter';
@@ -235,7 +226,6 @@
                     }
 
                     .btn {
-                        margin-top: 7.15vw;
                         width: 24.6vw;
                         height: 11.5vw;
                         font-weight: 500;
@@ -274,7 +264,7 @@
 
 @keyframes opacityB {
     0% {
-        opacity: 0;
+        opacity: 0.3;
     }
 
     50% {
@@ -282,13 +272,13 @@
     }
 
     100% {
-        opacity: 0;
+        opacity: 0.3;
     }
 }
 
 @keyframes opacityC {
     0% {
-        opacity: 0.75;
+        opacity: 1;
     }
 
     50% {
@@ -296,6 +286,6 @@
     }
 
     100% {
-        opacity: 0.75;
+        opacity: 1;
     }
 }

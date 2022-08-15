@@ -131,12 +131,12 @@ export class WorkSectionComponent {
   }
   timeOut2(wb1, wb2, wb3, wb4) {
     setTimeout(() => {
-      wb1.classList.remove();
       wb1.classList.remove('d-none', 'scaleIn');
-      wb2.classList.add('scaleIn');
+      wb2.classList.remove('d-none', 'scaleIn');
       wb3.classList.add('scaleIn');
       wb4.classList.add('scaleIn');
       wb1.classList.add('scaleOut');
+      wb2.classList.add('scaleOut');
     }, 1000);
   }
 
@@ -167,18 +167,26 @@ export class WorkSectionComponent {
   timeOut3(wb1, wb2, wb3, wb4) {
     setTimeout(() => {
       wb1.classList.add('d-none');
-      wb2.classList.remove('scaleIn');
+      wb2.classList.add('d-none');
       wb3.classList.remove('scaleIn');
       wb4.classList.remove('scaleIn');
-      wb2.classList.add('scaleOut');
       wb3.classList.add('scaleOut');
       wb4.classList.add('scaleOut');
     }, 1000);
   }
 
   // Links
+
+  tryOutMyFirstOwnApp() {
+    window.open('https://www.juergenhildbrand.ch/oberi-meiggu/index.html');
+  }
+
+  myFirstOwnApp() {
+    window.open('https://github.com/JuergenHildbrand/obere-meiggenalp.git');
+  }
+
   myPageGit() {
-    window.open('https://github.com/JuergenHildbrand/juergenhildbrand.ch.git');
+    window.open('https://github.com/JuergenHildbrand/juergenhildbrand.git');
   }
 
   tryOutElPlloLoco() {

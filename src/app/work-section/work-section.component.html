@@ -10,10 +10,25 @@
 
     <div class="myProjects">
 
-        <!-- My page -->
+        <!-- my first own app -->
         <div class="d-wrap">
             <div class="work" id="workBox1" [class.scaleOut]="workBox1" [class.scaleIn]="!workBox1">
                 <div class="imgCont" id="wb1">
+                    <img class="workImg" src="assets/img/myFirstOwnApp.png">
+                    <div class="middle">
+                        <div class="title">My first own app</div>
+                        <div class="text">To manage the water supply in Meiggenalp (VS). Password: Widder1911</div>
+                        <div class="dflex">
+                            <button class="btn" (click)="tryOutMyFirstOwnApp()">Try it</button>
+                            <button class="btn" (click)="myFirstOwnApp()">Check git</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- My page -->
+            <div class="work" id="workBox2" [class.scaleOut]="workBox2" [class.scaleIn]="!workBox2">
+                <div class="imgCont" id="wb2">
                     <img class="workImg" src="assets/img/myPage.png">
                     <div class="middle">
                         <div class="title">My personal homepage</div>
@@ -24,10 +39,11 @@
             </div>
 
             <!-- El pllo loco -->
-            <div class="work" id="workBox2" [class.scaleOut]="workBox2" [class.scaleIn]="!workBox2">
-                <div class="imgCont" id="wb2">
+            <div class="work" id="workBox3" [class.scaleOut]="workBox3" [class.scaleIn]="!workBox3">
+                <div class="imgCont" id="wb3">
                     <img class="workImg" src="assets/img/elPolloLoco.png">
                     <div class="middle">
+                        <div class="bg"></div>
                         <div class="title">El Pollo Loco</div>
                         <div class="text">JavaScript - based jump and run game</div>
                         <div class="dFlex">
@@ -39,8 +55,8 @@
             </div>
 
             <!-- Join -->
-            <div class="work" id="workBox3" [class.scaleOut]="workBox3" [class.scaleIn]="!workBox3">
-                <div class="imgCont" id="wb3">
+            <div class="work" id="workBox4" [class.scaleOut]="workBox4" [class.scaleIn]="!workBox4">
+                <div class="imgCont" id="wb4">
                     <img class="workImg" src="assets/img/join.jpg">
                     <div class="middle">
                         <div class="title">Join</div>
@@ -54,7 +70,7 @@
             </div>
 
             <!-- Pokedex -->
-            <div class="work" id="workBox4" [class.scaleOut]="workBox4" [class.scaleIn]="!workBox4">
+            <!-- <div class="work" id="workBox4" [class.scaleOut]="workBox4" [class.scaleIn]="!workBox4">
                 <div class="imgCont" id="wb4">
                     <img class="workImg" src="assets/img/pokedex.png">
                     <div class="middle">
@@ -66,7 +82,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
         </div>
     </div>
