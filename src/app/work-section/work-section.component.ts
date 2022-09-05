@@ -133,8 +133,8 @@ export class WorkSectionComponent {
     setTimeout(() => {
       wb1.classList.remove('d-none', 'scaleIn');
       wb2.classList.remove('d-none', 'scaleIn');
-      wb3.classList.add('scaleIn');
-      wb4.classList.add('scaleIn');
+      wb3.classList.add('d-none');
+      wb4.classList.add('d-none');
       wb1.classList.add('scaleOut');
       wb2.classList.add('scaleOut');
     }, 1000);
@@ -168,8 +168,8 @@ export class WorkSectionComponent {
     setTimeout(() => {
       wb1.classList.add('d-none');
       wb2.classList.add('d-none');
-      wb3.classList.remove('scaleIn');
-      wb4.classList.remove('scaleIn');
+      wb3.classList.remove('d-none', 'scaleIn');
+      wb4.classList.remove('d-none', 'scaleIn');
       wb3.classList.add('scaleOut');
       wb4.classList.add('scaleOut');
     }, 1000);
@@ -186,7 +186,7 @@ export class WorkSectionComponent {
   }
 
   myPageGit() {
-    window.open('https://github.com/JuergenHildbrand/juergenhildbrand.git');
+    window.open('https://github.com/JuergenHildbrand/juergenhildbrand.ch.git');
   }
 
   tryOutElPlloLoco() {
