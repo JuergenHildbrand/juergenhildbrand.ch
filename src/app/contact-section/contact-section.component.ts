@@ -78,6 +78,8 @@ export class ContactSectionComponent {
             this.response.message = "Your Email has been sent!"
             setTimeout(() => {
               this.response.okk = true;
+              this.response.hasResponse = false;
+              ngForm.reset();
             }, 3000);
             console.log(this.response.ok);
             console.log(this.response.message);
