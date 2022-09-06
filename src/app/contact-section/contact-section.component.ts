@@ -32,8 +32,6 @@ export class ContactSectionComponent {
     const aboutBottomPosition = aboutTopPosition + aboutHeight;
 
     this.reachedContact = screenBottom > aboutTopPosition + vwCalc && screenTop < aboutBottomPosition - vwCalc;
-    console.log(this.reachedContact);
-    
   }
 
   /**

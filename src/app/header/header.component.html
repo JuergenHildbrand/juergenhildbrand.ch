@@ -3,11 +3,11 @@
     <div routerLink="/" class="logoHeader" [class.darkLogo]="darkMode" [class.fontSize]="darkMode">J.H</div>
 
     <div class="linksHeader" [class.darkLinks]="darkMode">
-        <a routerLink="/">Home</a>
+        <a routerLink="/" (click)="scrollTop()">Home</a>
         <a href="#skills">Skills</a>
         <a href="#work">Work</a>
         <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="#contactSection">Contact</a>
     </div>
 
     <div class="menu">
@@ -20,7 +20,7 @@
                 <a href="#skills" (click)="openMenu()">Skills</a>
                 <a href="#work" (click)="openMenu()">Work</a>
                 <a href="#about" (click)="openMenu()">About</a>
-                <a href="#contact"  (click)="openMenu()">Contact</a>
+                <a href="#contactSection"  (click)="openMenu()">Contact</a>
             </div>
 
             <a href="javascript:void(0);" class="icon" (click)="openMenu()">

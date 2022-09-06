@@ -1,14 +1,3 @@
-<div id="uConstr" class="d-none">
-    <app-header [darkMode]="router.url == '/imprint'"></app-header>
-    <router-outlet></router-outlet>
-    <app-footer [darkMode]="router.url == '/imprint'"></app-footer>
-</div>
-
-<!-- under construction -->
-<div id="invisible">
-    <div id="overlayBg">
-        <div class="overlay">
-            under construcion...
-        </div>
-    </div>
-</div>
+<app-header [darkMode]="router.url == '/imprint'"></app-header>
+<router-outlet></router-outlet>
+<app-footer [darkMode]="router.url == '/imprint'"></app-footer>

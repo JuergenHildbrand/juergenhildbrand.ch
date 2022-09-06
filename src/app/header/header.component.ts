@@ -23,4 +23,8 @@ export class HeaderComponent {
       x.style.display = 'block';
     }
   }
+
+  scrollTop() {
+    window.scrollTo(0, 0);
+  }
 }
