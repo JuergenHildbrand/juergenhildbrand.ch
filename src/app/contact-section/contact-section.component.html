@@ -10,7 +10,6 @@
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
         <div class="contactTxt">Name</div>
-
         <input 
             type="text" 
             placeholder="Enter your name"  
@@ -21,7 +20,6 @@
             #name="ngModel">
 
         <div class="contactTxt">Email address</div>
-
         <input 
             type="email"
             placeholder="Enter your Email address" 
@@ -29,10 +27,11 @@
             required 
             [(ngModel)]="contact.email" 
             name="email" 
-            #email="ngModel">
+            #email="ngModel"
+            email 
+            pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}">
 
         <div class="contactTxt">Message</div>
-
         <textarea 
             placeholder="Enter your message" 
             id="message" 
