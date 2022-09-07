@@ -108,7 +108,7 @@ export class WorkSectionComponent {
   }
 
   tryOutMyFirstOwnApp() {
-    window.open('https://www.juergenhildbrand.ch/oberi-meiggu/index.html');
+    window.open('https://www.meiggenalp.ch');
   }
 
   myFirstOwnApp() {
