@@ -16,8 +16,4 @@ export class FooterComponent {
   git() {
     window.open('https://github.com/JuergenHildbrand');
   }
-
-  xing() {
-    window.open('https://www.xing.com/discover/updates');
-  }
 }

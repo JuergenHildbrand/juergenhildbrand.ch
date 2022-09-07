@@ -15,8 +15,6 @@ export class SkillsSectionComponent implements OnInit {
       delay: 100,
       duration: 1200,
       once: true
-  });
+    });
+  }
 }
-  
-}
-

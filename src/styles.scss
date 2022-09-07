@@ -2,7 +2,6 @@ body,
 html {
     margin: 0;
     width: 100%;
-    // max-width: 1920px;
     padding: -40px, 72px;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -17,7 +16,7 @@ html {
 }
 
 .d-flex {
-    display: flex;
+    display: flex !important;
 }
 
 h1,
@@ -31,97 +30,12 @@ span {
 
 ///// Animations /////
 
-// From right
-.active1InR {
-    animation: fadeInAmimationRight 1s ease-in-out;
-}
-
-.active2InR {
-    animation: fadeInAmimationRight 1.2s ease-in-out;
-}
-
-.active3InR {
-    animation: fadeInAmimationRight 1.4s ease-in-out;
-}
-
-.active4InR {
-    animation: fadeInAmimationRight 1.5s ease-in-out;
-}
-
-.active5InR {
-    animation: fadeInAmimationRight 2s ease-in-out;
-}
-
-// From left
-.active1InL {
-    animation: fadeInAmimationLeft 1s ease-in-out;
-}
-
-.active2InL {
-    animation: fadeInAmimationLeft 1.2s ease-in-out;
-}
-
-.active3InL {
-    animation: fadeInAmimationLeft 1.4s ease-in-out;
-}
-
-.active4InL {
-    animation: fadeInAmimationLeft 1.5s ease-in-out;
-}
-
-// Go left an stays
-.active1OutL {
-    animation: hiddenObject 0s 0.59s forwards, fadeOutAmimationLeft 0.6s ease-in-out;
-}
-
-.active2OutL {
-    animation: hiddenObject 0s 0.79s forwards, fadeOutAmimationLeft 0.8s ease-in-out;
-}
-
-.active3OutL {
-    animation: hiddenObject 0s 0.99s forwards, fadeOutAmimationLeft 1s ease-in-out;
-}
-
-.active4OutL {
-    animation: hiddenObject 0s 1.49s forwards, fadeOutAmimationLeft 1.5s ease-in-out;
-}
-
-// Go right and Stays
-.active1OutR {
-    animation: hiddenObject 0s 0.59s forwards, fadeOutAmimationRight 0.6s ease-in-out;
-}
-
-.active2OutR {
-    animation: hiddenObject 0s 0.79s forwards, fadeOutAmimationRight 0.8s ease-in-out;
-}
-
-.active3OutR {
-    animation: hiddenObject 0s 0.99s forwards, fadeOutAmimationRight 1s ease-in-out;
-}
-
-.active4OutR {
-    animation: hiddenObject 0s 1.49s forwards, fadeOutAmimationRight 1.5s ease-in-out;
-}
-
-.active5OutR {
-    animation: hiddenObject 0s 1.99s forwards, fadeOutAmimationRight 2s ease-in-out;
-}
-
-// Scale
 .scaleOut {
     animation: showObjectIn 1.2s ease-in-out;
 }
 
-.scaleOutC {
-    animation: showObjectIn 0.5s ease-in-out;
-}
-
 .scaleIn {
     animation: hiddenObject 0s 1.19s forwards, showObjectOut 1.2s ease-in-out;
-}
-
-.scaleInC {
-    animation: hiddenObject 0s 0.4s forwards, showObjectOut 0.5s ease-in-out;
 }
 
 @keyframes showObjectIn {
@@ -150,56 +64,6 @@ span {
     }
 }
 
-@keyframes fadeInAmimationLeft {
-
-    0% {
-        transform: translateX(-1200px);
-    }
-    100% {
-        transform: translateX(0);
-    }  
-}
-
-@keyframes fadeInAmimationRight {
-
-    0% {
-        transform: translateX(1200px);
-    }
-    100% {
-        transform: translateX(0);
-    }  
-}
-
-@keyframes fadeInAmimationTop {
-
-    0% {
-        transform: translateY(-1200px);
-    }
-    100% {
-        transform: translateY(0);
-    }  
-}
-
-@keyframes fadeOutAmimationRight {
-
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(1200px);
-    }  
-}
-
-@keyframes fadeOutAmimationLeft {
-
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-1200px);
-    }  
-}
-
 @keyframes hiddenObject {
 
     from {
@@ -211,58 +75,6 @@ span {
     
 }
 
-@media(max-width: 900px) {
-
-    @keyframes fadeInAmimationLeft {
-
-        0% {
-            transform: translateX(-900px);
-        }
-        100% {
-            transform: translateX(0);
-        }  
-    }
-    
-    @keyframes fadeInAmimationRight {
-    
-        0% {
-            transform: translateX(900px);
-        }
-        100% {
-            transform: translateX(0);
-        }  
-    }
-    
-    @keyframes fadeInAmimationTop {
-    
-        0% {
-            transform: translateY(-900px);
-        }
-        100% {
-            transform: translateY(0);
-        }  
-    }
-    
-    @keyframes fadeOutAmimationRight {
-    
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(900px);
-        }  
-    }
-    
-    @keyframes fadeOutAmimationLeft {
-    
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(-900px);
-        }  
-    }
-}
 
 #skills,
 #about {
@@ -271,5 +83,4 @@ span {
 
 #work {
     scroll-margin-top: 0;
-
 }

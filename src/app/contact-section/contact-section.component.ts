@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { NavigationService } from '../navigation.service';
 
@@ -11,28 +11,6 @@ import { NavigationService } from '../navigation.service';
 export class ContactSectionComponent {
 
   constructor(private http: HttpClient, public navigation: NavigationService) { }
-
-  ///// Animations /////
-  reachedContact = false;
-  sendBtn = false;
-  disabled = true;
-
-
-  @HostListener('window:scroll', ['$event'])
-  onWindowScroll() {
-
-    const screenTop = window.pageYOffset;
-    const screenBottom = window.innerHeight + screenTop;
-    const vw = window.innerWidth;
-    const vwCalc = vw / 8;
-
-    const about = document.getElementById('contactSection');
-    const aboutHeight = about.clientHeight;
-    const aboutTopPosition = about.offsetTop;
-    const aboutBottomPosition = aboutTopPosition + aboutHeight;
-
-    this.reachedContact = screenBottom > aboutTopPosition + vwCalc && screenTop < aboutBottomPosition - vwCalc;
-  }
 
   /**
   * This is bind to ngForm's InputFields in Template File

@@ -1,5 +1,4 @@
 .aboutMeSection {
-    position: relative;
     width: 100%;
     height: 41.6vw;
     display: flex;
@@ -7,25 +6,30 @@
     font-family: 'Sen';
 
     .description {
+        width: 50vw;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
         h2 {
-            position: absolute;
-            top: 1vw;
-            left: 5vw;
+            margin-top: 2vw;
             font-style: normal;
             font-weight: 700;
             font-size: 3.82vw;
             line-height: 4.58vw;
-            min-width: 400px;
         }
 
-        p {
-            position: absolute;
-            top: 6.5vw;
-            left: 5vw;
-            width: 40vw;
-            color: #181823;
-            padding-right: 5vw;
-            font-size: 1.11vw;
+        .text {
+            margin-top: 2vw;
+
+            p {
+                margin-top: 0.5vw;
+                margin-left: 6vw;
+                width: 40vw;
+                color: #181823;
+                padding-right: 5vw;
+                font-size: 1.11vw;
+            }
         }
     }
 
@@ -43,6 +47,7 @@
     }
 }
 
+
 @media(max-width: 900px) {
 
     .aboutMeSection {
@@ -50,23 +55,25 @@
         flex-direction: column-reverse;
 
         .description {
+            width: 100% !important;
             min-height: fit-content;
 
             h2 {
-                position: unset;
-                margin-left: 4.44vw;
+                margin-top: 6vw;
                 font-size: 8.89vw;
-                line-height: 2.64
             }
 
-            p {
-                position: unset;
-                min-height: fit-content;
-                margin-bottom: 12vw;
-                width: 91.12vw;
-                margin-left: 4.44vw;
-                color: #181823;
-                font-size: 18px;
+            .text {
+                margin-top: 6vw;
+                padding-bottom: 32px;
+
+                p {
+                    margin-top: 0.5vw;
+                    margin-left: 5vw;
+                    width: 90vw;
+                    padding-right: 5vw;
+                    font-size: 12px;
+                }
             }
         }
 
@@ -80,7 +87,6 @@
 
             .imgAboutMe {
                 width: 100vw;
-
             }
         }
     }

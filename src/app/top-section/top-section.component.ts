@@ -1,4 +1,6 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import * as AOS from 'aos';
+
 
 @Component({
   selector: 'app-top-section',
@@ -6,37 +8,14 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./top-section.component.scss']
 })
 
-export class TopSectionComponent  {
+export class TopSectionComponent implements OnInit {
 
-
-  ///// Animations /////
-  topSection = true;
-  secoundBg = true;
-  headerTxt = true;
-
-  @HostListener('window:scroll', ['$event'])
-  onWindowScroll() {
-
-    const bodyRect = document.body.getBoundingClientRect();
-
-    const screenTop = window.pageYOffset;
-    const vw = window.innerWidth;
-    const vwCalc = vw / 12;
-
-    const a = document.getElementById('topSection');
-    const topSection = a.getBoundingClientRect();
-    const topSectionBottomPosition = topSection.bottom - bodyRect.top;
-
-    const b = document.getElementById('secoundBg');
-    const secoundBg = b.getBoundingClientRect();
-    const secoundBgBottomPosition = secoundBg.bottom - bodyRect.top;
-
-    const c = document.getElementById('headerTxt');
-    const headerTxt = c.getBoundingClientRect();
-    const headerTxtBottomPosition = headerTxt.bottom - bodyRect.top;
-
-    this.topSection = screenTop < topSectionBottomPosition - vwCalc;
-    this.secoundBg = screenTop < secoundBgBottomPosition - vwCalc;
-    this.headerTxt = screenTop < headerTxtBottomPosition - vwCalc;
+  ngOnInit() {
+    AOS.init({
+      offset: 1000,
+      delay: 500,
+      duration: 1200,
+      once: true
+    });
   }
 }
