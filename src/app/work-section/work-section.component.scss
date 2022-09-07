@@ -1,14 +1,11 @@
-.dFlex {
-    display: flex !important;
-}
-
 .workSection {
     width: 100%;
-    height: 83.125vw;
+    height: fit-content;
     display: flex;
     justify-content: center;
     position: relative;
     background-color: #131111;
+    padding-bottom: 32px;
 
     h2 {
         position: absolute;
@@ -55,14 +52,11 @@
     }
 
     .myProjects {
-        position: absolute;
-        top: 22.2vw;
-        left: 16.14vw;
-
-        .d-wrap {
-            display: flex;
-            flex-wrap: wrap;
-        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 22.2vw;
 
         .imgCont {
             position: relative;

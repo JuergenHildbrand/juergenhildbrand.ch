@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-work-section',
@@ -8,120 +8,104 @@ import { Component, HostListener } from '@angular/core';
 
 export class WorkSectionComponent {
 
-  ///// Disable Buttons /////
-  click1: boolean = true;
-  click2: boolean = false;
-  click3: boolean = false;
+  btn1 = true;
+  btn2 = false;
+  btn3 = false;
 
-  
-  // Button 1
-  all() {
-    let wb1 = document.getElementById('wb1');
-    let wb2 = document.getElementById('wb2');
-    let wb3 = document.getElementById('wb3');
-    let wb4 = document.getElementById('wb4');
-    wb1.classList.add('scaleIn');
-    wb2.classList.add('scaleIn');
-    wb3.classList.add('scaleIn');
-    wb4.classList.add('scaleIn');
-    this.clickFunction1();
-    this.timeOut1(wb1, wb2, wb3, wb4);
+  set1() {
+    this.btn1 = true
+    this.btn2 = false;
+    this.btn3 = false;
   }
-  clickFunction1() {
-    this.click1 = true;
-    this.click2 = false;
-    this.click3 = false;
-    let btn1 = document.getElementById('btn1');
-    let btn2 = document.getElementById('btn2');
-    let btn3 = document.getElementById('btn3');
-    btn1.classList.add('backgroundColorBtn');
-    btn2.classList.remove('backgroundColorBtn');
-    btn3.classList.remove('backgroundColorBtn');
+
+  set2() {
+    this.btn1 = false
+    this.btn2 = true;
+    this.btn3 = false;
   }
-  timeOut1(wb1, wb2, wb3, wb4) {
+
+  set3() {
+    this.btn1 = false
+    this.btn2 = false;
+    this.btn3 = true;
+  }
+
+  scaleIn() {
+    const ang3 = document.getElementById('ang3');
+    const ang2 = document.getElementById('ang2');
+    const ang1 = document.getElementById('ang1');
+    const js4 = document.getElementById('js4');
+    const js3 = document.getElementById('js3');
+    ang3.classList.add('scaleIn');
+    ang2.classList.add('scaleIn');
+    ang1.classList.add('scaleIn');
+    js4.classList.add('scaleIn');
+    js3.classList.add('scaleIn');
+    this.scaleOut(ang3,ang2, ang1, js4, js3);
+  }
+
+  scaleOut(ang3, ang2, ang1, js4, js3) {
+    if (this.btn1) {
+      this.all(ang3, ang2, ang1, js4, js3);
+    }
+    if (this.btn2) {
+      this.angular(ang3, ang2, ang1, js4, js3);
+    }
+    if (this.btn3) {
+      this.javascript(ang3, ang2, ang1, js4, js3);
+    }
+  }
+
+  all(ang3, ang2, ang1, js4, js3) {
     setTimeout(() => {
-      wb1.classList.remove('d-none', 'scaleIn');
-      wb2.classList.remove('d-none', 'scaleIn');
-      wb3.classList.remove('d-none', 'scaleIn');
-      wb4.classList.remove('d-none', 'scaleIn');
-      wb1.classList.add('scaleOut');
-      wb2.classList.add('scaleOut');
-      wb3.classList.add('scaleOut');
-      wb4.classList.add('scaleOut');
+      ang3.classList.remove('d-none', 'scaleIn');
+      ang2.classList.remove('d-none', 'scaleIn');
+      ang1.classList.remove('d-none', 'scaleIn');
+      js4.classList.remove('d-none', 'scaleIn');
+      js3.classList.remove('d-none', 'scaleIn');
+      ang2.classList.add('scaleOut');
+      ang1.classList.add('scaleOut');
+      js4.classList.add('scaleOut');
+      js3.classList.add('scaleOut');
     }, 1000);
   }
 
-  // Button 2
-  angular() {
-    let wb1 = document.getElementById('wb1');
-    let wb2 = document.getElementById('wb2');
-    let wb3 = document.getElementById('wb3');
-    let wb4 = document.getElementById('wb4');
-    wb1.classList.add('scaleIn');
-    wb2.classList.add('scaleIn');
-    wb3.classList.add('scaleIn');
-    wb4.classList.add('scaleIn');
-    this.clickFunction2();
-    this.timeOut2(wb1, wb2, wb3, wb4);
-  }
-  clickFunction2() {
-    this.click1 = false;
-    this.click2 = true;
-    this.click3 = false;
-    let btn1 = document.getElementById('btn1');
-    let btn2 = document.getElementById('btn2');
-    let btn3 = document.getElementById('btn3');
-    btn1.classList.remove('backgroundColorBtn');
-    btn2.classList.add('backgroundColorBtn');
-    btn3.classList.remove('backgroundColorBtn');
-  }
-  timeOut2(wb1, wb2, wb3, wb4) {
+  angular(ang3, ang2, ang1, js4, js3) {
     setTimeout(() => {
-      wb1.classList.remove('d-none', 'scaleIn');
-      wb2.classList.remove('d-none', 'scaleIn');
-      wb3.classList.add('d-none');
-      wb4.classList.add('d-none');
-      wb1.classList.add('scaleOut');
-      wb2.classList.add('scaleOut');
+      ang3.classList.remove('d-none', 'scaleIn');
+      ang2.classList.remove('d-none', 'scaleIn');
+      ang1.classList.remove('d-none', 'scaleIn');
+      js4.classList.remove('scaleIn');
+      js3.classList.remove('scaleIn');
+      ang3.classList.add('scaleOut');
+      ang2.classList.add('scaleOut');
+      ang1.classList.add('scaleOut');
+      js4.classList.add('d-none');
+      js3.classList.add('d-none');
     }, 1000);
   }
 
-  // Button 3
-  javascript() {
-    let wb1 = document.getElementById('wb1');
-    let wb2 = document.getElementById('wb2');
-    let wb3 = document.getElementById('wb3');
-    let wb4 = document.getElementById('wb4');
-    wb1.classList.add('scaleIn');
-    wb2.classList.add('scaleIn');
-    wb3.classList.add('scaleIn');
-    wb4.classList.add('scaleIn');
-    this.clickFunction3();
-    this.timeOut3(wb1, wb2, wb3, wb4);
-  }
-  clickFunction3() {
-    this.click1 = false;
-    this.click2 = false;
-    this.click3 = true;
-    let btn1 = document.getElementById('btn1');
-    let btn2 = document.getElementById('btn2');
-    let btn3 = document.getElementById('btn3');
-    btn1.classList.remove('backgroundColorBtn');
-    btn2.classList.remove('backgroundColorBtn');
-    btn3.classList.add('backgroundColorBtn');
-  }
-  timeOut3(wb1, wb2, wb3, wb4) {
+  javascript(ang3, ang2, ang1, js4, js3) {
     setTimeout(() => {
-      wb1.classList.add('d-none');
-      wb2.classList.add('d-none');
-      wb3.classList.remove('d-none', 'scaleIn');
-      wb4.classList.remove('d-none', 'scaleIn');
-      wb3.classList.add('scaleOut');
-      wb4.classList.add('scaleOut');
+      ang3.classList.remove('scaleIn');
+      ang2.classList.remove('scaleIn');
+      ang1.classList.remove('scaleIn');
+      js4.classList.remove('d-none', 'scaleIn');
+      js3.classList.remove('d-none', 'scaleIn');
+      ang3.classList.add('d-none');
+      ang2.classList.add('d-none');
+      ang1.classList.add('d-none');
+      js4.classList.add('scaleOut');
+      js3.classList.add('scaleOut');
     }, 1000);
   }
+
 
   // Links
+
+  tryOutSlackClone() {
+    window.open('https://www.juergenhildbrand.ch/slackclone/index.html');
+  }
 
   tryOutMyFirstOwnApp() {
     window.open('https://www.juergenhildbrand.ch/oberi-meiggu/index.html');
