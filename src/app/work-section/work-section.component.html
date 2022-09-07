@@ -20,7 +20,7 @@
                 <div class="middle">
                     <div class="title">Slack clone</div>
                     <div class="text">Angular - Group work</div>
-                    <button class="btn" (click)="tryOutSlackClone()">Try it</button>
+                    <button class="btn" (click)="tryOutSlackClone()" [disabled]="disabledBtns">Try it</button>
                 </div>
             </div>
         </div>
@@ -36,8 +36,8 @@
                         <div class="red">Password: Widder1911</div>
                     </div>
                     <div class="d-Flex">
-                        <button class="btn" (click)="tryOutMyFirstOwnApp()">Try it</button>
-                        <button class="btn" (click)="myFirstOwnApp()">Check git</button>
+                        <button class="btn" (click)="tryOutMyFirstOwnApp()" [disabled]="disabledBtns">Try it</button>
+                        <button class="btn" (click)="myFirstOwnApp()" [disabled]="disabledBtns">Check git</button>
                     </div>
                 </div>
             </div>
@@ -50,7 +50,7 @@
                 <div class="middle">
                     <div class="title">My personal homepage</div>
                     <div class="text">Angular - my first Angular project</div>
-                    <button class="btn" (click)="myPageGit()">Check git</button>
+                    <button class="btn" (click)="myPageGit()" [disabled]="disabledBtns">Check git</button>
                 </div>
             </div>
         </div>
@@ -64,8 +64,8 @@
                     <div class="title">El Pollo Loco</div>
                     <div class="text">JavaScript - based jump and run game</div>
                     <div class="d-Flex">
-                        <button class="btn" (click)="tryOutElPlloLoco()">Try it</button>
-                        <button class="btn" (click)="elPlloLocoGit()">Check git</button>
+                        <button class="btn" (click)="tryOutElPlloLoco()" [disabled]="disabledBtns">Try it</button>
+                        <button class="btn" (click)="elPlloLocoGit()" [disabled]="disabledBtns">Check git</button>
                     </div>
                 </div>
             </div>

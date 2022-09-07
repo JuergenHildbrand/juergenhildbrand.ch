@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-work-section',
@@ -6,11 +6,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./work-section.component.scss']
 })
 
-export class WorkSectionComponent {
+export class WorkSectionComponent implements OnInit {
 
   btn1 = true;
   btn2 = false;
   btn3 = false;
+  disabledBtns = false;
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.ngOnInit();
+  }
+
+  ngOnInit(): void {
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      this.disabledBtns = true;
+     } else {
+      this.disabledBtns = false;
+     }
+  }
 
   set1() {
     this.btn1 = true
@@ -41,7 +55,7 @@ export class WorkSectionComponent {
     ang1.classList.add('scaleIn');
     js4.classList.add('scaleIn');
     js3.classList.add('scaleIn');
-    this.scaleOut(ang3,ang2, ang1, js4, js3);
+    this.scaleOut(ang3, ang2, ang1, js4, js3);
   }
 
   scaleOut(ang3, ang2, ang1, js4, js3) {
@@ -100,7 +114,7 @@ export class WorkSectionComponent {
     }, 1000);
   }
 
-
+  
   // Links
 
   tryOutSlackClone() {

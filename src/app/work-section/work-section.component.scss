@@ -143,6 +143,10 @@
     }
 }
 
+.opacity {
+    opacity: 1;
+}
+
 @media(max-width: 900px) {
 
     .workSection {
@@ -195,13 +199,8 @@
                 width: 73.5vw;
                 height: 60.1vw;
 
-                .workImg {
-                    animation: opacityC 6s infinite;
-                }
-
                 .middle {
                     background: rgba(245, 245, 245, 0.8);
-                    animation: opacityB 6s infinite;
 
                     .title {
                         font-family: 'Inter';
@@ -253,36 +252,5 @@
                 }
             }
         }
-    }
-}
-
-
-///// Animations responsive //////
-
-@keyframes opacityB {
-    0% {
-        opacity: 0.3;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0.3;
-    }
-}
-
-@keyframes opacityC {
-    0% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0.2;
-    }
-
-    100% {
-        opacity: 1;
     }
 }
