@@ -3,11 +3,11 @@
     <h2 id="titleWork">My Work</h2>
 
     <div class="buttons" id="buttonsWork">
-        <button class="btns backgroundColorBtn" (click)="set1(); scaleIn()" [disabled]="btn1"
+        <button class="btns backgroundColorBtn" (click)="toggle1(); scaleIn()" [disabled]="btn1"
             [class.backgroundColorBtn]="btn1">All</button>
-        <button class="btns" (click)="set2(); scaleIn()" [disabled]="btn2"
+        <button class="btns" (click)="toggle2(); scaleIn()" [disabled]="btn2"
             [class.backgroundColorBtn]="btn2">Angular</button>
-        <button class="btns" (click)="set3(); scaleIn()" [disabled]="btn3" [class.backgroundColorBtn]="btn3">Java
+        <button class="btns" (click)="toggle3(); scaleIn()" [disabled]="btn3" [class.backgroundColorBtn]="btn3">Java
             Script</button>
     </div>
 

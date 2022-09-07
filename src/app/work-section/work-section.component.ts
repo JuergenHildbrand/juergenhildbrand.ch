@@ -11,7 +11,7 @@ export class WorkSectionComponent implements OnInit {
   btn1 = true;
   btn2 = false;
   btn3 = false;
-  disabledBtns = false;
+  disabledBtns: boolean;
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
@@ -26,19 +26,19 @@ export class WorkSectionComponent implements OnInit {
      }
   }
 
-  set1() {
+  toggle1() {
     this.btn1 = true
     this.btn2 = false;
     this.btn3 = false;
   }
 
-  set2() {
+  toggle2() {
     this.btn1 = false
     this.btn2 = true;
     this.btn3 = false;
   }
 
-  set3() {
+  toggle3() {
     this.btn1 = false
     this.btn2 = false;
     this.btn3 = true;

@@ -17,8 +17,7 @@
             required 
             [(ngModel)]="contact.name" 
             name="name" 
-            #name="ngModel"
-        >
+            #name="ngModel">
 
         <div class="contactTxt">Email address</div>
         <input 
@@ -30,8 +29,7 @@
             name="email" 
             #email="ngModel"
             email 
-            pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}"
-        >
+            pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}">
 
         <div class="contactTxt">Message</div>
         <textarea 
@@ -40,15 +38,14 @@
             required 
             [(ngModel)]="contact.message" 
             name="message"
-            #message="ngModel"
-        >
+            #message="ngModel">
         </textarea>
 
         <button 
             id="sendBtn" 
             type="submit" 
-            [disabled]="!contactForm.form.valid"
-        >
+            [disabled]="!contactForm.form.valid">
+            
             Send
         </button>
 
@@ -62,8 +59,8 @@
     [class.response__ok]="response.ok" 
     [class.response__not_ok]="!response.ok" 
     [class.scaleOutC]="response.ok" 
-    [class.scaleInC]="response.notOk"
->
+    [class.scaleInC]="response.notOk">
+
     {{response.message}}
     <button (click)="closeResponse()">Ok</button>
 </div>

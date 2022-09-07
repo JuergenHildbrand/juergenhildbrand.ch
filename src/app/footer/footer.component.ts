@@ -7,13 +7,14 @@ import { Component, Input } from '@angular/core';
 })
 
 export class FooterComponent {
+
   @Input() darkMode = true;
 
-  linkedIn() {
+  goTolinkedIn() {
     window.open('https://www.linkedin.com/in/j%C3%BCrgenhildbrand/');
   }
 
-  git() {
+  goToGit() {
     window.open('https://github.com/JuergenHildbrand');
   }
 }

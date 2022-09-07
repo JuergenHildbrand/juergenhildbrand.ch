@@ -1,9 +1,9 @@
 <header [class.headerDark]="darkMode">
 
-    <div routerLink="/" class="logoHeader" [class.darkLogo]="darkMode" [class.fontSize]="darkMode">J.H</div>
+    <div routerLink="/" class="logoHeader" [class.darkLogo]="darkMode" [class.fontSize]="darkMode" (click)="scrollTop()">J.H</div>
 
     <div class="linksHeader" [class.darkLinks]="darkMode">
-        <a routerLink="/" (click)="scrollTop()">Home</a>
+        <a routerLink="/">Home</a>
         <a href="#skills">Skills</a>
         <a href="#work">Work</a>
         <a href="#about">About</a>
@@ -16,14 +16,14 @@
             <a href="#home" class="active"></a>
 
             <div id="myLinks">
-                <a routerLink="/" (click)="toggle()">Home</a>
-                <a href="#skills" (click)="toggle()">Skills</a>
-                <a href="#work" (click)="toggle()">Work</a>
-                <a href="#about" (click)="toggle()">About</a>
-                <a href="#contactSection"  (click)="toggle()">Contact</a>
+                <a routerLink="/" (click)="slideInOut()">Home</a>
+                <a href="#skills" (click)="slideInOut()">Skills</a>
+                <a href="#work" (click)="slideInOut()">Work</a>
+                <a href="#about" (click)="slideInOut()">About</a>
+                <a href="#contactSection"  (click)="slideInOut()">Contact</a>
             </div>
 
-            <a href="javascript:void(0);" class="icon" (click)="toggle()">
+            <a href="javascript:void(0);" class="icon" (click)="slideInOut()">
                 <img class="menuImg" src="assets/ico/menu-smartphone.png">
             </a>
             
