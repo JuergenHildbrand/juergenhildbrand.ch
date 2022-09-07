@@ -117,8 +117,12 @@ export class WorkSectionComponent implements OnInit {
   
   // Links
 
-  tryOutSlackClone() {
-    window.open('https://www.juergenhildbrand.ch/slackclone/index.html');
+  tryOutMySlackClone() {
+    window.open('https://www.juergenhildbrand.ch/slack-clone/index.html')  
+  }
+
+  slackCloneGit() {
+    window.open('https://github.com/JuergenHildbrand/Jey-s-Slack-clone.git');
   }
 
   tryOutMyFirstOwnApp() {
