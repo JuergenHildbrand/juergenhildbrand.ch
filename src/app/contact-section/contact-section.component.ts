@@ -12,9 +12,6 @@ export class ContactSectionComponent {
 
   constructor(private http: HttpClient, public navigation: NavigationService) { }
 
-  /**
-  * This is bind to ngForm's InputFields in Template File
-  */
   contact = {
     name: '', //Bind  to InputField name="name"
     email: '', //Bind to InputField name="email"
@@ -39,46 +36,57 @@ export class ContactSectionComponent {
     },
   };
 
-/**
-* Do not forget to import FormsModule in app.module.ts
-*/
   onSubmit(ngForm) {
     if (ngForm.submitted && ngForm.form.valid) {
       this.http
         .post(this.post.endPoint, this.post.body(this.contact))
         .subscribe({
-          next: (response) => {
-            this.response.hasResponse = true;
-            this.response.okk = false;
-            this.response.ok = true;
-            this.response.message = "Your Email has been sent!"
-            setTimeout(() => {
-              this.response.okk = true;
-              this.response.hasResponse = false;
-              ngForm.reset();
-            }, 3000);
-            console.log(this.response.ok);
-            console.log(this.response.message);
-            // Here Message was send
+          next: () => {
+            this.messageSent();
+            ngForm.reset();   
           },
-          error: (error) => {
-            this.response.hasResponse = true;
-            this.response.ok = false;
-            this.response.message = "Your Email has not been sent!"
-            console.error(error);
-            // Here Message was not send!!!!!
+          error: (error) => { 
+            this.messageNotSent(error)
           },
           complete: () => console.info('send post complete'),
         });
     }
   }
 
+  messageSent() {
+    this.response.hasResponse = true;
+            this.response.notOk = false;
+            this.response.ok = true;
+            this.response.message = "Your Email has been sent!"
+            setTimeout(() => {
+              this.response.notOk = true;
+              document.getElementById('response').classList.add('scaleIn');
+              setTimeout(() => {
+                this.response.hasResponse = false;
+              }, 1000);
+            }, 3000);
+            console.log(this.response.ok);
+            console.log(this.response.message);
+  }
+
+  messageNotSent(error) {
+    this.response.hasResponse = true;
+    this.response.ok = false;
+    this.response.message = "Your Email has not been sent!"
+    console.error(error);
+  }
+  
   response = {
-    okk : false,
+    notOk : false,
     ok : false,
     message : "",
     hasResponse : false
   }
+
+  closeResponse() {
+    document.getElementById('response').classList.add('scaleIn');
+    setTimeout(() => {
+      this.response.hasResponse = false;
+    }, 1000);
+  }
 }
-
-

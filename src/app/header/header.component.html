@@ -16,14 +16,14 @@
             <a href="#home" class="active"></a>
 
             <div id="myLinks">
-                <a routerLink="/" (click)="openMenu()">Home</a>
-                <a href="#skills" (click)="openMenu()">Skills</a>
-                <a href="#work" (click)="openMenu()">Work</a>
-                <a href="#about" (click)="openMenu()">About</a>
-                <a href="#contactSection"  (click)="openMenu()">Contact</a>
+                <a routerLink="/" (click)="toggle()">Home</a>
+                <a href="#skills" (click)="toggle()">Skills</a>
+                <a href="#work" (click)="toggle()">Work</a>
+                <a href="#about" (click)="toggle()">About</a>
+                <a href="#contactSection"  (click)="toggle()">Contact</a>
             </div>
 
-            <a href="javascript:void(0);" class="icon" (click)="openMenu()">
+            <a href="javascript:void(0);" class="icon" (click)="toggle()">
                 <img class="menuImg" src="assets/ico/menu-smartphone.png">
             </a>
             

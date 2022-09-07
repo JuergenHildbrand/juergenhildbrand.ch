@@ -46,17 +46,17 @@ export class WorkSectionComponent {
 
   scaleOut(ang3, ang2, ang1, js4, js3) {
     if (this.btn1) {
-      this.all(ang3, ang2, ang1, js4, js3);
+      this.showAllProjects(ang3, ang2, ang1, js4, js3);
     }
     if (this.btn2) {
-      this.angular(ang3, ang2, ang1, js4, js3);
+      this.showAngularProjects(ang3, ang2, ang1, js4, js3);
     }
     if (this.btn3) {
-      this.javascript(ang3, ang2, ang1, js4, js3);
+      this.showJavascriptProjects(ang3, ang2, ang1, js4, js3);
     }
   }
 
-  all(ang3, ang2, ang1, js4, js3) {
+  showAllProjects(ang3, ang2, ang1, js4, js3) {
     setTimeout(() => {
       ang3.classList.remove('d-none', 'scaleIn');
       ang2.classList.remove('d-none', 'scaleIn');
@@ -70,7 +70,7 @@ export class WorkSectionComponent {
     }, 1000);
   }
 
-  angular(ang3, ang2, ang1, js4, js3) {
+  showAngularProjects(ang3, ang2, ang1, js4, js3) {
     setTimeout(() => {
       ang3.classList.remove('d-none', 'scaleIn');
       ang2.classList.remove('d-none', 'scaleIn');
@@ -85,7 +85,7 @@ export class WorkSectionComponent {
     }, 1000);
   }
 
-  javascript(ang3, ang2, ang1, js4, js3) {
+  showJavascriptProjects(ang3, ang2, ang1, js4, js3) {
     setTimeout(() => {
       ang3.classList.remove('scaleIn');
       ang2.classList.remove('scaleIn');

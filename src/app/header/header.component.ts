@@ -9,7 +9,7 @@ import { Component, Input, } from '@angular/core';
 export class HeaderComponent {
   @Input() darkMode = true;
 
-  openMenu() {
+  toggle() {
     let x = document.getElementById('myLinks');
     if (x.style.display === 'block') {
       x.classList.remove('openMenuA')
