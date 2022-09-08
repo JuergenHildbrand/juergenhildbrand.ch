@@ -114,6 +114,12 @@ export class WorkSectionComponent implements OnInit {
     }, 1000);
   }
 
+  toggleBtns() {
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      this.disabledBtns = false;
+     }
+  }
+
   
   // Links
 

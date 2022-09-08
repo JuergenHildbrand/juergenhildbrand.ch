@@ -14,12 +14,14 @@
     <div class="myProjects">
 
         <!-- slack-clone -->
-        <div class="work" id="ang3">
+        <div class="work" id="ang3" (click)="toggleBtns()">
             <div class="imgCont">
                 <img class="workImg" src="assets/img/slackclone.png">
                 <div class="middle">
                     <div class="title">Slack clone</div>
-                    <div class="red text">(under construction)</div>
+                    <div class="text">
+                        <div class="red">(under construction)</div>
+                    </div>
                     <div class="d-flex">
                         <button class="btn" (click)="tryOutMySlackClone()" [disabled]="disabledBtns">Try it</button>
                         <button class="btn" (click)="slackCloneGit()" [disabled]="disabledBtns">Check git</button>
@@ -29,7 +31,7 @@
         </div>
 
         <!-- my first own app -->
-        <div class="work" id="ang2">
+        <div class="work" id="ang2" (click)="toggleBtns()">
             <div class="imgCont">
                 <img class="workImg" src="assets/img/myFirstOwnApp.jpg">
                 <div class="middle">
@@ -38,7 +40,7 @@
                         <div class="red">(under construction, only ready for smartphone)</div>
                         <div class="red">Password: Widder1911</div>
                     </div>
-                    <div class="d-Flex">
+                    <div class="d-flex">
                         <button class="btn" (click)="tryOutMyFirstOwnApp()" [disabled]="disabledBtns">Try it</button>
                         <button class="btn" (click)="myFirstOwnApp()" [disabled]="disabledBtns">Check git</button>
                     </div>
@@ -47,7 +49,7 @@
         </div>
 
         <!-- My page -->
-        <div class="work" id="ang1">
+        <div class="work" id="ang1" (click)="toggleBtns()">
             <div class="imgCont">
                 <img class="workImg" src="assets/img/myPage.png">
                 <div class="middle">
@@ -59,13 +61,13 @@
         </div>
 
         <!-- El pllo loco -->
-        <div class="work" id="js4">
+        <div class="work" id="js4" (click)="toggleBtns()">
             <div class="imgCont">
                 <img class="workImg" src="assets/img/elPolloLoco.png">
                 <div class="middle">
                     <div class="title">El Pollo Loco</div>
                     <div class="text">JavaScript - based jump and run game</div>
-                    <div class="d-Flex">
+                    <div class="d-flex">
                         <button class="btn" (click)="tryOutElPlloLoco()" [disabled]="disabledBtns">Try it</button>
                         <button class="btn" (click)="elPlloLocoGit()" [disabled]="disabledBtns">Check git</button>
                     </div>
@@ -74,13 +76,13 @@
         </div>
 
         <!-- Join -->
-        <div class="work" id="js3">
+        <div class="work" id="js3" (click)="toggleBtns()">
             <div class="imgCont">
                 <img class="workImg" src="assets/img/join.jpg">
                 <div class="middle">
                     <div class="title">Join</div>
                     <div class="text">JavaScript - Group work kanban board</div>
-                    <div class="d-Flex">
+                    <div class="d-flex">
                         <button class="btn" (click)="tryOutJoin()">Try it!</button>
                         <button class="btn" (click)="joinGit()">Check git</button>
                     </div>
