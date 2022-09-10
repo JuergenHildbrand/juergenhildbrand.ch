@@ -19,19 +19,7 @@ export class WorkSectionComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-      document.getElementById('overlay5').classList.add('d-none');
-      document.getElementById('overlay4').classList.add('d-none');
-      document.getElementById('overlay3').classList.add('d-none');
-      document.getElementById('overlay2').classList.add('d-none');
-      document.getElementById('overlay1').classList.add('d-none');
-    } else {
-      document.getElementById('overlay5').classList.remove('d-none');
-      document.getElementById('overlay4').classList.remove('d-none');
-      document.getElementById('overlay3').classList.remove('d-none');
-      document.getElementById('overlay2').classList.remove('d-none');
-      document.getElementById('overlay1').classList.remove('d-none');
-    }
+    this.toggleOverlay();
   }
 
   toggle1() {
@@ -120,6 +108,22 @@ export class WorkSectionComponent implements OnInit {
       js4.classList.add('scaleOut');
       js3.classList.add('scaleOut');
     }, 1000);
+  }
+
+  toggleOverlay() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      document.getElementById('overlay5').classList.add('d-none');
+      document.getElementById('overlay4').classList.add('d-none');
+      document.getElementById('overlay3').classList.add('d-none');
+      document.getElementById('overlay2').classList.add('d-none');
+      document.getElementById('overlay1').classList.add('d-none');
+    } else {
+      document.getElementById('overlay5').classList.remove('d-none');
+      document.getElementById('overlay4').classList.remove('d-none');
+      document.getElementById('overlay3').classList.remove('d-none');
+      document.getElementById('overlay2').classList.remove('d-none');
+      document.getElementById('overlay1').classList.remove('d-none');
+    }
   }
 
   showOverlay5() {
