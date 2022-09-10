@@ -11,7 +11,7 @@ export class WorkSectionComponent implements OnInit {
   btn1 = true;
   btn2 = false;
   btn3 = false;
-  disabledBtns: boolean;
+  overlay: boolean = false;
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
@@ -19,11 +19,19 @@ export class WorkSectionComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-      this.disabledBtns = true;
-     } else {
-      this.disabledBtns = false;
-     }
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      document.getElementById('overlay5').classList.add('d-none');
+      document.getElementById('overlay4').classList.add('d-none');
+      document.getElementById('overlay3').classList.add('d-none');
+      document.getElementById('overlay2').classList.add('d-none');
+      document.getElementById('overlay1').classList.add('d-none');
+    } else {
+      document.getElementById('overlay5').classList.remove('d-none');
+      document.getElementById('overlay4').classList.remove('d-none');
+      document.getElementById('overlay3').classList.remove('d-none');
+      document.getElementById('overlay2').classList.remove('d-none');
+      document.getElementById('overlay1').classList.remove('d-none');
+    }
   }
 
   toggle1() {
@@ -114,17 +122,77 @@ export class WorkSectionComponent implements OnInit {
     }, 1000);
   }
 
-  toggleBtns() {
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-      this.disabledBtns = false;
-     }
+  showOverlay5() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      document.getElementById('overlay5').classList.add('d-noneEffektScaleOut');
+      document.getElementById('overlay5').classList.remove('d-none');
+      setTimeout(() => {
+        document.getElementById('overlay4').classList.add('d-none');
+        document.getElementById('overlay3').classList.add('d-none');
+        document.getElementById('overlay2').classList.add('d-none');
+        document.getElementById('overlay1').classList.add('d-none');
+      }, 500);
+    }
   }
 
-  
+  showOverlay4() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      document.getElementById('overlay4').classList.add('d-noneEffektScaleOut');
+      document.getElementById('overlay4').classList.remove('d-none');
+      setTimeout(() => {
+        document.getElementById('overlay5').classList.add('d-none');
+        document.getElementById('overlay3').classList.add('d-none');
+        document.getElementById('overlay2').classList.add('d-none');
+        document.getElementById('overlay1').classList.add('d-none');
+      }, 500);
+    }
+  }
+
+  showOverlay3() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      document.getElementById('overlay3').classList.add('d-noneEffektScaleOut');
+      document.getElementById('overlay3').classList.remove('d-none');
+      setTimeout(() => {
+        document.getElementById('overlay5').classList.add('d-none');
+        document.getElementById('overlay4').classList.add('d-none');
+        document.getElementById('overlay2').classList.add('d-none');
+        document.getElementById('overlay1').classList.add('d-none');
+      }, 500);
+    }
+  }
+
+  showOverlay2() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      document.getElementById('overlay2').classList.add('d-noneEffektScaleOut');
+      document.getElementById('overlay2').classList.remove('d-none');
+      setTimeout(() => {
+        document.getElementById('overlay5').classList.add('d-none');
+        document.getElementById('overlay4').classList.add('d-none');
+        document.getElementById('overlay3').classList.add('d-none');
+        document.getElementById('overlay1').classList.add('d-none');
+      }, 500);
+    }
+  }
+
+  showOverlay1() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      document.getElementById('overlay1').classList.add('d-noneEffektScaleOut');
+      document.getElementById('overlay1').classList.remove('d-none');
+      setTimeout(() => {
+        document.getElementById('overlay5').classList.add('d-none');
+        document.getElementById('overlay4').classList.add('d-none');
+        document.getElementById('overlay3').classList.add('d-none');
+        document.getElementById('overlay2').classList.add('d-none');
+      }, 500);
+    }
+  }
+
+
+
   // Links
 
   tryOutMySlackClone() {
-    window.open('https://www.juergenhildbrand.ch/slack-clone/index.html')  
+    window.open('https://www.juergenhildbrand.ch/slack-clone/index.html')
   }
 
   slackCloneGit() {

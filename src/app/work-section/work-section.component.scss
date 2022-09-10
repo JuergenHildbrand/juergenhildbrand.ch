@@ -73,7 +73,7 @@
                 object-fit: cover;
             }
 
-            .middle {
+            .overlay {
                 width: 100%;
                 height: 100%;
                 position: absolute;
@@ -137,7 +137,7 @@
             opacity: 0.3;
         }
 
-        .work:hover .middle {
+        .work:hover .overlay {
             opacity: 1;
         }
     }
@@ -195,7 +195,7 @@
                 width: 73.5vw;
                 height: 60.1vw;
 
-                .middle {
+                .overlay {
                     background: rgba(245, 245, 245, 0.8);
 
                     .title {
@@ -241,12 +241,43 @@
 
         .myProjects {
             .imgCont {
-                .middle {
+                .overlay {
                     .btn {
                         font-size: 4.4vw;
                     }
                 }
             }
         }
+    }
+}
+
+
+.d-noneEffektScaleIn {
+    animation: opacityIn 1000ms;
+}
+
+.d-noneEffektScaleOut {
+    animation: opacityOut 1000ms;
+}
+
+@keyframes opacityIn {
+
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        display: none !important;
+    }
+}
+
+@keyframes opacityOut {
+
+    from {
+        display: unset;
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
