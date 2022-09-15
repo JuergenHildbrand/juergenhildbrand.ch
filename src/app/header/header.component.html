@@ -11,19 +11,19 @@
     </div>
 
     <div class="menu">
-        <div class="topnav" [class.headerDark]="darkMode">
+        <div class="topnav" [class.headerDark]="darkMode" (click)="slideInOut()">
 
             <a href="#home" class="active"></a>
 
             <div id="myLinks">
-                <a routerLink="/" (click)="slideInOut()">Home</a>
-                <a href="#skills" (click)="slideInOut()">Skills</a>
-                <a href="#work" (click)="slideInOut()">Work</a>
-                <a href="#about" (click)="slideInOut()">About</a>
-                <a href="#contactSection"  (click)="slideInOut()">Contact</a>
+                <a routerLink="/" (click)="slideInOut()" [class.headerDarkMenu]="darkMode">Home</a>
+                <a href="#skills" (click)="slideInOut()" [class.headerDarkMenu]="darkMode">Skills</a>
+                <a href="#work" (click)="slideInOut()" [class.headerDarkMenu]="darkMode">Work</a>
+                <a href="#about" (click)="slideInOut()" [class.headerDarkMenu]="darkMode">About</a>
+                <a href="#contactSection"  (click)="slideInOut()" [class.headerDarkMenu]="darkMode">Contact</a>
             </div>
 
-            <a href="javascript:void(0);" class="icon" (click)="slideInOut()">
+            <a href="javascript:void(0);" class="icon">
                 <img class="menuImg" src="assets/ico/menu-smartphone.png">
             </a>
             

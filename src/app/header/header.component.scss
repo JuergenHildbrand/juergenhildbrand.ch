@@ -1,8 +1,7 @@
 header {
     position: fixed;
     width: 100%;
-    height: 6.11vw;
-    max-height: 88px !important;
+    height: 88px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -17,7 +16,7 @@ header {
         font-style: normal;
         font-weight: 700;
         line-height: 150%;
-        font-size: 3.125vw;
+        font-size: 44px;
         color: white;
         cursor: pointer;
     }
@@ -25,7 +24,6 @@ header {
     .linksHeader {
         position: absolute;
         right: 5vw;
-        height: 100%;
         display: flex;
 
         a {
@@ -39,7 +37,7 @@ header {
             font-family: 'Sen';
             font-style: normal;
             font-weight: 400;
-            font-size: 1.11vw;
+            font-size: 16px;
             text-decoration: none;
             color: white;
             opacity: 0.7;
@@ -75,6 +73,11 @@ header {
     // box-shadow: 0px 0px 3px 0 rgba(0, 0, 0, 0.2);
 }
 
+.headerDarkMenu {
+    background-color: lightgray !important;
+    color: black !important;
+}
+
 
 @media(max-width: 900px) {
 
@@ -87,11 +90,13 @@ header {
             position: absolute;
             left: 0;
             margin-left: 4.44vw;
-            font-size: 45px;
+        }
+
+        .linksHeader {
+            display: none;
         }
 
         .menu {
-            position: relative;
             margin-left: 75%;
             width: 300px;
             z-index: 4;
@@ -114,8 +119,9 @@ header {
             #myLinks {
                 position: absolute;
                 text-align: right;
-                width: 100%;
                 right: 4vw;
+                width: 100%;
+                max-width: 90px;
             }
 
             #myLinks a {
@@ -149,7 +155,6 @@ header {
                 display: block;
                 position: absolute;
                 right: 30px;
-                z-index: 1000;
             }
 
             .active {
@@ -165,6 +170,7 @@ header {
 
 @media(min-width: 901px) {
     header {
+
         .menu {
             display: none;
         }

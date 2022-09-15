@@ -11,7 +11,7 @@ export class AboutMeSectionComponent implements OnInit{
 
   ngOnInit() {
     AOS.init({
-      delay: 500,
+      delay: 300,
       duration: 1200,
       once: true
     });

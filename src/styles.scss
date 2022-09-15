@@ -77,18 +77,9 @@ span {
 
 #skills,
 #about {
-    scroll-margin-top: 6.11vw;
+    scroll-margin-top: 88px;
 }
 
 #work {
     scroll-margin-top: 0;
-}
-
-@media (min-width: 1430px) {
-
-    #skills,
-#about {
-    scroll-margin-top: 88px;
-}
-
 }

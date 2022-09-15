@@ -12,7 +12,7 @@ export class SkillsSectionComponent implements OnInit {
   ngOnInit() {
     AOS.init({
       offset: 0,
-      delay: 100,
+      delay: 0,
       duration: 1200,
       once: true
     });
