@@ -1,9 +1,10 @@
 .imprintCont {
     width: 90vw;
-    min-height: fit-content;
+    max-height: 80vh;
     padding-top: 8vw;
     padding-left: 4.44vw;
     padding-right: 4.44vw;
+    overflow: scroll;
     
     h1 {
         font-size: 2.22vw;

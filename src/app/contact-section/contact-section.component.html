@@ -3,11 +3,42 @@
     <h2>Contact me.</h2>
 
     <div class="contactDescription">
-        <p>Get in touch via the form below, or by emailing</p> 
+        <p>Get in touch via the form below, or by emailing</p>
         <a href="mailto:abc@example.com" target="_blank">info@juergenhildbrand.ch</a>
     </div>
 
-    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+    <form [formGroup]="addTaskForm" (ngSubmit)="onSubmit()">
+        <div class="collumn">
+            <div class="contactTxt">Name</div>
+            <input 
+                formControlName="name"
+                placeholder="Enter your name" />
+               
+                <div style="color: white;" *ngIf="name">
+                    Name is required.
+                  </div>
+
+            <div class="contactTxt">Email address</div>
+            <input 
+                formControlName="email"
+                placeholder="Enter your Email address"/>
+
+            <div class="contactTxt">Message</div>
+            <div class="example-full-width">
+                <textarea 
+                    formControlName="message"
+                    placeholder="Enter your message">
+                </textarea>
+            </div>
+
+            <button type="submit">
+                Send
+            </button>
+            
+        </div>
+    </form>
+
+    <!-- <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
         <div class="contactTxt">Name</div>
         <input 
@@ -15,11 +46,19 @@
             placeholder="Enter your name"  
             id="name" 
             required 
-            [(ngModel)]="contact.name" 
+            [(ngModel)]="contact.name "
             name="name" 
             #name="ngModel">
 
         <div class="contactTxt">Email address</div>
+        <input type="email"
+            class="form-control"
+            name="email"
+            [(ngModel)]="model.email"
+            required
+            pattern="[^ @]*@[^ @]*"
+            emailDomain
+            #email="ngModel">
         <input 
             type="email"
             placeholder="Enter your Email address" 
@@ -27,9 +66,7 @@
             required 
             [(ngModel)]="contact.email" 
             name="email" 
-            #email="ngModel"
-            email 
-            pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}">
+            #email="ngModel">
 
         <div class="contactTxt">Message</div>
         <textarea 
@@ -49,18 +86,15 @@
             Send
         </button>
 
-    </form>
+    </form> -->
 </div>
 
-<div 
-    class="response"
-    id="response"
-    *ngIf="response.hasResponse" 
-    [class.response__ok]="response.ok" 
-    [class.response__not_ok]="!response.ok" 
-    [class.scaleOutC]="response.ok" 
-    [class.scaleInC]="response.notOk">
+<div class="response" id="response" *ngIf="response.hasResponse" [class.response__ok]="response.ok"
+    [class.response__not_ok]="!response.ok" [class.scaleOutC]="response.ok" [class.scaleInC]="response.notOk">
 
     {{response.message}}
     <button (click)="closeResponse()">Ok</button>
 </div>
+
+<!-- email 
+pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" -->

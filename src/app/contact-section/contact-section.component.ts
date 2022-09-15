@@ -1,6 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, VERSION } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { NavigationService } from '../navigation.service';
+import {
+  FormControl,
+  FormGroup,
+  Validators,
+  FormBuilder,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-contact-section',
@@ -8,16 +14,39 @@ import { NavigationService } from '../navigation.service';
   styleUrls: ['./contact-section.component.scss']
 })
 
-export class ContactSectionComponent {
+export class ContactSectionComponent implements OnInit {
 
-  constructor(private http: HttpClient, public navigation: NavigationService) { }
+  name = false;
+  formSubmitted = false;
 
-  contact = {
-    name: '', //Bind  to InputField name="name"
-    email: '', //Bind to InputField name="email"
-    message: '', //Bind to InputField name="message"
-  };
+  constructor(
+    private http: HttpClient,
+    public navigation: NavigationService,
+    private formBuilder: FormBuilder,
+  ) {
+    this.addTaskForm = this.formBuilder.group({
+      // name: new FormControl('', [
+      //   Validators.required,
+      name: new  FormControl('', [
+        Validators.required, 
+        Validators.minLength(5), 
+        Validators.maxLength(50)]),
+  
+      email: new FormControl('', [
+        Validators.required,
+        Validators.pattern("[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}"),
+      ]),
+      message: new FormControl('', [
+        Validators.required,
+      ]),
+    });
+  }
 
+  addTaskForm!: FormGroup;
+
+  ngOnInit() {
+
+  }
   /**
   * A post request construct configuration
   */
@@ -36,16 +65,19 @@ export class ContactSectionComponent {
     },
   };
 
-  onSubmit(ngForm) {
-    if (ngForm.submitted && ngForm.form.valid) {
+  onSubmit() {
+    if (this.addTaskForm.invalid) {
+      this.name = true
+      this.addTaskForm.markAllAsTouched();
+    } else {
       this.http
-        .post(this.post.endPoint, this.post.body(this.contact))
+        .post(this.post.endPoint, this.post.body(this.addTaskForm.value))
         .subscribe({
           next: () => {
             this.messageSent();
-            ngForm.reset();   
+            // ngForm.reset();
           },
-          error: (error) => { 
+          error: (error) => {
             this.messageNotSent(error)
           },
           complete: () => console.info('send post complete'),
@@ -55,18 +87,18 @@ export class ContactSectionComponent {
 
   messageSent() {
     this.response.hasResponse = true;
-            this.response.notOk = false;
-            this.response.ok = true;
-            this.response.message = "Your Email has been sent!"
-            setTimeout(() => {
-              this.response.notOk = true;
-              document.getElementById('response').classList.add('scaleIn');
-              setTimeout(() => {
-                this.response.hasResponse = false;
-              }, 1000);
-            }, 3000);
-            console.log(this.response.ok);
-            console.log(this.response.message);
+    this.response.notOk = false;
+    this.response.ok = true;
+    this.response.message = "Your Email has been sent!"
+    setTimeout(() => {
+      this.response.notOk = true;
+      document.getElementById('response').classList.add('scaleIn');
+      setTimeout(() => {
+        this.response.hasResponse = false;
+      }, 1000);
+    }, 3000);
+    console.log(this.response.ok);
+    console.log(this.response.message);
   }
 
   messageNotSent(error) {
@@ -75,12 +107,12 @@ export class ContactSectionComponent {
     this.response.message = "Your Email has not been sent!"
     console.error(error);
   }
-  
+
   response = {
-    notOk : false,
-    ok : false,
-    message : "",
-    hasResponse : false
+    notOk: false,
+    ok: false,
+    message: "",
+    hasResponse: false
   }
 
   closeResponse() {
@@ -89,4 +121,6 @@ export class ContactSectionComponent {
       this.response.hasResponse = false;
     }, 1000);
   }
+
+
 }
