@@ -15,9 +15,11 @@ import {
 })
 
 export class ContactSectionComponent implements OnInit {
+[x: string]: any;
 
   // name = false;
   name = 'Angular ' + VERSION.major;
+  ngForm: any;
 
   constructor(
     private http: HttpClient,
@@ -32,6 +34,10 @@ export class ContactSectionComponent implements OnInit {
     message: new FormControl('', [Validators.required, Validators.minLength(30), Validators.maxLength(500)]),
   });
 
+  ngOnInit() {
+    
+  }
+
   onSubmit(): void{
     this.formSubmitted = true;
     if (this.registrationFormGroup.invalid) {
@@ -43,7 +49,6 @@ export class ContactSectionComponent implements OnInit {
       .subscribe({
         next: () => {
           this.messageSent();
-          // ngForm.reset();
         },
         error: (error) => {
           this.messageNotSent(error)
@@ -51,9 +56,8 @@ export class ContactSectionComponent implements OnInit {
         complete: () => console.info('send post complete'),
       });
     }
-  }
-
-  ngOnInit() {
+    this.formSubmitted = false;
+    this.registrationFormGroup.reset();
   }
 
   /**
@@ -84,7 +88,7 @@ export class ContactSectionComponent implements OnInit {
       document.getElementById('response').classList.add('scaleIn');
       setTimeout(() => {
         this.response.hasResponse = false;
-      }, 1000);
+      }, 900);
     }, 3000);
     console.log(this.response.ok);
     console.log(this.response.message);
