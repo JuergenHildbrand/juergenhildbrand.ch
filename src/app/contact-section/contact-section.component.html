@@ -38,7 +38,7 @@
             </div>
             <div class="collumn">
                 <span class="validation-error"
-                    *ngIf="(formSubmitted || registrationFormGroup.controls.name.touched)  && registrationFormGroup.controls.name.errors?.minlength || registrationFormGroup.controls.name.errors?.maxlength">
+                    *ngIf="(formSubmitted || registrationFormGroup.controls.message.touched)  && registrationFormGroup.controls.message.errors?.minlength || registrationFormGroup.controls.message.errors?.maxlength">
                     Name should be between 30 to 500 characters
                 </span>
 
