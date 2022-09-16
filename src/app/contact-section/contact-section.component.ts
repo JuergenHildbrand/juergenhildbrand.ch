@@ -16,37 +16,68 @@ import {
 
 export class ContactSectionComponent implements OnInit {
 
-  name = false;
-  formSubmitted = false;
+  // name = false;
+  name = 'Angular ' + VERSION.major;
 
   constructor(
     private http: HttpClient,
-    public navigation: NavigationService,
-    private formBuilder: FormBuilder,
-  ) {
-    this.addTaskForm = this.formBuilder.group({
-      // name: new FormControl('', [
-      //   Validators.required,
-      name: new  FormControl('', [
-        Validators.required, 
-        Validators.minLength(5), 
-        Validators.maxLength(50)]),
-  
-      email: new FormControl('', [
-        Validators.required,
-        Validators.pattern("[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}"),
-      ]),
-      message: new FormControl('', [
-        Validators.required,
-      ]),
-    });
+    public navigation: NavigationService
+  ) {}
+
+
+  formSubmitted = false;
+  registrationFormGroup = new FormGroup({
+    name: new  FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(50)]),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    message: new FormControl('', [Validators.required, Validators.minLength(30), Validators.maxLength(500)]),
+  });
+
+  onSubmit(): void{
+    this.formSubmitted = true;
+    if (this.registrationFormGroup.invalid) {
+      return;
+    } 
+    if (this.registrationFormGroup.valid) {
+      this.http
+      .post(this.post.endPoint, this.post.body(this.registrationFormGroup.value))
+      .subscribe({
+        next: () => {
+          this.messageSent();
+          // ngForm.reset();
+        },
+        error: (error) => {
+          this.messageNotSent(error)
+        },
+        complete: () => console.info('send post complete'),
+      });
+    }
   }
 
-  addTaskForm!: FormGroup;
+  // onSubmit(): void{
+  //   this.formSubmitted = true;
+  //   if (this.registrationFormGroup.invalid){
+  //     return;
+  //   } else {
+      // this.http
+      //   .post(this.post.endPoint, this.post.body(this.registrationFormGroup.valid))
+      //   .subscribe({
+      //     next: () => {
+      //       this.messageSent();
+      //       // ngForm.reset();
+      //     },
+      //     error: (error) => {
+      //       this.messageNotSent(error)
+      //     },
+      //     complete: () => console.info('send post complete'),
+      //   });
+  //   }
+  // }
+
+  // formSubmitted!: FormGroup;
 
   ngOnInit() {
-
   }
+
   /**
   * A post request construct configuration
   */
@@ -65,25 +96,25 @@ export class ContactSectionComponent implements OnInit {
     },
   };
 
-  onSubmit() {
-    if (this.addTaskForm.invalid) {
-      this.name = true
-      this.addTaskForm.markAllAsTouched();
-    } else {
-      this.http
-        .post(this.post.endPoint, this.post.body(this.addTaskForm.value))
-        .subscribe({
-          next: () => {
-            this.messageSent();
-            // ngForm.reset();
-          },
-          error: (error) => {
-            this.messageNotSent(error)
-          },
-          complete: () => console.info('send post complete'),
-        });
-    }
-  }
+  // onSubmit() {
+  //   if (this.addTaskForm.invalid) {
+  //     this.name = true
+  //     this.addTaskForm.markAllAsTouched();
+  //   } else {
+  //     this.http
+  //       .post(this.post.endPoint, this.post.body(this.addTaskForm.value))
+  //       .subscribe({
+  //         next: () => {
+  //           this.messageSent();
+  //           // ngForm.reset();
+  //         },
+  //         error: (error) => {
+  //           this.messageNotSent(error)
+  //         },
+  //         complete: () => console.info('send post complete'),
+  //       });
+  //   }
+  // }
 
   messageSent() {
     this.response.hasResponse = true;

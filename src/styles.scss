@@ -19,6 +19,15 @@ html {
     display: flex !important;
 }
 
+.collumn {
+    display: flex;
+    flex-direction: column !important;
+}
+
+.mt4 {
+    margin-top: 4px;
+}
+
 h1,
 h2,
 p,

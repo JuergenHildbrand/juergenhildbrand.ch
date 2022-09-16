@@ -58,6 +58,7 @@
         left: 27.3vw;
 
         .contactTxt {
+            margin-top: 1.39vw;
             margin-bottom: 1.11vw;
             font-weight: 500;
             font-size: 1.25vw;
@@ -69,7 +70,6 @@
             width: 41.37vw;
             height: 2.7vw;
             padding-left: 1.13vw;
-            margin-bottom: 1.39vw;
             background: #1A1A1A;
             border: 0px solid;
             font-weight: 500;
@@ -99,9 +99,8 @@
         }
 
         button {
-            position: absolute;
-            top: 31.22vw;
-            left: 31.8vw;
+            margin-top: 24px;
+            margin-left: calc((100vw - 41.37vw) / 2 + 28px) !important;
             width: 10.9vw;
             height: 4.17vw;
             background: black;
@@ -128,6 +127,11 @@
     }
 }
 
+span {
+    color: red;
+    font-size: 8px;
+}
+
 
 @media(max-width: 900px) {
 
@@ -146,7 +150,7 @@
             position: absolute;
             top: 33.15vw;
             left: 4.44vw;
-            flex-direction: column;
+            // flex-direction: column !important;
 
             p {
                 font-size: 4.44vw;

@@ -7,34 +7,103 @@
         <a href="mailto:abc@example.com" target="_blank">info@juergenhildbrand.ch</a>
     </div>
 
-    <form [formGroup]="addTaskForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="registrationFormGroup" (ngSubmit)="onSubmit()">
         <div class="collumn">
+
             <div class="contactTxt">Name</div>
-            <input 
-                formControlName="name"
-                placeholder="Enter your name" />
-               
-                <div style="color: white;" *ngIf="name">
-                    Name is required.
-                  </div>
+            <input type="text" formControlName="name" placeholder="name">
+            <span class="validation-error"
+                *ngIf="(formSubmitted || registrationFormGroup.controls.name.touched) && registrationFormGroup.controls.name.errors?.required">
+                Name is required
+            </span>
+            <span class="validation-error mt4"
+                *ngIf="(formSubmitted || registrationFormGroup.controls.name.touched)  && registrationFormGroup.controls.name.errors?.minlength || registrationFormGroup.controls.name.errors?.maxlength">Name
+                should be between 4 to 50 characters
+            </span>
 
             <div class="contactTxt">Email address</div>
-            <input 
-                formControlName="email"
-                placeholder="Enter your Email address"/>
+            <input type="text" formControlName="email" placeholder="email">
+            <span class="validation-error mt4"
+                *ngIf="(formSubmitted || registrationFormGroup.controls.email.touched)  && registrationFormGroup.controls.email.errors?.required">Email
+                is required</span>
+            <span class="validation-error mt4"
+                *ngIf="(formSubmitted || registrationFormGroup.controls.email.touched)  && registrationFormGroup.controls.email.errors?.email">Please
+                enter correct email id
+            </span>
+
 
             <div class="contactTxt">Message</div>
             <div class="example-full-width">
-                <textarea 
-                    formControlName="message"
-                    placeholder="Enter your message">
-                </textarea>
+                <textarea formControlName="message" placeholder="enter your message"></textarea>
             </div>
+            <div class="collumn">
+                <span class="validation-error"
+                    *ngIf="(formSubmitted || registrationFormGroup.controls.name.touched)  && registrationFormGroup.controls.name.errors?.minlength || registrationFormGroup.controls.name.errors?.maxlength">
+                    Name should be between 30 to 500 characters
+                </span>
+
+                <button type="submit">Submit</button>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <div class="contactTxt">Name</div>
+                                                    <input formControlName="name" placeholder="Enter your name" />
+            <input type="text" formControlName="name" placeholder="name">
+
+            <span class="validation-error"
+                *ngIf="(formSubmitted || registrationFormGroup.controls.name.touched) && registrationFormGroup.controls.name.errors?.required">
+                Name
+                is required
+            </span>
+            <span class="validation-error"
+                *ngIf="(formSubmitted || registrationFormGroup.controls.name.touched)  && registrationFormGroup.controls.name.errors?.minlength || registrationFormGroup.controls.name.errors?.maxlength">
+                Name should be between 5 to 50 characters
+            </span>
+
+                                            <div style="color: white;" *ngIf="name">
+                                                      Name is required.
+                                             </div>
+
+            <div class="contactTxt">Email address</div>
+                                            <input formControlName="email" placeholder="Enter your Email address" />
+            <input type="text" formControlName="email" placeholder="email">
+            <span class="validation-error"
+                *ngIf="(formSubmitted || registrationFormGroup.controls.email.touched)  && registrationFormGroup.controls.email.errors?.required">
+                Email is required
+            </span>
+            <span class="validation-error"
+                *ngIf="(formSubmitted || registrationFormGroup.controls.email.touched)  && registrationFormGroup.controls.email.errors?.email">
+                Please enter correct email id
+            </span>
+
+            <div class="contactTxt">Message</div>
+            <div class="example-full-width">
+                <textarea formControlName="message" placeholder="Enter your message"></textarea>
+            </div>
+            <span class="validation-error"
+                *ngIf="(formSubmitted || registrationFormGroup.controls.name.touched)  && registrationFormGroup.controls.name.errors?.minlength || registrationFormGroup.controls.name.errors?.maxlength">
+                Name should be between 30 to 500 characters
+            </span>
 
             <button type="submit">
                 Send
-            </button>
-            
+            </button> -->
+
         </div>
     </form>
 
