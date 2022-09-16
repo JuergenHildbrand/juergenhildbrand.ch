@@ -53,28 +53,6 @@ export class ContactSectionComponent implements OnInit {
     }
   }
 
-  // onSubmit(): void{
-  //   this.formSubmitted = true;
-  //   if (this.registrationFormGroup.invalid){
-  //     return;
-  //   } else {
-      // this.http
-      //   .post(this.post.endPoint, this.post.body(this.registrationFormGroup.valid))
-      //   .subscribe({
-      //     next: () => {
-      //       this.messageSent();
-      //       // ngForm.reset();
-      //     },
-      //     error: (error) => {
-      //       this.messageNotSent(error)
-      //     },
-      //     complete: () => console.info('send post complete'),
-      //   });
-  //   }
-  // }
-
-  // formSubmitted!: FormGroup;
-
   ngOnInit() {
   }
 
@@ -95,26 +73,6 @@ export class ContactSectionComponent implements OnInit {
       },
     },
   };
-
-  // onSubmit() {
-  //   if (this.addTaskForm.invalid) {
-  //     this.name = true
-  //     this.addTaskForm.markAllAsTouched();
-  //   } else {
-  //     this.http
-  //       .post(this.post.endPoint, this.post.body(this.addTaskForm.value))
-  //       .subscribe({
-  //         next: () => {
-  //           this.messageSent();
-  //           // ngForm.reset();
-  //         },
-  //         error: (error) => {
-  //           this.messageNotSent(error)
-  //         },
-  //         complete: () => console.info('send post complete'),
-  //       });
-  //   }
-  // }
 
   messageSent() {
     this.response.hasResponse = true;
