@@ -100,7 +100,7 @@
 
         button {
             margin-top: 24px;
-            margin-left: calc((100vw - 41.37vw) / 2 + 28px) !important;
+            margin-left: calc((100vw - 41.37vw) / 2 + 28px);
             width: 10.9vw;
             height: 4.17vw;
             background: black;
@@ -203,8 +203,8 @@ span {
             }
 
             button {
-                top: 116.22vw;
-                left: 55.8vw;
+                margin-top: 48px;
+                margin-left: 55.8vw;
                 width: 35.56vw;
                 height: 16.67vw;
                 font-weight: 500;
