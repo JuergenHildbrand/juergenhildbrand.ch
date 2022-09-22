@@ -7,7 +7,8 @@ import * as AOS from 'aos';
   styleUrls: ['./about-me-section.component.scss']
 })
 
-export class AboutMeSectionComponent implements OnInit{
+export class AboutMeSectionComponent {
+
 
   ngOnInit() {
     AOS.init({

@@ -1,18 +1,23 @@
 <header [class.headerDark]="darkMode">
 
-    <div routerLink="/" class="logoHeader" [class.darkLogo]="darkMode" [class.fontSize]="darkMode" (click)="scrollTop()">J.H</div>
+    <div routerLink="/" class="logoHeader" [class.darkLogo]="darkMode" [class.fontSize]="darkMode"
+        (click)="scrollTop()">J.H</div>
 
     <div class="linksHeader" [class.darkLinks]="darkMode">
+
         <a routerLink="/" (click)="scrollTop()">Home</a>
         <a href="#skills">Skills</a>
         <a href="#work">Work</a>
         <a href="#about">About</a>
         <a href="#contactSection">Contact</a>
+        <img class="imgBtn" *ngIf="en" (click)="toggle()" src="assets/img/england.jpg">
+        <img class="imgBtn" *ngIf="!en" (click)="toggle()" src="assets/img/germany.jpg">
+
     </div>
 
     <div class="menu">
+        
         <div class="topnav" [class.headerDark]="darkMode" (click)="slideInOut()">
-
             <a href="#home" class="active"></a>
 
             <div id="myLinks">
@@ -20,15 +25,17 @@
                 <a href="#skills" (click)="slideInOut()" [class.headerDarkMenu]="darkMode">Skills</a>
                 <a href="#work" (click)="slideInOut()" [class.headerDarkMenu]="darkMode">Work</a>
                 <a href="#about" (click)="slideInOut()" [class.headerDarkMenu]="darkMode">About</a>
-                <a href="#contactSection"  (click)="slideInOut()" [class.headerDarkMenu]="darkMode">Contact</a>
+                <a href="#contactSection" (click)="slideInOut()" [class.headerDarkMenu]="darkMode">Contact</a>
             </div>
 
             <a href="javascript:void(0);" class="icon">
                 <img class="menuImg" src="assets/ico/menu-smartphone.png">
             </a>
-            
         </div>
+
+        <img class="imgBtn" style="margin-top: 4px;" *ngIf="en" (click)="toggle()" src="assets/img/england.jpg">
+        <img class="imgBtn" style="margin-top: 4px;" *ngIf="!en" (click)="toggle()" src="assets/img/germany.jpg">
+
     </div>
 
 </header>
-

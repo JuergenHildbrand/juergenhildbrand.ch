@@ -25,6 +25,9 @@ header {
         position: absolute;
         right: 5vw;
         display: flex;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
         a {
             display: flex;
@@ -78,6 +81,12 @@ header {
     color: black !important;
 }
 
+.imgBtn {
+    height: 16px;
+    max-width: 24px;
+    cursor: pointer;
+}
+
 
 @media(max-width: 900px) {
 
@@ -104,6 +113,8 @@ header {
             font-style: normal;
             font-weight: 400;
             font-size: 16px;
+            display: flex;
+
 
             .topnav {
                 overflow: hidden;
@@ -135,6 +146,15 @@ header {
                 &:first-child {
                     margin-top: 320px;
                 }
+            }
+
+            .myLinksDE {
+                width: 100%;
+                max-width: 110px !important;
+            }
+
+            .myLinksDE a {
+                padding-right: 8px !important;
             }
 
             .topnav {

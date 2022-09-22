@@ -1,4 +1,4 @@
-import { Component, Input, } from '@angular/core';
+import { Component, Input, OnInit, } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +9,9 @@ import { Component, Input, } from '@angular/core';
 export class HeaderComponent {
 
   @Input() darkMode = true;
+  en: boolean = true;
+
+  constructor() { }
 
   slideInOut() {
     let x = document.getElementById('myLinks');
@@ -22,6 +25,14 @@ export class HeaderComponent {
       x.classList.remove('exitMenu');
       x.classList.add('openMenuA');
       x.style.display = 'block';
+    }
+  }
+
+  toggle() {
+    if (this.en == true) {
+      this.en = false;
+    } else {
+      this.en = true;
     }
   }
 
