@@ -68,7 +68,7 @@ header {
 
     .darkLinks {
         a {
-            color: #5221E6;
+            color: black;
 
             &:hover {
                 color: white;
@@ -78,6 +78,7 @@ header {
 
     .darkLogo {
         color: black;
+        background-color: white;
     }
 }
 

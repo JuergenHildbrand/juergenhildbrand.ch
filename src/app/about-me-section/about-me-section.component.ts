@@ -9,7 +9,6 @@ import * as AOS from 'aos';
 
 export class AboutMeSectionComponent {
 
-
   ngOnInit() {
     AOS.init({
       delay: 300,

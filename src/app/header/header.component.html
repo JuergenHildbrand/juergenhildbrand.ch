@@ -1,7 +1,13 @@
 <header [class.headerDark]="darkMode">
 
-    <div routerLink="/" class="logoHeader" [class.darkLogo]="darkMode" [class.fontSize]="darkMode"
-        (click)="scrollTop()">J.H</div>
+    <div
+        class="logoHeader" 
+        routerLink="/" 
+        [class.darkLogo]="darkMode" 
+        [class.fontSize]="darkMode"
+        (click)="scrollTop()">
+        J.H
+    </div>
 
     <div class="linksHeader" [class.darkLinks]="darkMode">
 
@@ -13,16 +19,20 @@
 
         <div class="language">
             <img class="languageIcon" src="assets/ico/languageIcon.png">
-            <button class="toggleLanguageBtn" 
+            <button 
+                class="toggleLanguageBtn" 
                 *ngIf="en" 
                 (click)="toggle(); 
-                comp.translate.use('de')">
+                comp.translate.use('de')" 
+                [class.darkLogo]="darkMode">
                 de
             </button>
-            <button class="toggleLanguageBtn" 
+            <button 
+                class="toggleLanguageBtn" 
                 *ngIf="!en" 
                 (click)="toggle(); 
-                comp.translate.use('en')">
+                comp.translate.use('en')"
+                [class.darkLogo]="darkMode">
                 en
             </button>
         </div>
@@ -34,30 +44,41 @@
             <a href="#home" class="active"></a>
 
             <div id="myLinks">
-                <a routerLink="/" 
+
+                <a 
+                    routerLink="/" 
                     (click)="slideInOut(); scrollTop()" 
-                    [class.headerDarkMenu]="darkMode"
+                    [class.headerDarkMenu]="darkMode" 
                     translate>
                     Home
                 </a>
-                <a href="#skills" 
+
+                <a 
+                    href="#skills" 
                     (click)="slideInOut()" 
                     [class.headerDarkMenu]="darkMode" 
-                    translate>Skills
+                    translate>
+                    Skills
                 </a>
-                <a href="#work" 
+
+                <a 
+                    href="#work" 
                     (click)="slideInOut()" 
                     [class.headerDarkMenu]="darkMode" 
                     translate>
                     Work
                 </a>
-                <a href="#about" 
+
+                <a 
+                    href="#about" 
                     (click)="slideInOut()" 
                     [class.headerDarkMenu]="darkMode" 
                     translate>
                     About
                 </a>
-                <a href="#contactSection" 
+
+                <a 
+                    href="#contactSection" 
                     (click)="slideInOut()" 
                     [class.headerDarkMenu]="darkMode" 
                     translate>
@@ -66,21 +87,17 @@
             </div>
 
             <a href="javascript:void(0);" class="icon">
-
                 <img class="menuImg" src="assets/ico/menu-smartphone.png">
             </a>
+
         </div>
 
         <div class="language">
             <img class="languageIconSmallSize" src="assets/ico/languageIcon.png">
-            <button class="toggleLanguageBtn" 
-                *ngIf="en" 
-                (click)="toggle(); 
+            <button class="toggleLanguageBtn" *ngIf="en" (click)="toggle(); 
                 comp.translate.use('de')">de
             </button>
-            <button class="toggleLanguageBtn" 
-                *ngIf="!en" 
-                (click)="toggle(); 
+            <button class="toggleLanguageBtn" *ngIf="!en" (click)="toggle(); 
                 comp.translate.use('en')">
                 en
             </button>

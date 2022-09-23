@@ -10,15 +10,19 @@
     <form [formGroup]="registrationFormGroup" (ngSubmit)="onSubmit()">
         <div class="column">
 
-            <div class="contactTxt">Name</div>
+            <span class="contactTxt">Name</span>
             <input type="text" formControlName="name">
-            <span class="validation-error mt4" *ngIf="(formSubmitted || 
+            <span 
+                class="validation-error mt4" 
+                *ngIf="(formSubmitted || 
                 registrationFormGroup.controls.name.touched) && 
                 registrationFormGroup.controls.name.errors?.required" 
                 translate>
                 Name is required
             </span>
-            <span class="validation-error mt4" *ngIf="(formSubmitted || 
+            <span 
+                class="validation-error mt4" 
+                *ngIf="(formSubmitted || 
                 registrationFormGroup.controls.name.touched)  && 
                 registrationFormGroup.controls.name.errors?.minlength || 
                 registrationFormGroup.controls.name.errors?.maxlength"
@@ -28,13 +32,17 @@
 
             <div class="contactTxt" translate>Email address</div>
             <input type="text" formControlName="email">
-            <span class="validation-error mt4" *ngIf="(formSubmitted || 
+            <span 
+                class="validation-error mt4" 
+                *ngIf="(formSubmitted || 
                 registrationFormGroup.controls.email.touched) && 
                 registrationFormGroup.controls.email.errors?.required"
                 translate>
                 Email is required
             </span>
-            <span class="validation-error mt4" *ngIf="(formSubmitted || 
+            <span   
+                class="validation-error mt4" 
+                *ngIf="(formSubmitted || 
                 registrationFormGroup.controls.email.touched) && 
                 registrationFormGroup.controls.email.errors?.email"
                 translate>
@@ -47,13 +55,18 @@
                 <textarea formControlName="message"></textarea>
             </div>
             <div class="column">
-                <span class="validation-error mt4" *ngIf="(formSubmitted || 
+                <span 
+                    class="validation-error mt4" 
+                    *ngIf="(formSubmitted || 
                     registrationFormGroup.controls.name.touched) && 
                     registrationFormGroup.controls.name.errors?.required"
                     translate>
                     Message is required
                 </span>
-                <span class="validation-error" *ngIf="(formSubmitted || registrationFormGroup.controls.message.touched) && 
+                <span 
+                    class="validation-error" 
+                    *ngIf="(formSubmitted || 
+                    registrationFormGroup.controls.message.touched) && 
                     registrationFormGroup.controls.message.errors?.minlength || 
                     registrationFormGroup.controls.message.errors?.maxlength"
                     translate>
@@ -67,12 +80,15 @@
     </form>
 </div>
 
-<div class="response" id="response" *ngIf="response.hasResponse" [class.response__ok]="response.ok"
-    [class.response__not_ok]="!response.ok" [class.scaleOutC]="response.ok" [class.scaleInC]="response.notOk">
+<div 
+    class="response" 
+    id="response" 
+    *ngIf="response.hasResponse" 
+    [class.response__ok]="response.ok"
+    [class.response__not_ok]="!response.ok" 
+    [class.scaleOutC]="response.ok" 
+    [class.scaleInC]="response.notOk">
 
     {{response.message}}
     <button (click)="closeResponse()">Ok</button>
 </div>
-
-<!-- email 
-pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" -->

@@ -15,8 +15,6 @@ import {
 
 export class ContactSectionComponent implements OnInit {
 
-
-  [x: string]: any;
   name = 'Angular ' + VERSION.major;
   ngForm: any;
   public innerWidth: any;
@@ -25,7 +23,6 @@ export class ContactSectionComponent implements OnInit {
     private http: HttpClient,
     public navigation: NavigationService
   ) { }
-
 
   formSubmitted = false;
   registrationFormGroup = new FormGroup({
