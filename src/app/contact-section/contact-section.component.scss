@@ -1,16 +1,16 @@
 .contactSection {
-    position: relative;
     width: 100%;
     max-width: 100%;
-    height: 62.1vw;
+    height: fit-content;
     font-family: 'Inter';
     font-style: normal;
     background-color: black;
+    display: flex;
+    flex-direction: column;
 
     h2 {
-        position: absolute;
-        top: 7vw;
-        left: 27.5vw;
+        margin-top: 7vw;
+        margin-left: calc((100vw - 42vw) / 2);
         font-weight: 700;
         font-size: 3.82vw;
         line-height: 6.25vw;
@@ -18,27 +18,23 @@
     }
 
     .contactDescription {
-        position: absolute;
-        top: 13vw;
-        left: 27.5vw;
+        margin-left: calc((100vw - 42vw) / 2);
         display: flex;
-        align-items: center;
 
         p {
             font-family: 'Roboto';
             font-style: normal;
             font-weight: 500;
             font-size: 1.25vw;
-            line-height: 1.39vw;
             color: #FFFFFF;
+            padding-right: 8px;
             opacity: 0.66;
         }
 
         a {
-            margin-left: 0.5vw;
+            margin-top: 1vw;
             text-decoration: none;
-            color: #5221E6;
-            padding: 0.5vw;
+            color: #5221E6 !important;
             font-size: 1.25vw;
             cursor: pointer;
             transition: 225ms ease-in-out;
@@ -53,12 +49,10 @@
     }
 
     form {
-        position: relative;
-        top: 18.75vw;
-        left: 27.3vw;
+        margin-left: calc((100vw - 42vw) / 2);
 
         .contactTxt {
-            margin-top: 1.39vw;
+            margin-top: 3vw;
             margin-bottom: 1.11vw;
             font-weight: 500;
             font-size: 1.25vw;
@@ -67,7 +61,7 @@
         }
 
         input {
-            width: 41.37vw;
+            width: 42vw;
             height: 2.7vw;
             padding-left: 1.13vw;
             background: #1A1A1A;
@@ -81,8 +75,8 @@
         }
 
         textarea {
-            width: 41.37vw;
-            height: 12.43vw;
+            width: 42vw;
+            height: 12vw;
             padding-top: 1.13vw;
             padding-left: 1.13vw;
             background: #1A1A1A;
@@ -100,7 +94,8 @@
 
         button {
             margin-top: 24px;
-            margin-left: 31.8%;
+            margin-left: 45.6%;
+            margin-bottom: 7vw;
             width: 10.9vw;
             height: 4.17vw;
             background: black;
@@ -129,87 +124,74 @@
 
 span {
     color: red;
-    font-size: 8px;
+    font-size: 12px;
 }
 
 
 @media(max-width: 900px) {
 
     .contactSection {
-        height: 220vw;
+        height: fit-content;
+        padding-bottom: 10vw;
 
         h2 {
-            position: absolute;
-            top: 20vw;
-            left: 4.44vw;
-            font-size: 8.89vw;
-            line-height: 8.33vw;
+            margin-top: 10vw;
+            margin-left: 4.44vw;
+            font-size: 7vw;
         }
 
         .contactDescription {
-            position: absolute;
-            top: 33.15vw;
-            left: 4.44vw;
-            // flex-direction: column !important;
+            margin-top: 1vw;
+            margin-left: 4.44vw;
+            font-size: 16px;
 
             p {
-                font-size: 4.44vw;
-                line-height: 8.02vw;
+                margin-top: 2vw;
+                font-size: 16px;
             }
 
             a {
-                position: absolute;
-                top: 8vw;
-                left: -0.5vw;
-                font-size: 4.44vw;
-                padding: 0.7vw;
-
-                &:hover {
-                    padding: 0.7vw;
-                }
+                font-size: 16px;
             }
         }
 
         form {
-            position: absolute;
-            top: 59.62vw;
-            left: 4.44vw;
+            margin-top: 2vw;
+            margin-left: 4.44vw;
 
             .contactTxt {
-                margin-bottom: 4.44vw;
                 font-weight: 500;
-                font-size: 4.44vw;
+                font-size: 16px;
                 line-height: 5.35vw;
 
             }
 
             input {
                 width: 86.5vw;
-                height: 10vw;
+                height: 39px;
                 padding-left: 4.44vw;
-                margin-bottom: 4.44vw;
-                font-size: 4.44vw;
+                font-size: 16px;
                 line-height: 5.35vw;
             }
 
             textarea {
                 width: 86.5vw;
-                height: 47.86vw;
+                height: 20vw;
                 padding-top: 2.44vw;
                 padding-left: 4.44vw;
-                font-weight: 500;
-                font-size: 4.44vw;
-                line-height: 5.55vw;
+                font-size: 16px;
+                line-height: normal;
             }
 
             button {
-                margin-top: 48px;
-                margin-left: 55.8vw;
-                width: 35.56vw;
-                height: 16.67vw;
+                margin-top: 16px;
+                margin-left: unset;
+                margin-left: calc((100vw - 128px) - 9vw);
+                margin-bottom: 0vw;
+                width: 128px;
+                height: 60px;
                 font-weight: 500;
-                font-size: 5vw;
-                line-height: 5.55vw;
+                font-size: 18px;
             }
         }
     }
@@ -220,8 +202,6 @@ span {
     width: 100%;
     background-color: black;
     position: fixed;
-    align-items: center;
-    flex-direction: column;
     top: 0;
     left: 0;
     right: 0;

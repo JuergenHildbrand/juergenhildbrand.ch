@@ -1,6 +1,5 @@
 .sklillsSection {
     width: 100%;
-    height: 54vw;
     display: flex;
     justify-content: center;
     position: relative;
@@ -18,7 +17,6 @@
     }
 
     .skillBoxesCont {
-        position: absolute;
         margin-top: 11.1vw;
     }
 
@@ -35,7 +33,7 @@
         font-family: 'Roboto', sans-serif;
         font-style: normal;
         font-weight: 400;
-        font-size: 1.25vw;
+        font-size: 1.8vw !important;
         line-height: 1.94vw;
         text-align: center;
         background-color: white;
@@ -53,7 +51,8 @@
         }
 
         .p6 {
-            margin-top: 2.8vw;
+            margin-top: 1.8vw;
+            line-height: normal;
         }
 
         .p7 {
@@ -62,6 +61,7 @@
 
         .p8 {
             margin-top: 2.91vw;
+            line-height: normal;
         }
 
         .p9 {
@@ -106,62 +106,57 @@
 @media(max-width: 900px) {
 
     .sklillsSection {
-        min-height: 130vw;
 
         h2 {
-            top: 12.84vw;
-            font-size: 8.89vw;
-            line-height: 11.1vw;
+            top: 6vw;
+            font-size: 7vw !important;
         }
 
         .skillBoxesCont {
-            margin-top: 39vw;
+            margin-top: 24vw;
             width: 95.56vw;
-            padding-bottom: 12vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
             .boxes {
                 position: relative;
                 width: 28.79vw;
                 height: 18.87vw;
+                max-width: 20vw;
+                max-height: 13.1vw;
                 margin-left: 2.22vw;
                 margin-right: 2.22vw;
                 margin-bottom: 11.08vw;
                 border-radius: 1.6vw;
-                font-size: 4.28vw;
+                font-size: 2.8vw !important;
 
                 p {
-                    margin-top: 8.42vw;
-                    line-height: 7.49vw;
+                    margin-top: 6vw;
                 }
 
                 .p4 {
-                    margin-top: 7.4vw;
-                    line-height: 7.49vw;
+                    margin-top: 6vw;
                 }
 
                 .p5 {
-                    margin-top: 7.67vw;
-                    line-height: 7.49vw;
+                    margin-top: 6vw;
                 }
 
                 .p6 {
-                    margin-top: 6.01vw;
-                    line-height: 4.81vw;
+                    margin-top: 4vw;
                 }
 
                 .p7 {
-                    margin-top: 6.62vw;
-                    line-height: 7.49vw;
+                    margin-top: 6vw;
                 }
 
                 .p8 {
-                    margin-top: 6.51vw;
-                    line-height: 4.81vw;
+                    margin-top: 5vw;
                 }
 
                 .p9 {
-                    margin-top: 5.98vw;
-                    line-height: 7.49vw;
+                    margin-top: 6vw;
                 }
 
                 .position {
@@ -201,3 +196,27 @@
         }
     }
 }
+
+// @media(max-width: 460px) {
+
+//     .sklillsSection {
+
+//         h2 {
+//             top: 12.84vw;
+//             line-height: 11.1vw;
+//         }
+
+//         .skillBoxesCont {
+//             margin-top: 39vw;
+//             width: 95.56vw;
+//             padding-bottom: 12vw;
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+
+//             .boxes {
+//                 font-size: 12px !important;
+//             }
+//         }
+//     }
+// }

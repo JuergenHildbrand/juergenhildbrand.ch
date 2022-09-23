@@ -1,11 +1,10 @@
-import { Component, OnInit, VERSION } from '@angular/core';
+import { Component, HostListener, Injectable, OnInit, VERSION } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { NavigationService } from '../navigation.service';
 import {
   FormControl,
   FormGroup,
-  Validators,
-  FormBuilder,
+  Validators
 } from '@angular/forms';
 
 @Component({
@@ -15,46 +14,46 @@ import {
 })
 
 export class ContactSectionComponent implements OnInit {
-[x: string]: any;
 
-  // name = false;
+
+  [x: string]: any;
   name = 'Angular ' + VERSION.major;
   ngForm: any;
+  public innerWidth: any;
 
   constructor(
     private http: HttpClient,
     public navigation: NavigationService
-  ) {}
+  ) { }
 
 
   formSubmitted = false;
   registrationFormGroup = new FormGroup({
-    name: new  FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(50)]),
+    name: new FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(50)]),
     email: new FormControl('', [Validators.required, Validators.email]),
     message: new FormControl('', [Validators.required, Validators.minLength(30), Validators.maxLength(500)]),
   });
 
   ngOnInit() {
-    
   }
 
-  onSubmit(): void{
+  onSubmit(): void {
     this.formSubmitted = true;
     if (this.registrationFormGroup.invalid) {
       return;
-    } 
+    }
     if (this.registrationFormGroup.valid) {
       this.http
-      .post(this.post.endPoint, this.post.body(this.registrationFormGroup.value))
-      .subscribe({
-        next: () => {
-          this.messageSent();
-        },
-        error: (error) => {
-          this.messageNotSent(error)
-        },
-        complete: () => console.info('send post complete'),
-      });
+        .post(this.post.endPoint, this.post.body(this.registrationFormGroup.value))
+        .subscribe({
+          next: () => {
+            this.messageSent();
+          },
+          error: (error) => {
+            this.messageNotSent(error)
+          },
+          complete: () => console.info('send post complete'),
+        });
     }
     this.formSubmitted = false;
     this.registrationFormGroup.reset();
@@ -114,6 +113,5 @@ export class ContactSectionComponent implements OnInit {
       this.response.hasResponse = false;
     }, 1000);
   }
-
 
 }

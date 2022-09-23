@@ -8,11 +8,12 @@
     .description {
         width: 50vw;
         display: flex;
-        align-items: center;
         flex-direction: column;
 
         h2 {
             margin-top: 2vw;
+            margin-left: 6vw;
+            margin-bottom: 1vw;
             font-style: normal;
             font-weight: 700;
             font-size: 3.82vw;
@@ -20,15 +21,13 @@
         }
 
         .text {
-            margin-top: 2vw;
 
             p {
-                margin-top: 0.5vw;
-                margin-left: 6vw;
-                width: 40vw;
-                color: #181823;
-                padding-right: 5vw;
+                padding-left: 6vw;
+                padding-right: 6vw;
+                padding-bottom: 0.7vw;
                 font-size: 1.11vw;
+                color: #181823;
             }
         }
     }
@@ -55,20 +54,17 @@
             width: 100% !important;
 
             h2 {
-                margin-top: 6vw;
-                font-size: 8.89vw;
+                margin-top: 4vw;
+                margin-bottom: 4vw;
+                font-size: 6vw; 
             }
 
             .text {
-                margin-top: 6vw;
-                padding-bottom: 32px;
+                padding-bottom: 4vw;
 
                 p {
-                    margin-top: 0.5vw;
-                    margin-left: 5vw;
-                    width: 90vw;
-                    padding-right: 5vw;
-                    font-size: 12px;
+                    font-size: 14px;
+                    padding-bottom: 1vw;
                 }
             }
         }

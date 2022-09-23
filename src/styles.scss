@@ -19,7 +19,7 @@ html {
     display: flex !important;
 }
 
-.collumn {
+.column {
     display: flex;
     flex-direction: column !important;
 }
@@ -85,10 +85,7 @@ span {
 
 
 #skills,
-#about {
-    scroll-margin-top: 88px;
-}
-
+#about,
 #work {
-    scroll-margin-top: 0;
+    scroll-margin-top: 88px;
 }

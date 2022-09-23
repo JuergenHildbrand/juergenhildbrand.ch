@@ -1,60 +1,66 @@
 <div class="contactSection" id="contactSection">
 
-    <h2>Contact me.</h2>
+    <h2 translate>Contact me.</h2>
 
-    <div class="contactDescription">
-        <p>Get in touch via the form below, or by emailing</p>
+    <div class="contactDescription column">
+        <p  translate>Get in touch via the form below, or by emailing</p>
         <a href="mailto:abc@example.com" target="_blank">info@juergenhildbrand.ch</a>
     </div>
 
     <form [formGroup]="registrationFormGroup" (ngSubmit)="onSubmit()">
-        <div class="collumn">
+        <div class="column">
 
             <div class="contactTxt">Name</div>
-            <input type="text" formControlName="name" placeholder="name">
+            <input type="text" formControlName="name">
             <span class="validation-error mt4" *ngIf="(formSubmitted || 
                 registrationFormGroup.controls.name.touched) && 
-                registrationFormGroup.controls.name.errors?.required">
+                registrationFormGroup.controls.name.errors?.required" 
+                translate>
                 Name is required
             </span>
             <span class="validation-error mt4" *ngIf="(formSubmitted || 
                 registrationFormGroup.controls.name.touched)  && 
                 registrationFormGroup.controls.name.errors?.minlength || 
-                registrationFormGroup.controls.name.errors?.maxlength">
+                registrationFormGroup.controls.name.errors?.maxlength"
+                translate>
                 Name should be between 4 to 50 characters
             </span>
 
-            <div class="contactTxt">Email address</div>
-            <input type="text" formControlName="email" placeholder="email">
+            <div class="contactTxt" translate>Email address</div>
+            <input type="text" formControlName="email">
             <span class="validation-error mt4" *ngIf="(formSubmitted || 
                 registrationFormGroup.controls.email.touched) && 
-                registrationFormGroup.controls.email.errors?.required">
+                registrationFormGroup.controls.email.errors?.required"
+                translate>
                 Email is required
             </span>
             <span class="validation-error mt4" *ngIf="(formSubmitted || 
                 registrationFormGroup.controls.email.touched) && 
-                registrationFormGroup.controls.email.errors?.email">
+                registrationFormGroup.controls.email.errors?.email"
+                translate>
                 Please enter correct email id
             </span>
 
 
-            <div class="contactTxt">Message</div>
+            <div class="contactTxt" translate>Message</div>
             <div class="example-full-width">
-                <textarea formControlName="message" placeholder="enter your message"></textarea>
+                <textarea formControlName="message"></textarea>
             </div>
-            <div class="collumn">
+            <div class="column">
                 <span class="validation-error mt4" *ngIf="(formSubmitted || 
                     registrationFormGroup.controls.name.touched) && 
-                    registrationFormGroup.controls.name.errors?.required">
+                    registrationFormGroup.controls.name.errors?.required"
+                    translate>
                     Message is required
                 </span>
                 <span class="validation-error" *ngIf="(formSubmitted || registrationFormGroup.controls.message.touched) && 
                     registrationFormGroup.controls.message.errors?.minlength || 
-                    registrationFormGroup.controls.message.errors?.maxlength">
+                    registrationFormGroup.controls.message.errors?.maxlength"
+                    translate>
                     Massage should be between 30 to 500 characters
                 </span>
 
-                <button type="submit">Submit</button>
+                <button type="submit" translate>Submit</button>
 
             </div>
         </div>

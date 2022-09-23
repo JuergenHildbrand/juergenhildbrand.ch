@@ -1,4 +1,5 @@
-import { Component, Input, OnInit, } from '@angular/core';
+import { Component, Injectable, Input } from '@angular/core';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-header',
@@ -6,12 +7,16 @@ import { Component, Input, OnInit, } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 
+@Injectable({
+  providedIn: 'root'
+})
+
 export class HeaderComponent {
 
   @Input() darkMode = true;
   en: boolean = true;
 
-  constructor() { }
+  constructor(public comp: AppComponent) { }
 
   slideInOut() {
     let x = document.getElementById('myLinks');
@@ -31,8 +36,10 @@ export class HeaderComponent {
   toggle() {
     if (this.en == true) {
       this.en = false;
+      document.getElementById('myLinks').classList.add('changeWidth');
     } else {
       this.en = true;
+      document.getElementById('myLinks').classList.remove('changeWidth');
     }
   }
 

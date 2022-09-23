@@ -8,6 +8,10 @@ header {
     z-index: 1000;
     background-color: black;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-family: 'Sen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
 
     .logoHeader {
         position: absolute;
@@ -35,12 +39,8 @@ header {
             align-items: center;
             padding-left: 1.67vw;
             padding-right: 1.67vw;
-            height: 6.11vw;
+            height: 88px;
             max-height: 88px;
-            font-family: 'Sen';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
             text-decoration: none;
             color: white;
             opacity: 0.7;
@@ -50,6 +50,18 @@ header {
             &:hover {
                 opacity: 1;
                 background-color: #5221E6;
+            }
+        }
+
+        .language {
+            display: flex;
+            align-items: center;
+            padding-left: 1.67vw;
+            padding-right: 1.67vw;
+            height: 88px;
+
+            .languageIcon {
+                height: 20px;
             }
         }
     }
@@ -73,7 +85,6 @@ header {
     background-color: white !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     min-height: 88px;
-    // box-shadow: 0px 0px 3px 0 rgba(0, 0, 0, 0.2);
 }
 
 .headerDarkMenu {
@@ -81,19 +92,41 @@ header {
     color: black !important;
 }
 
-.imgBtn {
-    height: 16px;
-    max-width: 24px;
+.toggleLanguageBtn {
+    background-color: black;
+    border: 0;
+    color: rgba(255, 255, 255, 0.7);
     cursor: pointer;
+}
+
+.changeWidth {
+    max-width: 110px !important;
 }
 
 
 @media(max-width: 900px) {
 
     header {
-        position: unset;
+        position: fixed;
         height: 88px;
 
+        .languageIconSmallSize {
+            position: absolute;
+            top: 32px;
+            right: 104px;
+            height: 20px;
+            max-width: 24px;
+            cursor: pointer;
+        }
+
+        .toggleLanguageBtn {
+            position: absolute;
+            top: 32px;
+            right: 80px;
+            height: 20px;
+            max-width: 24px;
+            cursor: pointer;
+        }
 
         .logoHeader {
             position: absolute;
@@ -105,14 +138,10 @@ header {
             display: none;
         }
 
-        .menu {
+        .menuSmallSize{
             margin-left: 75%;
             width: 300px;
             z-index: 4;
-            font-family: 'Sen';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
             display: flex;
 
 
@@ -144,7 +173,7 @@ header {
                 padding-right: 16px;
 
                 &:first-child {
-                    margin-top: 320px;
+                    margin-top: 356px;
                 }
             }
 
@@ -191,7 +220,7 @@ header {
 @media(min-width: 901px) {
     header {
 
-        .menu {
+        .menuSmallSize {
             display: none;
         }
     }

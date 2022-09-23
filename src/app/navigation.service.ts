@@ -21,9 +21,9 @@ export class NavigationService {
   scroll() {
     if (this.router.url !== '/imprint') {
       if (window.scrollY >= window.innerHeight) {
-        document.getElementById('menu').style.top = '0';
+        document.getElementById('menuSmallSize').style.top = '0';
       } else {
-        document.getElementById('menu').style.top =
+        document.getElementById('menuSmallSize').style.top =
           window.innerHeight - window.scrollY + 'px';
       }
     }

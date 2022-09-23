@@ -1,14 +1,30 @@
 <div class="workSection" id="work">
 
-    <h2 id="titleWork">My Work</h2>
+    <h2 id="titleWork" translate>My Work</h2>
 
     <div class="buttons" id="buttonsWork">
-        <button class="btns backgroundColorBtn" (click)="toggle1(); scaleIn()" [disabled]="btn1"
-            [class.backgroundColorBtn]="btn1">All</button>
-        <button class="btns" (click)="toggle2(); scaleIn()" [disabled]="btn2"
-            [class.backgroundColorBtn]="btn2">Angular</button>
-        <button class="btns" (click)="toggle3(); scaleIn()" [disabled]="btn3" [class.backgroundColorBtn]="btn3">Java
-            Script</button>
+        <button 
+            class="btns backgroundColorBtn" 
+            (click)="toggle1(); scaleIn()" 
+            [disabled]="btn1"
+            [class.backgroundColorBtn]="btn1" 
+            translate>
+            All
+        </button>
+        <button 
+            class="btns" 
+            (click)="toggle2(); scaleIn()" 
+            [disabled]="btn2"
+            [class.backgroundColorBtn]="btn2">
+            Angular
+        </button>
+        <button 
+            class="btns" 
+            (click)="toggle3(); scaleIn()" 
+            [disabled]="btn3" 
+            [class.backgroundColorBtn]="btn3">
+            JavaScript
+        </button>
     </div>
 
     <div class="myProjects">
@@ -18,13 +34,13 @@
             <div class="imgCont">
                 <img class="workImg" src="assets/img/slackclone.png">
                 <div class="overlay" id="overlay5">
-                    <div class="title">Slack clone</div>
-                    <div class="text">Angular -
-                        <div class="red">(under construction)</div>
-                    </div>
+                    <span class="title">Slack clone</span>
+                    <span class="text">Angular
+                        <p class="red" translate>(under construction)</p>
+                    </span>
                     <div class="d-flex">
-                        <button class="btn" (click)="tryOutMySlackClone()">Try it</button>
-                        <button class="btn" (click)="slackCloneGit()">Check git</button>
+                        <button class="btn" (click)="tryOutMySlackClone()" translate>Try it!</button>
+                        <button class="btn" (click)="slackCloneGit()" translate>Check git</button>
                     </div>
                 </div>
             </div>
@@ -35,13 +51,13 @@
             <div class="imgCont">
                 <img class="workImg" src="assets/img/myFirstOwnApp.jpg">
                 <div class="overlay"  id="overlay4">
-                    <div class="title">My first own app</div>
-                    <div class="text">Angular -<br>To manage the water supply in Meiggenalp (VS).
-                        <div class="red">Password: Widder1911</div>
-                    </div>
+                    <div class="title" translate>My first own app</div>
+                    <span class="text" translate>Angular<br>To manage the water supply in Meiggenalp (VS).
+                        <p class="red" translate>Password: Widder1911</p>
+                    </span>
                     <div class="d-flex">
-                        <button class="btn" (click)="tryOutMyFirstOwnApp()">Try it</button>
-                        <button class="btn" (click)="myFirstOwnApp()">Check git</button>
+                        <button class="btn" (click)="tryOutMyFirstOwnApp()" translate>Try it!</button>
+                        <button class="btn" (click)="myFirstOwnApp()" translate>Check git</button>
                     </div>
                 </div>
             </div>
@@ -52,9 +68,9 @@
             <div class="imgCont">
                 <img class="workImg" src="assets/img/myPage.png">
                 <div class="overlay"  id="overlay3">
-                    <div class="title">My personal homepage</div>
-                    <div class="text">Angular - my first Angular project</div>
-                    <button class="btn" (click)="myPageGit()">Check git</button>
+                    <div class="title" translate>My personal homepage</div>
+                    <div class="text" translate>First Angular project</div>
+                    <button class="btn" (click)="myPageGit()" translate>Check git</button>
                 </div>
             </div>
         </div>
@@ -65,10 +81,10 @@
                 <img class="workImg" src="assets/img/elPolloLoco.png">
                 <div class="overlay" id="overlay2">
                     <div class="title">El Pollo Loco</div>
-                    <div class="text">JavaScript - based jump and run game</div>
+                    <div class="text" translate>JavaScript - based jump and run game</div>
                     <div class="d-flex">
-                        <button class="btn" (click)="tryOutElPlloLoco()">Try it</button>
-                        <button class="btn" (click)="elPlloLocoGit()">Check git</button>
+                        <button class="btn" (click)="tryOutElPlloLoco()" translate>Try it!</button>
+                        <button class="btn" (click)="elPlloLocoGit()" translate>Check git</button>
                     </div>
                 </div>
             </div>
@@ -79,11 +95,11 @@
             <div class="imgCont">
                 <img class="workImg" src="assets/img/join.jpg">
                 <div class="overlay" id="overlay1">
-                    <div class="title">Join</div>
-                    <div class="text">JavaScript - Group work kanban board</div>
+                    <div class="title" translate>Join</div>
+                    <div class="text" translate>JavaScript - Group work - kanban board</div>
                     <div class="d-flex">
-                        <button class="btn" (click)="tryOutJoin()">Try it!</button>
-                        <button class="btn" (click)="joinGit()">Check git</button>
+                        <button class="btn" (click)="tryOutJoin()" translate>Try it!</button>
+                        <button class="btn" (click)="joinGit()" translate>Check git</button>
                     </div>
                 </div>
             </div>

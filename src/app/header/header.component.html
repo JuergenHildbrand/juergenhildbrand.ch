@@ -6,36 +6,85 @@
     <div class="linksHeader" [class.darkLinks]="darkMode">
 
         <a routerLink="/" (click)="scrollTop()">Home</a>
-        <a href="#skills">Skills</a>
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="#contactSection">Contact</a>
-        <img class="imgBtn" *ngIf="en" (click)="toggle()" src="assets/img/england.jpg">
-        <img class="imgBtn" *ngIf="!en" (click)="toggle()" src="assets/img/germany.jpg">
+        <a href="#skills" translate>Skills</a>
+        <a href="#work" translate>Work</a>
+        <a href="#about" translate>About</a>
+        <a href="#contactSection" translate>Contact</a>
+
+        <div class="language">
+            <img class="languageIcon" src="assets/ico/languageIcon.png">
+            <button class="toggleLanguageBtn" 
+                *ngIf="en" 
+                (click)="toggle(); 
+                comp.translate.use('de')">
+                de
+            </button>
+            <button class="toggleLanguageBtn" 
+                *ngIf="!en" 
+                (click)="toggle(); 
+                comp.translate.use('en')">
+                en
+            </button>
+        </div>
 
     </div>
 
-    <div class="menu">
-        
+    <div class="menuSmallSize">
         <div class="topnav" [class.headerDark]="darkMode" (click)="slideInOut()">
             <a href="#home" class="active"></a>
 
             <div id="myLinks">
-                <a routerLink="/" (click)="slideInOut()" [class.headerDarkMenu]="darkMode">Home</a>
-                <a href="#skills" (click)="slideInOut()" [class.headerDarkMenu]="darkMode">Skills</a>
-                <a href="#work" (click)="slideInOut()" [class.headerDarkMenu]="darkMode">Work</a>
-                <a href="#about" (click)="slideInOut()" [class.headerDarkMenu]="darkMode">About</a>
-                <a href="#contactSection" (click)="slideInOut()" [class.headerDarkMenu]="darkMode">Contact</a>
+                <a routerLink="/" 
+                    (click)="slideInOut(); scrollTop()" 
+                    [class.headerDarkMenu]="darkMode"
+                    translate>
+                    Home
+                </a>
+                <a href="#skills" 
+                    (click)="slideInOut()" 
+                    [class.headerDarkMenu]="darkMode" 
+                    translate>Skills
+                </a>
+                <a href="#work" 
+                    (click)="slideInOut()" 
+                    [class.headerDarkMenu]="darkMode" 
+                    translate>
+                    Work
+                </a>
+                <a href="#about" 
+                    (click)="slideInOut()" 
+                    [class.headerDarkMenu]="darkMode" 
+                    translate>
+                    About
+                </a>
+                <a href="#contactSection" 
+                    (click)="slideInOut()" 
+                    [class.headerDarkMenu]="darkMode" 
+                    translate>
+                    Contact
+                </a>
             </div>
 
             <a href="javascript:void(0);" class="icon">
+
                 <img class="menuImg" src="assets/ico/menu-smartphone.png">
             </a>
         </div>
 
-        <img class="imgBtn" style="margin-top: 4px;" *ngIf="en" (click)="toggle()" src="assets/img/england.jpg">
-        <img class="imgBtn" style="margin-top: 4px;" *ngIf="!en" (click)="toggle()" src="assets/img/germany.jpg">
+        <div class="language">
+            <img class="languageIconSmallSize" src="assets/ico/languageIcon.png">
+            <button class="toggleLanguageBtn" 
+                *ngIf="en" 
+                (click)="toggle(); 
+                comp.translate.use('de')">de
+            </button>
+            <button class="toggleLanguageBtn" 
+                *ngIf="!en" 
+                (click)="toggle(); 
+                comp.translate.use('en')">
+                en
+            </button>
+        </div>
 
     </div>
-
 </header>
