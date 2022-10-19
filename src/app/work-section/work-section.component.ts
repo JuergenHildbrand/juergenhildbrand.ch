@@ -126,12 +126,27 @@ export class WorkSectionComponent implements OnInit {
     }
   }
 
+  showOverlay6() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      document.getElementById('overlay6').classList.add('d-noneEffektScaleOut');
+      document.getElementById('overlay6').classList.remove('d-none');
+      setTimeout(() => {
+        document.getElementById('overlay5').classList.add('d-none');
+        document.getElementById('overlay4').classList.add('d-none');
+        document.getElementById('overlay3').classList.add('d-none');
+        document.getElementById('overlay2').classList.add('d-none');
+        document.getElementById('overlay1').classList.add('d-none');
+      }, 500);
+    }
+  }
+
   showOverlay5() {
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-      document.getElementById('overlay5').classList.add('d-noneEffektScaleOut');
-      document.getElementById('overlay5').classList.remove('d-none');
+      document.getElementById('overlay4').classList.add('d-noneEffektScaleOut');
+      document.getElementById('overlay4').classList.remove('d-none');
       setTimeout(() => {
-        document.getElementById('overlay4').classList.add('d-none');
+        document.getElementById('overlay6').classList.add('d-none');
+        document.getElementById('overlay5').classList.add('d-none');
         document.getElementById('overlay3').classList.add('d-none');
         document.getElementById('overlay2').classList.add('d-none');
         document.getElementById('overlay1').classList.add('d-none');
@@ -144,6 +159,7 @@ export class WorkSectionComponent implements OnInit {
       document.getElementById('overlay4').classList.add('d-noneEffektScaleOut');
       document.getElementById('overlay4').classList.remove('d-none');
       setTimeout(() => {
+        document.getElementById('overlay6').classList.add('d-none');
         document.getElementById('overlay5').classList.add('d-none');
         document.getElementById('overlay3').classList.add('d-none');
         document.getElementById('overlay2').classList.add('d-none');
@@ -157,6 +173,7 @@ export class WorkSectionComponent implements OnInit {
       document.getElementById('overlay3').classList.add('d-noneEffektScaleOut');
       document.getElementById('overlay3').classList.remove('d-none');
       setTimeout(() => {
+        document.getElementById('overlay6').classList.add('d-none');
         document.getElementById('overlay5').classList.add('d-none');
         document.getElementById('overlay4').classList.add('d-none');
         document.getElementById('overlay2').classList.add('d-none');
@@ -170,6 +187,7 @@ export class WorkSectionComponent implements OnInit {
       document.getElementById('overlay2').classList.add('d-noneEffektScaleOut');
       document.getElementById('overlay2').classList.remove('d-none');
       setTimeout(() => {
+        document.getElementById('overlay6').classList.add('d-none');
         document.getElementById('overlay5').classList.add('d-none');
         document.getElementById('overlay4').classList.add('d-none');
         document.getElementById('overlay3').classList.add('d-none');
@@ -183,6 +201,7 @@ export class WorkSectionComponent implements OnInit {
       document.getElementById('overlay1').classList.add('d-noneEffektScaleOut');
       document.getElementById('overlay1').classList.remove('d-none');
       setTimeout(() => {
+        document.getElementById('overlay6').classList.add('d-none');
         document.getElementById('overlay5').classList.add('d-none');
         document.getElementById('overlay4').classList.add('d-none');
         document.getElementById('overlay3').classList.add('d-none');
@@ -196,11 +215,11 @@ export class WorkSectionComponent implements OnInit {
   // Links
 
   tryOutMySlackClone() {
-    window.open('https://www.juergenhildbrand.ch/slack-clone/index.html')
+    window.open('https://slackclone.juergenhildbrand.ch/landing')
   }
 
   slackCloneGit() {
-    window.open('https://github.com/JuergenHildbrand/Jey-s-Slack-clone.git');
+    window.open('https://github.com/juergenhildbrand/jey-s-slack-clone.git');
   }
 
   tryOutMyFirstOwnApp() {
@@ -208,27 +227,35 @@ export class WorkSectionComponent implements OnInit {
   }
 
   myFirstOwnApp() {
-    window.open('https://github.com/JuergenHildbrand/obere-meiggenalp.git');
+    window.open('https://github.com/juergenhildbrand/obere-meiggenalp.git');
+  }
+
+  tryOutRingOfFire() {
+    window.open('https://ringoffire.juergenhildbrand.ch/')
+  }
+
+  ringOfFire() {
+    window.open('https://github.com/juergenhildbrand/ring-of-fire.git');
   }
 
   myPageGit() {
-    window.open('https://github.com/JuergenHildbrand/juergenhildbrand.ch.git');
+    window.open('https://github.com/juergenhildbrand/juergenhildbrand.ch.git');
   }
 
   tryOutElPlloLoco() {
-    window.open('https://www.juergenhildbrand.ch/El-Pollo-Loco/index.html')
+    window.open('https://elpolloloco.juergenhildbrand.ch/')
   }
 
   elPlloLocoGit() {
-    window.open('https://github.com/JuergenHildbrand/El-Pollo-Loco.git');
+    window.open('https://github.com/juergenhildbrand/el-pollo-loco.git');
   }
 
   tryOutJoin() {
-    window.open('https://www.juergenhildbrand.ch/Join/index.html')
+    window.open('https://join.juergenhildbrand.ch/')
   }
 
   joinGit() {
-    window.open('https://github.com/JuergenHildbrand/Join.git');
+    window.open('https://github.com/JuergenHildbrand/join.git');
   }
 
   tryOutPokedex() {
