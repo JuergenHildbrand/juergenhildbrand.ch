@@ -227,7 +227,7 @@ export class WorkSectionComponent implements OnInit {
   }
 
   myFirstOwnApp() {
-    window.open('https://github.com/juergenhildbrand/obere-meiggenalp.git');
+    window.open('https://github.com/JuergenHildbrand/Obere-Meiggenalp.git');
   }
 
   tryOutRingOfFire() {
